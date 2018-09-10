@@ -1,0 +1,170 @@
+.intro
+  height: 100vh
+  +r(1024)
+    padding-top: 50px
+    height: auto
+    padding-bottom: 100px
+  &__in
+    @extend %flex
+    @extend %flex-c
+    max-width: 1054px
+    position: relative
+    height: 100%
+    +r(1024)
+      flex-wrap: wrap
+  &__col
+    width: 100%
+    position: relative
+    height: 100%
+  &__col1
+    height: 400px
+    @extend %flex
+    @extend %flex-c
+    +r(1024)
+      height: 290px
+      margin: 50px auto
+  &__col2
+    padding-left: 60px
+    position: relative
+    +r(1200)
+      padding-left: 29px
+    +r(1024)
+      padding-left: 0
+  &__screen
+    display: none
+    +r(1024)
+      display: block
+  &__title
+    color: $PURPLE
+    font-size: 4.4em
+    font-weight: 900
+    line-height: 71px
+    margin-bottom: 27px
+    text-transform: uppercase
+    +r(1024)
+      font-size: 3.3em
+      max-width: 340px
+      width: 100%
+      line-height: 58px
+    +r(480)
+      font-size: 41px
+      line-height: 43px
+      margin-bottom: 20px
+      max-width: 284px
+    span
+      color: #755587
+  &__body
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+  &__subtitle
+    color: #2c2929
+    font-size: 20px
+    font-weight: 500
+    line-height: 30px
+    +r(480)
+      font-size: 18px
+      font-weight: 600
+      line-height: 22px
+  &__images
+    max-width: 100%
+    max-height: 100%
+    will-change: opacity, visibility
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    +tr(all .5s ease-in)
+    display: block
+    opacity: 0
+    visibility: hidden
+    &.is-show
+      opacity: 1
+      visibility: visible
+    +r(1024)
+      left: 0
+      right: 0
+      margin: auto
+.intro-hide
+  +r(1024)
+    display: none
+// intro-slider
+.slider
+  padding-right: 60px
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  opacity: 0
+  +r(1024)
+    position: relative
+    top: auto
+    transform: none
+    opacity: 1
+    padding-right: 30px
+  &__title
+    color: $PURPLE
+    text-transform: uppercase
+    margin-bottom: 24px
+    +r(480)
+      margin-bottom: 13px
+    b
+      font-weight: 800
+  &__sub
+    color: black
+    font-weight: 800
+    text-transform: capitalize
+    font-size: 27px
+    line-height: 34px
+  &__text
+    margin-bottom: 28px
+    line-height: 21px
+  &__body
+    margin: 27px 0 68px 0
+  &__footer
+    +r(1024)
+      margin: auto
+      text-align: center
+
+.slider-dots
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  right: 0
+  z-index: 2
+  +r(1024)
+    top: 40%
+  //   top: auto
+  //   transform: none
+  //   left: 0
+  //   bottom: 120px
+  //   text-align: center
+  li
+    display: block
+    padding: 3px
+    +tr(all .3s ease)
+    // +r(1024)
+      // display: inline-block
+    &:not(:last-child)
+      margin-bottom: 8px
+      // +r(1024)
+      //   margin: 0 20px 0 0
+    &.slick-active
+      button
+        background-color: $PURPLE
+    button
+      display: block
+      border: none
+      padding: 3px
+      +hide-text
+      cursor: pointer
+      border-radius: 50%
+      width: 8px
+      height: 8px
+      +tr(all .3s ease-in)
+      background-color: #CDD8DE
+      &:hover
+        background-color: $PURPLE
+
+
+
+
+

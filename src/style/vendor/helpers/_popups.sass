@@ -1,0 +1,244 @@
+.popup
+  position: fixed
+  opacity: 0
+  visibility: hidden
+  width: 100%
+  background-color: $WHITE
+  top: 0
+  left: 0
+  height: 100vh
+  +tr(all .3s ease-in)
+  overflow-y: auto
+  &.is-active
+    opacity: 1
+    visibility: visible
+  &__slider
+    background-image: linear-gradient(to top, #f6435a 0%, #f6435a 1%, #6f1f51 100%)
+    z-index: 1001
+  &__login,
+  &__menu
+    background: url(../img/svg/menu.svg)center no-repeat
+    background-position: 50% calc(100% - 150px)
+    background-size: cover
+    background-color: rgba(128,128,128, 0.6)
+    +rh(740)
+      background-position-y: calc(100% - 110px)
+  &__login
+    z-index: 223
+  &__menu
+    z-index: 222
+  &__in
+    position: relative
+    color: black
+    height: 100%
+    // max-width: 1105px
+    max-width: 1145px
+    width: 100%
+    margin: auto
+    flex-direction: column
+    @extend %flex
+    +r(1200)
+      width: 90%
+      margin: auto
+    +r(480)
+      width: 100%
+  &__header,
+  &__body
+    +r(480)
+      width: 90%
+      margin: auto
+  &__header
+    width: 100%
+    margin: auto
+    @extend %flex
+    justify-content: space-between
+    color: $RED
+    height: 34px
+    flex: 0 0 auto
+    padding-top: 30px
+    padding-bottom: 0
+    +r(480)
+      .basket
+        position: absolute
+        right: 30px
+    +r(480)
+      justify-content: flex-start
+      .sticky__logo
+        display: none
+      .sticky__right
+        width: 100%
+        justify-content: flex-start
+  &__title
+    margin-bottom: 54px
+  &__body
+    flex: 1 1 auto
+    width: 100%
+    @extend %flex
+    justify-content: center
+    align-items: center
+    padding-top: 70px
+  &__footer
+    padding-bottom: 24px
+    @extend %flex
+    flex-shrink: 0
+    justify-content: space-between
+    align-items: flex-end
+    +r(1100)
+      .order
+        display: none
+      // flex-direction: column
+    // .order
+      // +r(1100)
+        // display: none
+    +r(480)
+      .social
+        order: 1
+    +r(767)
+      padding: 10px 0
+      margin-top: 10px
+    .form__field
+      &:not(:last-child)
+        margin-bottom: 28px
+    +r(480)
+      flex-direction: column
+      justify-content: center
+      align-items: center
+  &__col
+    flex: 1
+    padding: 0 5%
+  &__audio
+    z-index: 4444
+    animation: none
+    background: linear-gradient(to top, #bb4077 0%, #3299a8 99%, #3299a8 100%)
+    background-position-y: 50%!important
+    &.is-active
+      opacity: 0.95
+    .popup__in
+      max-width: 975px
+    .popup__body
+      padding-top: 40px
+
+
+.popup__body-login
+  max-width: 412px
+  padding-left: (170px / 1105px) * 100%
+  flex-direction: column
+  +r(1024)
+    padding-left: 0
+  // +r(1200)
+    // max-width: 100%
+    // padding-left: 0
+    // align-items: center
+  .popup__title
+    +r(480)
+      margin-bottom: 0
+      padding: 25px 0
+.popup__body-menu
+  max-width: 800px
+  // padding-top: 170px
+  margin: auto
+  +rh(740)
+    // padding-top: 100px
+  +r(767)
+    // padding-top: 100px
+  +r(480)
+    align-items: flex-start
+    flex: none
+.popup__footer-menu
+  +r(480)
+    flex-direction: column
+  +r(480)
+    align-items: center
+// .popup-slider
+//   &__item
+//     color: $WHITE
+//     text-align: center
+//     padding-top: 60px
+// .popup-slider__header
+//   h3
+//     font-size: 24px
+//   img
+//     margin: auto
+//     max-width: 60%
+//     max-height: 100%
+
+.popup-dots
+  text-align: center
+  li
+    display: inline-block
+    vertical-align: middle
+    &:not(:first-child)
+      margin-left: 12px
+    &.slick-active,
+    &:hover
+      button
+        background-color: rgba(255,255,255,1)
+    button
+      background: none
+      outline: none
+      border: none
+      +hide-text
+      height: 3px
+      width: 18px
+      background-color: rgba(255,255,255,.3)
+      +tr(background-color .3s ease-in)
+      cursor: pointer
+
+// popup-slider
+
+.popup
+    &__close
+      font-weight: 800
+      position: absolute
+      top: 30%
+      transform: translateY(-50%)
+      right: 0
+      background: 0
+      border: 0
+      color: white
+      font-size: 14px
+      z-index: 2
+      padding: 0
+      padding-right: 31px
+      svg
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 0
+.popup-slider
+  overflow: hidden
+  padding: 0 12%
+  &__item
+    // display: flex!important
+    // justify-content: center
+    font-size: 0
+  &__promo
+    color: white
+    h2
+      font-weight: 800
+      font-size: 32px
+      margin-bottom: 30px
+    p
+      font-weight: 500
+      font-size: 16px
+      line-height: 28px
+  &__col
+    display: inline-block
+    vertical-align: middle
+    padding: 0 4%
+    width: 43%
+    &:first-of-type
+      text-align: center
+      max-width: 303px
+      img
+        margin: auto
+        max-width: 100%
+        max-height: 100%
+    &:last-of-type
+      // padding-top: 50px
+      padding-top: 30px
+      max-width: 380px
+
+
+
+

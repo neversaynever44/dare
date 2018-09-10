@@ -1,0 +1,74 @@
+.comments
+  color: $WHITE
+  padding: 50px 0 100px 0
+  background-image: linear-gradient(to top, #6f1f51 0%, #da3b4f 100%)
+  position: relative
+  &__top,
+  &__bottom
+    width: 100%
+    left: 0
+    position: absolute
+  &__top
+    bottom: 100%
+  &__bottom
+    top: 100%
+  &__in
+    max-width: 845px
+  &__title
+    margin-bottom: 64px
+    text-align: center
+    h3
+      font-size: 28px
+      font-weight: 700
+    span
+      font-weight: 400
+    p
+      margin-top: 5px
+      font-size: 17px
+  &__list
+    margin-bottom: 73px
+  &__form
+    max-width: 780px
+    margin: auto
+    width: 100%
+    padding-top: 18px
+.comment
+  padding-left: 34px
+  padding-right: 30px
+  margin-bottom: 40px
+  position: relative
+  font-weight: 500
+  &:before
+    content: ''
+    z-index: 1
+    display: block
+    position: absolute
+    top: 0
+    left: 3px
+    width: 18px
+    height: 16px
+    background: url(../img/svg/post-w.svg)center no-repeat
+  &__content
+    border-bottom: 1px solid rgba(2555,255,255,0.2)
+    padding-bottom: 40px
+  &__title
+    font-size: 17px
+    font-weight: 500
+  &__desc
+    margin: 11px 0
+    line-height: 28px
+    font-size: 16px
+  &__post
+    font-size: 14px
+    font-style: italic
+    padding-left: 20px
+    position: relative
+    &:before
+      content: ''
+      z-index: 1
+      position: absolute
+      top: 0
+      left: 0
+      background: url(../img/svg/clock.svg)center no-repeat
+      width: 14px
+      height: 13px

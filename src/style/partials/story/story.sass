@@ -1,0 +1,34 @@
+.story
+  // min-height: 672px
+  min-height: 612px
+  color: $WHITE
+  position: relative
+  // height: auto
+  background: url(../img/svg/story.svg)center no-repeat
+  +cover
+  +rm(1400)
+    height: 100vh
+  &__in
+    max-width: 980px
+    height: 100%
+  &__shape
+    position: absolute
+    z-index: -1
+    top: 0
+    left: 0
+    width: 100%
+    display: none
+  &__promo
+    position: absolute
+    top: 51%
+    transform: translateY(-50%)
+    max-width: 373px
+    width: 100%
+    h3
+      font-size: 19px
+      text-transform: uppercase
+      margin-bottom: 10px
+    strong
+      text-transform: capitalize
+      font-size: 40px
+      line-height: 55px

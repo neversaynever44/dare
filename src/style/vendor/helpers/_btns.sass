@@ -1,0 +1,337 @@
+%btn
+  position: relative
+  display: inline-block
+  text-align: center
+  background: none
+  cursor: pointer
+  text-decoration:none
+  font-weight: 400
+  font-size: 16px
+  border: none
+
+.btn-tooltip,
+.btn-cart,
+.btn-primary,
+.btn-secondary,
+.btn-plus
+  @extend %btn
+  svg
+    position: absolute
+    top: 0 
+    left: 0
+    rect
+      transition: all 600ms ease
+      stroke-width: 2
+      stroke-dasharray: 353, 0
+      stroke-dashoffset: 0
+      -webkit-transition: all 600ms ease
+  span
+    font-weight: 700
+    text-transform: uppercase
+.btn-plus
+  svg
+    rect
+      stroke-dasharray: 273, 0
+.btn-primary
+  width: 247px
+  height: 60px
+  line-height: 60px
+  rect
+    stroke: white
+  span
+    color: $WHITE
+  &:hover
+    svg
+      rect
+          stroke-dasharray: 180, 585
+          stroke-dashoffset: 437
+.btn-secondary
+  width: 208px
+  height: 58px
+  line-height: 58px
+  span
+    color: $PURPLE
+  &:hover
+    svg
+      rect
+          stroke-dasharray: 143, 575
+          stroke-dashoffset: 437
+  &__white
+    span
+      color: $WHITE
+
+.btn-tooltip
+  width: 297px
+  height: 54px
+  line-height: 54px
+  span
+    color: $BLACK
+  &:hover
+    svg
+      rect
+          stroke-dasharray: 120,640
+          stroke-dashoffset: 340
+  &__white
+    span
+      color: $WHITE
+
+.btn-cart
+  width: 200px
+  height: 54px
+  line-height: 54px
+  span
+    color: #2c292966
+  svg
+    rect
+      stroke: #2c292966
+  &:hover
+    svg
+      rect
+        stroke-dasharray: 140, 558
+        stroke-dashoffset: 430
+  &__purple
+    span
+      color: #b84278
+    svg
+      rect
+        stroke: #b84278
+  &__black
+    span
+      color: $BLACK
+    svg
+      rect
+        stroke: #b84278
+    
+
+
+.btn-plus 
+  width: 174px
+  height: 56px
+  line-height: 56px
+  span
+    color: #ca3757
+  &:hover
+    svg
+      rect
+          stroke-dasharray: 110, 573
+          stroke-dashoffset: 437
+
+
+.btn-more
+  cursor: pointer
+  color: $RED
+  text-transform: uppercase
+  position: relative
+  padding-left: 30px
+  +tr(padding .3s ease)
+  font-weight: 800
+  font-size: 15px
+  &:before
+    content: ''
+    z-index: 1
+    display: block
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: 0
+    width: 21px
+    background-color: #f53e56
+    height: 3px
+    +tr(width .3s ease)
+  &:hover
+    padding-left: 10px
+    &:before
+      width: 0
+.btn-purple
+  color: $PURPLE
+  &:before
+    background-color: $PURPLE
+.btn-red span
+  color: #DF3E57
+
+.btn-program
+  span
+    color: #b84178
+  rect
+    stroke: #b84178 
+
+
+.btn-login
+  text-transform: uppercase
+  color: $RED
+  background: none
+  outline: 0
+  border: 1px solid $RED
+  padding: 19px 0
+  border-radius: 5px
+  font-weight: bold
+  display: block
+  max-width: 190px
+  width: 100%
+  text-align: center
+.btn-forgot
+  text-transform: capitalize
+  color: black
+  position: relative
+  margin-left: 20px
+  +r(767)
+    margin-left: 0
+    padding-top: 20px
+  &:before
+    content: ''
+    z-index: 1
+    display: block
+    position: absolute
+    bottom: 0
+    background: #000
+    width: 100%
+    height: 1px
+    +tr(width .3s ease-in-out)
+  &:hover
+    &:before
+      width: 0
+
+.btn-close
+  position: absolute
+  top: 50%
+  -webkit-transform: translateY(-50%)
+  -ms-transform: translateY(-50%)
+  transform: translateY(-50%)
+  right: 0
+  z-index: 100
+  display: block
+  width: 33px
+  display: block
+  cursor: pointer
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  height: 3px
+  &:before,
+  &:after
+    content: ""
+    left: 0
+    width: 100%
+    position: absolute
+    +tr(all .3s ease-in-out)
+    height: 100%
+    background: #FFF
+    width: 80%
+    background-color: $RED
+  &:before
+    transform: translateY(0) rotate(45deg)
+  &:after
+    transform: translateY(0) rotate(-45deg)
+.close-popup
+  position: absolute
+  top: 7%
+  -webkit-transform: translateY(-50%)
+  -ms-transform: translateY(-50%)
+  transform: translateY(-50%)
+  right: 0
+  z-index: 100
+  display: block
+  width: 33px
+  height: 23px
+  cursor: pointer
+  background: 0 0
+  border: 0
+  +hide-text
+  padding: 0
+  &__item
+    display: block
+    background-color: transparent
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    height: 3px
+    position: relative 
+    &:before,
+    &:after
+      content: ""
+      left: 0
+      width: 100%
+      position: absolute
+      +tr(all .3s ease-in-out)
+      height: 100%
+      width: 80%
+      background-color: $WHITE
+    &:before
+      transform: translateY(0) rotate(45deg)
+    &:after
+      transform: translateY(0) rotate(-45deg)   
+.link
+  &__gradient
+    .st-blue 
+      fill: #00deff
+    .st-title
+        fill: white
+    .st-green 
+      fill: #01f076
+    .st-orange 
+      fill: #ffcb00
+    .st-red 
+      fill: #ed2f4a
+    &:hover
+      .st-title
+        fill: black  
+.link-gradient__white
+  .st-title,
+  .st-grad
+    fill: white
+  &:hover
+    .st-title
+      fill: black
+    .st-blue 
+      fill: #00deff
+    .st-green 
+      fill: #01f076
+    .st-orange 
+      fill: #ffcb00
+    .st-red 
+      fill: #ed2f4a
+
+.link
+  svg,
+  path
+    +tr(all .3s ease-in)
+  &:hover
+    .st-border
+      fill: white
+      stroke: none
+
+
+.st-border
+  fill: none
+  stroke: white
+  stroke-miterlimit: 10
+.group-title
+  path
+    fill: white   
+
+.link
+  &:hover
+    .group-title
+      path
+        fill: black
+    .st-arrow
+      fill: #FF9900
+.st-arrow
+  fill: white
+  +tr(all .3s ease-in)
+.link-black
+  .group-title
+    path
+      fill: black
+  .st-border
+    stroke: black
+  &:hover
+    .group-title
+      path
+        fill: white
+    .st-border
+      fill: black

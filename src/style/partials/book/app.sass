@@ -1,0 +1,77 @@
+.app
+  padding-bottom: 160px
+  overflow: hidden
+  +tr(all .3s ease-in)
+  &__in
+    max-width: 1070px
+    padding-left: 95px
+    position: relative
+  &__title
+    font-weight: 800
+    font-size: 62px
+    line-height: 68px
+    text-transform: uppercase
+    color: $PURPLE
+    span
+      color: #88478c
+  &__subtitle
+    margin: 45px 0 48px 0
+    color: $BLACK
+    font-size: 28px
+    font-weight: 500
+    line-height: 40px
+    max-width: 680px
+    width: 100%
+    span
+      font-weight: 800
+      color: #cc376b
+  &__title,
+  &__subtitle
+    +tr(all .3s ease-in)
+  &__body
+    @extend %flex
+    margin-bottom: 60px
+    position: relative
+  &__col
+    h3
+      color: $PURPLE
+      font-size: 15px
+      font-weight: 800
+      line-height: 20px
+      text-transform: uppercase
+      letter-spacing: 0.45px
+  &__list
+    @extend %flex
+    flex-wrap: wrap
+    margin: 26px 0 31px 0
+  &__phone
+    position: absolute
+    opacity: 0
+    transform: translateY(-50%)
+    top: 72%
+    right: 31px
+  &__btns
+    margin-top: 60px
+    @extend %flex
+    align-items: center
+.app__list-item
+  opacity: 0
+  +tr(all .3s ease-in)
+  width: 31%
+  padding-left: 21px
+  position: relative
+  margin-bottom: 20px
+  &:before
+    content: ''
+    z-index: 1
+    display: block
+    position: absolute
+    top: 2px
+    left: -2px
+    background: url(../img/svg/tick_purple.svg)center no-repeat
+    width: 16px
+    height: 12px
+  h4
+    font-weight: 600
+    color: $BLACK
+    font-size: 20px

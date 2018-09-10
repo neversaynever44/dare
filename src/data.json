@@ -1,0 +1,20 @@
+{
+  "pageTitle": "page title",
+  "eample": [
+    {
+      "text": "sample text",
+      "emojiIcon": "☎️",
+      "icon": null,
+      "href": "#",
+      "additionalClass": null
+    },
+    {
+      "text": "sample text",
+      "emojiIcon": "📧",
+      "icon": null,
+      "href": "#",
+      "additionalClass": null
+    }
+  ],
+  "lorem": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est consequuntur mollitia beatae expedita id amet non quis rerum ratione unde nostrum veritatis nam inventore similique esse asperiores doloremque cumque, laboriosam eveniet aliquam aliquid ea magni et rem. Cupiditate doloribus expedita laudantium, distinctio pariatur consequatur unde nihil nesciunt est facere repudiandae adipisci voluptatum magni deleniti magnam beatae culpa, commodi possimus in sed maiores. In molestias, non a nam odit sint delectus at nihil deserunt? Quos voluptatem, odit fugit libero nam qui tempore ex inventore culpa numquam eveniet ab nemo quas maiores necessitatibus magnam dolorem a. Reiciendis harum hic magnam nihil ex!"
+}

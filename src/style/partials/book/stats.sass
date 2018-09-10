@@ -1,0 +1,101 @@
+.stats
+  padding: 90px 0 87px 0
+  position: relative
+  +tr(all .3s ease-in)
+  // margin-top: 60px
+  // margin-bottom: 40px
+  &__text
+    position: absolute
+    bottom: 110%
+    text-align: right
+    z-index: 1
+    color: white
+    right: (88px/1200px)*100%
+    font-size: 18px
+    line-height: 30px
+    max-width: 420px
+  &__book
+    padding-top: 160px
+    padding-bottom: 20%
+  &__bg
+    height: 100%
+    position: absolute
+    top: 0
+    z-index: -1
+    left: 0
+    width: 100%
+    background-image: linear-gradient(to top,#6f1f51 0,#bb3256 99%,#bb3256 100%)
+  &__shape
+    z-index: -1
+    position: absolute
+    width: 100%
+    bottom: 100%
+    left: 0
+    right: 0
+    margin: auto
+    transform: translateY(3px)
+  &__in
+    max-width: 925px
+    position: relative
+    padding-bottom: 12%
+    +r(1024)
+      padding-bottom: 44%
+  &__list
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    @extend %flex
+    color: $AMARANTH
+    +r(1024)
+      flex-wrap: wrap
+    // margin: 0 0 0 -3%
+  &__item
+    flex: 1
+    text-transform: uppercase
+    text-align: center
+    opacity: 0
+    +tr(all .3s ease-in)
+    &:not(:first-child)
+      margin-left: 5%
+    +r(1024)
+      margin-bottom: 40px
+    &:last-of-type
+      +r(1024)
+        flex: 100%
+  &__pic
+    svg
+      width: 36px
+      height: 40px
+      fill: $AMARANTH
+      fill-rule: evenodd
+  &__num
+    margin: 16px 0
+    letter-spacing: 0.25px
+    color: $BLACK
+    font: 400 55px/1 "Galano Grotesque - Black", sans-serif, arial
+    +r(1024)
+      font-size: 40px
+  &__desc
+    font-size: 16px
+    font-weight: 700
+    line-height: 20px
+    letter-spacing: 0.48px
+  
+.stats__list-wh
+  color: $WHITE
+  .stats__num
+    color: $AMARANTH
+  .stats__pic
+    svg
+      fill: $WHITE
+
+.stats__list-purple
+  color: $PURPLE
+  .stats__num
+    color: $BLACK
+  .stats__pic
+    svg
+      fill: $PURPLE
+  
+

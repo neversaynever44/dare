@@ -1,0 +1,258 @@
+.program
+  color: $WHITE
+  padding: 22px 0 120px 0
+  position: relative
+  margin: 180px 0 240px 0
+  &__layer
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-image: linear-gradient(to top,#b5437a 0,#428ea2 99%,#428ea3 100%)
+    z-index: -1
+    will-change: height
+  // &__audio
+  &__bootcamp
+    background-image: linear-gradient(to top, #665d95 0%, #665d95 1%, #329daa 100%)
+    .program__body
+      align-items: center
+  &__top,
+  &__bottom
+    position: absolute
+    width: 100%
+    left: 0
+    right: 0
+    margin: auto
+  &__top
+    bottom: 100%
+    transform: translateY(3px)
+  &__bottom
+    top: 100%
+    // will-change: top
+  &__title
+    font-size: 32px
+    font-weight: 800
+    margin-bottom: 32px
+    line-height: 40px
+  &__subtitle
+    font-size: 16px
+    font-weight: 500
+    line-height: 28px
+  &__in
+    max-width: 1021px
+    +tr(all .3s ease-in)
+  &__header
+    text-align: center
+    margin-bottom: 90px
+    +r(1024)
+      margin-bottom: 45px
+    h2
+      font-size: 35px
+      line-height: 40px
+      margin-bottom: 17px
+    p
+      font-size: 20px
+      font-weight: 500
+      line-height: 30px
+  &__body
+    justify-content: space-between
+    position: relative
+    align-items: flex-start
+    +r(1024)
+      flex-direction: column
+  &__flex
+    @extend %flex
+    @extend %flex-c
+  &__content
+    width: 100%
+    +r(1024)
+      flex-direction: column
+    flex: 1
+    &:first-of-type
+      position: relative
+      padding-top: 25px
+      padding-bottom: 44%
+      +r(1024)
+        padding-bottom: 100%
+    &:last-of-type
+      max-width: 320px
+      +r(1024)
+        margin: auto
+  &__col
+    position: absolute
+    height: 100%
+    width: 100%
+    opacity: 0
+    top: 0
+    visibility: hidden
+    +tr(all .3s ease-in)
+    @extend %flex
+    flex-wrap: wrap
+    @extend %flex-c
+    &.is-active
+      opacity: 1
+      visibility: visible
+    +r(1024)
+      flex-direction: column
+      display: block
+      width: 100%
+  &__body,
+  &__list,
+  &__footer
+    @extend %flex
+  &__pic
+    max-width: 100%
+    max-height: 100%
+    +vertical
+  &__dots
+    left: 0
+    right: 0
+    bottom: 56px
+    +r(1024)
+      display: none
+.program__col-text
+  +r(1024)
+    display: none
+.program__col-text,
+.program__col-pic
+  flex: 1
+  +r(1024)
+    flex: auto
+.program__col-pic
+  +r(1024)
+    position: absolute
+    top: 0
+    text-align: center
+  img
+    +vcenter 
+    left: 72%
+    top: 55%
+    max-height: 152%
+    max-width: 100%
+    +r(1024)
+      position: static
+      transform: none
+      max-width: 80%
+
+
+
+
+.tabs
+  &__list
+    @extend %flex
+    flex-wrap: wrap
+    margin: 0 0 0 -2%
+    justify-content: space-between
+  &__item
+    flex: 47%
+    height: 90px
+    margin-left: 2%
+    margin-bottom: 2%
+    position: relative
+    cursor: pointer
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.04)
+    border-radius: 6px
+    border: 1px solid white
+    +vertical
+    +tr(all .3s ease-in)
+  &__title
+    display: inline-block
+    vertical-align: middle
+    text-transform: uppercase
+    letter-spacing: 0.54px
+    font-weight: 700
+    color: $WHITE
+    font-size: 16px
+    padding-top: 40px
+    +tr(all .3s ease-in)
+.tabs__list-audio
+  .tabs__item
+    &.is-active,
+    &:hover
+      border-color: #7ec6fc
+      .tabs__title
+        color: #7ec6fc
+    &:nth-child(1)
+      .tabs__title
+        &:before
+          background-image: url(../img/content/tabs/release.png)
+    &:nth-child(2)
+      .tabs__title
+        &:before
+          background-image: url(../img/content/tabs/courage.png)
+    &:nth-child(3)
+      .tabs__title
+        &:before
+          background-image: url(../img/content/tabs/sleep.png)
+    &:nth-child(4)
+      .tabs__title
+        &:before
+          background-image: url(../img/content/tabs/travel.png)
+  .tabs__title
+    position: relative
+    &:before
+      content: ''
+      z-index: 1
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      margin: auto
+      width: 40px
+      height: 40px
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center center
+
+.audio
+  position: relative
+  &__title
+    margin: 40px 0 30px 0
+    text-align: center
+    font-size: 16px
+    text-transform: uppercase
+    font-weight: 700
+  &__list
+    @extend %flex
+    flex-direction: column
+    +tr(all .3s ease-in)
+    opacity: 0
+    visibility: hidden
+    position: absolute
+    top: 44px
+    left: 0
+    right: 0
+    &.is-active
+      opacity: 1
+      visibility: visible
+  &__item
+    cursor: pointer
+    @extend %flex
+    justify-content: center
+    align-content: center
+    padding: 16px 0
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.04)
+    border-radius: 6px
+    border: 1px solid rgba(255,255,255,0.5)
+    h4
+      font-weight: 700
+      font-size: 15px
+    &:not(:last-child)
+      margin-bottom: 11px
+    
+.fear
+  position: absolute
+  max-height: 147%
+  max-width: 100%
+  top: 58%
+  left: 51%
+  -webkit-transform: translate(-50%,-50%)
+  -ms-transform: translate(-50%,-50%)
+  transform: translate(-50%,-50%)
+
+
+
+
+

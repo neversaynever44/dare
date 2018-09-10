@@ -1,0 +1,163 @@
+.entry
+  color: white
+  text-align: center
+  position: relative
+  // padding: 80px 0
+  // height: 100vh
+  // background-image: linear-gradient(to top,#a52d55 0%,#f0415a 100%)
+  height: 100vh
+  padding-bottom: 200px
+  +r(1024)
+    height: auto
+    padding-bottom: 80px
+  &__in
+    height: 100%
+    @extend %flex
+    flex-direction: column
+    position: relative
+    z-index: 1
+    justify-content: flex-start
+    padding-top: 100px
+    +r(1024)
+      padding-top: 50px
+    +r(480)
+      padding-top: 20px
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+    width: 100%
+    height: 100%
+    background-image: url(../img/svg/homepage_toolkit_background_bottom.svg)
+    +cover
+    background-position: 50% 100%
+    z-index: -1
+  &__tool
+    bottom: 0
+    height: 100%
+    background-image: url(../img/svg/tool.svg)
+    +cover
+    background-position: 50% 100%
+    z-index: 1
+  &__top,
+  &__tool
+    position: absolute
+    left: 0
+    right: 0
+    width: 100%
+  &__top
+      bottom: 100%
+      transform: translateY(3px)
+  &__col,
+  &__header
+    +r(1024)
+      flex-direction: column
+  &__header
+    @extend %flex
+    justify-content: center
+  &__col
+    @extend %flex
+    align-items: center
+    justify-content: flex-start
+    &:nth-of-type(1)
+      padding: 0 34px
+      border-right: 1px solid rgba(#fff, 0.6)
+      +r(1200)
+        padding: 0 4px
+        border: none 
+      +r(1024)
+        margin-bottom: 18px
+    &:nth-of-type(2)
+      padding-left: 48px
+      position: relative
+      +r(1200)
+        padding-left: 18px
+    &:nth-of-type(1),
+    &:nth-of-type(2),
+      +r(1024)
+        padding: 0
+  &__btns
+    @extend %flex
+  &__title
+    text-transform: uppercase
+    letter-spacing: 0.45px
+    font-size: 14px
+    margin-right: 45px
+    text-align: left
+    font-weight: 600
+    line-height: 20px
+    +r(1200)
+      margin-right: 15px
+    +r(1024)
+      margin: 0 0 20px 0
+    +r(480)
+      br 
+        display: none
+      
+  &__body
+    margin: 197px 0 70px 0
+    +r(1024)
+      margin: 120px 0 70px 0
+    +r(480)
+      margin: 50px 0
+    // margin: 57px 0 70px 0
+  &__promo,
+  &__text
+    font-size: 25px
+  &__promo
+    +r(480)
+      font-size: 19px
+      max-width: 200px
+      width: 100%
+      line-height: 25px
+      margin: auto
+  &__text
+      font-weight: 700
+      display: block
+      +r(480)
+        font-size: 18px
+        line-height: 23px
+        font-weight: 600
+  &__link
+    +r(480)
+      svg
+        width: 140px
+        height: 58px
+  &__count
+    padding: 18px 38px 40px 0
+    font-size: 196px
+    font-family: "Galano Grotesque - Black"
+    color: #f34259
+    line-height: 1
+    height: 172px
+    line-height: 172px
+    text-transform: uppercase
+    span
+      display: none
+      +r(1024)
+        display: block
+    +r(1024)
+      font-size: 97px
+      height: auto
+      line-height: 1
+      padding: 30px 0
+    +r(767)
+      font-size: 75px
+      padding: 25px 0
+      
+
+.entry__link-ml20
+  margin-left: 20px
+.first-screen
+  +r(480)
+    display: none
+.mobile-screen
+  display: none
+  +r(480)
+    display: block
+
+ 

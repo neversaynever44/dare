@@ -1,0 +1,57 @@
+.technology
+  &__list
+    text-align: center
+    align-items: flex-start
+    width: 100%
+    margin-bottom: 107px
+    justify-content: space-between
+    +tr(all .3s ease-in)
+    @extend %flex 
+    +r(1024)
+      flex-wrap: wrap
+      justify-content: center
+  &__footer
+    @extend %flex-c
+    +tr(all .3s ease-in)
+    flex-direction: column
+  &__btns
+    @extend %flex
+    @extend %flex-c
+.technology__list-item
+  flex: 1
+  +r(1024)
+    flex: auto
+    max-width: 200px
+    margin: 20px
+    // &:not(:first-child)
+    //   margin-left: 45px
+    // &:not(:last-child)
+    //   margin-bottom: 45px
+  &:nth-of-type(2)
+    flex: 2
+    +r(1024)
+      flex: auto
+.technology__list-pic
+  svg
+    fill: #b84278
+.technology__list-title
+  margin: 22px 0 16px 0
+  text-transform: uppercase
+  color: $BLACK
+  letter-spacing: 0.1px
+  font-size: 22px
+  font-weight: 800
+.technology__list-desc
+  font-size: 15px
+  color: #b84178
+  font-weight: 500
+  line-height: 22px
+  max-width: 280px
+  margin: auto
+.technology__list-wh
+  .technology__list-pic
+    svg
+      fill: $WHITE
+  .technology__list-title,
+  .technology__list-desc
+    color: $WHITE

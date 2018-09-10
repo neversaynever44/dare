@@ -1,0 +1,68 @@
+.testimonial
+  text-align: center
+  color: white
+  position: relative
+  margin: 193px 0 180px 0
+  +tr(all .3s ease-in)
+  &__book
+    background-image: linear-gradient(to top,#892651 0%,#e53f59 100%)
+  &__bootcamp
+    background-image: linear-gradient(to top, #645b92 0%, #3498a7 100%)
+    margin-top: 263px
+    margin-bottom: 312px
+  &__top,
+  &__bottom
+    position: absolute
+    left: 0
+    right: 0
+    width: 100%
+  &__top
+    bottom: 100%
+    transform: translateY(10px)
+  &__bottom
+    top: 100%
+  &__in
+    max-width: 920px
+    padding-bottom: 100px
+    padding-top: 70px
+    +tr(all .3s ease-in)
+  &__header
+    margin-bottom: 40px
+    blockquote
+      font-size: 38px
+      font-weight: 700
+      line-height: 55px
+      position: relative
+      padding-top: 40px
+      &:before
+        content: "“"
+        z-index: 1
+        display: block
+        position: absolute
+        top: 0
+        transform: translateY(-50%)
+        left: 0
+        right: 0
+        margin: auto
+        font-size: 130px
+        line-height: 130px
+        font-weight: 900
+        color: white
+      cite
+        font-style: normal
+        font-size: 15px
+        text-transform: uppercase
+        font-weight: 500
+        position: relative
+        padding-left: 19px
+        &:before
+          content: ""
+          z-index: 1
+          display: block
+          +vcenter
+          left: 0
+          background: white
+          width: 18px
+          height: 3px
+        b
+          font-weight: 700

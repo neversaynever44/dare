@@ -1,0 +1,57 @@
+// preloader
+.preloader
+  height: 100vh
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 2222
+  background-color: white
+  opacity: 0
+  visibility: hidden
+  +tr(all .3s ease-in)
+  @extend %flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  overflow: hidden
+  &.is-load
+    opacity: 1
+    visibility: visible
+  &__title
+    // margin-bottom: 70px
+    svg
+      fill: #e91536
+  &__img
+    margin: 70px 0 100px 0
+    img
+      max-width: 100%
+      max-height: 100%
+  &__footer
+    position: absolute
+    bottom: 40px
+    left: 50%
+    transform: translateX(-50%)
+  &__link
+    display: block
+    text-transform: uppercase
+    letter-spacing: 0.6px
+    color: $RED
+    font-weight: 800
+    padding: 20px
+    font-size: 12px
+    position: relative
+    &:after
+      content: ''
+      z-index: 1
+      display: block
+      +vcenter
+      transform: translate(-50%,-50%) rotate(90deg)
+      left: 120%
+      height: 51px
+      width: 3px
+      background-color: $RED
+      animation: slideDown .5s ease-in-out 0s alternate infinite none
+
+
+

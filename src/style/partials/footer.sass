@@ -1,0 +1,292 @@
+// footer
+.footer
+  background: linear-gradient(183deg,#6e5c8c 0%,#4b6390 58.75%,#224166 100%)
+  color: #fff
+  +tr(all .3s ease-in)
+  position: relative
+  width: 100%
+  padding-top: 50px
+  &__in
+    overflow: hidden
+    // +tr(all .3s ease-in)
+    +r(1024)
+      max-width: 767px
+    +r(767)
+      max-width: 480px
+    +r(480)
+      max-width: 320px
+  &__bg
+    position: absolute
+    bottom: 100%
+    left: 0
+    right: 0
+    width: 100%
+    z-index: -1
+    transform: translateY(3px)
+  &__in
+    max-width: 920px
+    margin: auto
+    width: 100%
+  &__intro
+    @extend %flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    padding: 70px 0
+    +r(480)
+      padding: 50px 0
+  &__top
+    text-align: center
+  &__promo
+    font-size: 38px
+    font-weight: 700
+    line-height: 55px
+    margin-bottom: 90px
+    +r(767)
+      font-size: 26px
+    +r(480)
+      font-size: 24px
+      line-height: 32px
+      margin-bottom: 46px
+      font-weight: 500
+      padding: 0 22px
+  &__title
+    margin: 16px 0 28px 0
+    font-weight: 500
+    font-size: 34px
+  &__body
+    margin-bottom: 14px
+    padding: 0 10px
+    +r(1024)
+      padding: 0
+      margin-bottom: 35px
+    +r(767)
+      display: flex
+      flex-direction: column
+    +r(480)
+      margin-bottom: 0
+  &__col
+    @extend %flex
+    justify-content: space-between
+    margin-bottom: 80px
+    +r(767)
+      margin-bottom: 0
+      flex-wrap: wrap
+    +r(480)
+      order: 2
+      margin: 27px 0 18px 0
+  &__list
+    +r(1024)
+      flex: 1
+    +r(767)
+      flex: 25%
+      padding: 0 50px
+      margin-bottom: 30px
+    +r(480)
+      text-align: center
+      padding: 0
+      margin: 0
+    &:not(:last-child)
+      +r(480)
+        display: none
+  &__bottom
+    padding: 36px 0 
+    font-size: 13px
+    border-top: 1px solid rgba(255,255,255, 0.3)
+    color: rgba(255,255,255,0.8)
+    @extend %flex
+    @extend %flex-between
+    +r(1024)
+      flex-direction: column
+      align-items: center
+      padding: 26px 0
+  &__copy
+    +r(1024)
+      padding: 25px 0
+    +r(480)
+      padding: 15px 0
+  &__link
+    +r(480)
+      svg
+        width: 140px
+
+.footer__list-item
+  &:not(:last-child)
+    margin-bottom: 9px
+  +r(480)
+    &:not(:first-child)
+      display: inline-block
+      padding-left: 10px
+    &:last-of-type
+      display: none
+    &:nth-of-type(2)
+      padding-left: 0
+      padding-right: 15px
+      position: relative
+      &:before
+        content: "|"
+        z-index: 1
+        display: block
+        position: absolute
+        top: 50%
+        height: 100%
+        right: 0
+        transform: translateY(-50%)
+.footer__list-title
+  margin-bottom: 19px 
+  font-size: 15px
+  text-transform: uppercase
+  +r(480)
+    margin-bottom: 15px
+
+.footer__list-link,
+.privacy__link
+  +tr(all .3s ease)
+  color: rgba(white, 0.8)
+  &:hover
+    color: rgba(white, 1)
+.footer__list-link
+  font-size: 14px
+  text-transform: capitalize
+  font-weight: 400
+
+
+.footer__list-link
+  font-weight: 400
+.link-eff
+  position: relative
+  cursor: pointer
+  &:before,
+  &:after
+    content: ''
+    z-index: 1
+    position: absolute
+    display: block
+    bottom: -2px
+    height: 2px
+    width: 0
+  &:before
+    left: 0
+    width: 0
+    background-color: transparent
+    +tr(width .0s ease)
+  &:after
+    right: 0
+    background-color: rgba(255,255,255, 0.8)
+    +tr(width .3s ease)
+  &:hover
+    &:before,
+    &:after
+      width: 100%
+  &:hover
+    &:before
+      background-color: rgba(255,255,255, 0.8)
+      +tr(width .3s ease-in)
+  &:hover
+    &:after
+      background-color: transparent
+      +tr(all .0s ease)
+// form
+.form
+  &__col
+    @extend %flex
+    @extend %flex-between
+    border-bottom: 1px solid white
+    justify-content: space-between
+    max-width: 496px
+    align-items: flex-end
+    width: 100%
+    margin: auto
+    padding: 18px 0 11px 0
+    +r(480)
+      position: relative
+      flex-direction: column
+      border: none
+      padding: 0
+      max-width: 248px
+      margin: auto
+  &__row
+    width: 100%
+    &:nth-of-type(1)
+      +r(480)
+        border-bottom: 1px solid white
+        padding-bottom: 15px
+    &:nth-of-type(2)
+      position: relative
+      flex-basis: 142px
+      +r(480)
+        flex-basis: 100%
+        padding-top: 20px
+      // +r(480)
+      //   position: absolute
+      //   top: 100%
+      //   padding-top: 25px
+  .form__input
+    padding-bottom: 0
+    border: 0
+    +r(480)
+      text-align: center
+
+
+// order
+.order
+  @extend %flex
+  @extend %flex-c
+  +r(480)
+    flex-wrap: wrap
+  &__item
+    +r(480)
+      &:not(:first-child)
+        flex: 1
+      &:first-of-type
+        width: 100%
+        text-align: center
+        margin-bottom: 20px
+    &:not(:last-child)
+      margin-right: 30px
+      +r(767)
+        margin-right: 15px
+      +r(480)
+        margin-right: 3px
+  &__link
+    display: block
+    // &:hover
+      // .order__app
+        // fill: black
+        // +tr(fill .3s ease-in-out)
+
+// privacy
+.privacy
+  &__list
+    @extend %flex
+    @extend %flex-c
+    +r(480)
+      flex-wrap: wrap
+  &__item
+    padding: 0 10px
+    position: relative
+    &:not(:last-child)
+      &:before
+        content: '|'
+        z-index: 1
+        display: block
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 0
+    +r(480)
+      &:nth-of-type(2)
+        &:before
+          display: none
+      &:last-of-type
+        padding-top: 11px    
+    &:first-of-type
+      padding-left: 0
+    &:last-of-type
+      padding-right: 0
+
+
+
+
+
+

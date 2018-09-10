@@ -1,0 +1,172 @@
+// sticky header
+.sticky
+  align-items: center
+  +tr(all .3s ease)
+  height: 34px
+  max-width: 1105px
+  width: 100%
+  position: fixed
+  left: 0
+  right: 0
+  margin: auto
+  top: 30px
+  z-index: 1000
+  color: $WHITE
+  +tr(all .3s ease-in-out)
+  @extend %flex
+  justify-content: space-between
+  +r(1200)
+    width: 90%
+  &.is-active
+    color: $RED
+    .logo__svg
+      fill: $RED
+    .burger__item
+      background-color: $RED
+      &:before,
+      &:after
+        background-color: $RED
+    .title-secondary
+      color: $RED
+    .basket__total
+      background-color: $RED
+      span
+        color: $WHITE
+    .basket__icon
+      fill: $RED
+    .link-eff
+      &:after
+        background-color: $RED
+      &:hover
+        &:after
+          background-color: transparent
+      &:hover
+        &:before
+          background-color: $RED
+  // &.is-open
+  //   +r(480)
+  //     .logo
+  //       display: none
+  //   .menu
+  //     opacity: 1
+  //     visibility: visible
+  //     height: 100vh
+  //     animation: 
+  //       name: popup
+  //       duration: 0.3s
+  //       timing-function: ease-in-out
+  //       fill-mode: backwards
+  //   .sticky__right
+  //     color: $RED
+  //   .logo__title
+  //     display: none
+  //   .burger__item
+  //     background: transparent
+  //   .basket__icon
+  //     fill: $RED
+  //   .basket__total
+  //     background-color: $RED
+  //     span
+  //       color: white
+  &__right
+    @extend %flex
+    @extend %flex-c
+    position: relative
+    padding-right: 34px
+.sticky-main
+  .auth
+    +r(767)
+      display: none
+
+
+  
+.logo
+  &__svg
+    +tr(all .3s ease-in)
+    margin-left: 13px
+    fill: #fff
+    fill-rule: evenodd
+    +r(480)
+      width: 80px
+      margin-left: 5px
+
+body
+  &.is-show-popup
+    overflow: hidden
+    .popup
+      -webkit-animation-name: popup
+      animation-name: popup
+      -webkit-animation-duration: 0.5s
+      animation-duration: 0.5s
+      -webkit-animation-timing-function: ease-in-out
+      animation-timing-function: ease-in-out
+      -webkit-animation-fill-mode: backwards
+      animation-fill-mode: backwards
+    .link-eff
+      &:before
+        left: 0
+        width: 0
+        background-color: transparent
+        +tr(width .0s ease)
+      &:after
+        right: 0
+        background-color: $RED
+        +tr(width .3s ease)
+      &:hover
+        &:before,
+        &:after
+          width: 100%
+      &:hover
+        &:before
+          background-color: $RED
+          +tr(width .3s ease-in)
+      &:hover
+        &:after
+          background-color: transparent
+          +tr(all .0s ease)
+    .popup__audio
+      animation: none
+    .logo__title,
+    .logo__svg,
+    .burger
+      display: none
+    .auth 
+      color: $RED
+    .basket__total 
+      background-color: $RED
+    .basket__total span 
+      color: white
+    .basket__icon 
+      fill: $RED
+    .burger__close
+      opacity: 1
+      visibility: visible
+      background-color: transparent
+      .burger__item
+        background-color: transparent!important
+        &:before
+          transform: translateY(0) rotate(45deg)
+        &:after
+          transform: translateY(0) rotate(-45deg)
+        &:before,
+        &:after
+          background: $RED
+          width: 80%
+    +r(767)
+      .auth
+        display: flex
+    +r(480)
+      .sticky__logo
+        display: none
+      .basket
+        position: absolute
+        right: 30px
+        top: 50%
+        transform: translateY(-50%)
+      .sticky__right 
+        width: 100%
+        justify-content: flex-start
+  
+   
+
+

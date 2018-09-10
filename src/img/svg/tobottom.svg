@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 195.75">
+          <defs>
+            <style>
+              .testimonial-bottom {
+                fill-rule: evenodd;
+                fill: url(#test-gradient2);
+              }
+            </style>
+            <linearGradient id="test-gradient2" x1="600.015" y1="4751.75" x2="600.015" y2="4556" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#6f1f51" />
+              <stop offset="1" stop-color="#882653" />
+            </linearGradient>
+          </defs>
+          <path id="Shape_2_copy_6" data-name="Shape 2 copy 6" class="testimonial-bottom" d="M1200.03,4751.01C979.657,4764.15,755.7,4600.48,561,4572c-240.067-35.12-478.811,62.67-561,101.17V4556H1200Z"
+            transform="translate(0 -4556)" />
+        </svg>

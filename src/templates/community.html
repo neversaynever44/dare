@@ -1,0 +1,311 @@
+{% include "partials/head.html" %}
+
+<body class="book-page">
+
+  <div class="container">
+    <!-- BEGIN  sticky-->
+    {% include "partials/sticky.html" %}
+    <!-- END  sticky-->
+  </div>
+  <!-- BEGIN  out-->
+
+
+  <div id="out">
+    <div id="viewBox">
+      <!-- BEGIN  promo-->
+      <section class="promo promo__community" id="promo">
+        <div class="promo__layer promo__layer-community">
+          <div class="promo__shape">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 145.25">
+              <defs>
+                <linearGradient id="linear-community" x1="599.95" y1="600.25" x2="599.95" y2="455" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#8d2753" />
+                  <stop offset="1" stop-color="#8d2753" />
+                </linearGradient>
+              </defs>
+              <path data-name="Shape 2 copy 5" d="M1199.94 460.85c-86.81-7.7-280.93-11.23-524.14 68.82-225.73 74.3-443.04 89.09-675.9 48.44V455H1200z"
+                transform="translate(0 -455)" fill-rule="evenodd" fill="url(#linear-community)" />
+            </svg>
+          </div>
+        </div>
+        <div class="promo__in inner flex">
+          <div class="promo__col">
+
+            <div class="promo__text">
+              <b>Connect with people</b> who are experiencing anxiety
+              <br> as you are.
+            </div>
+            <div class="promo__subtitle">
+              DARE Facebook communities are filled with very compassionate & understanding members from all over the world, who will encourage
+              you, listen to you and give you great advice on how to push through with your anxiety.
+            </div>
+          </div>
+          <div class="promo__pic">
+            <img src="img/content/community/phone-success.png" alt="">
+          </div>
+          <div class="promo__scroll">
+            <span class="scroll-to scroll-to__community">scroll</span>
+          </div>
+        </div>
+      </section>
+      <!-- end  promo-->
+      <!-- BEGIN  plus-->
+      <section class="plus plus__community" data-trigger="true" id="plus">
+        <div class="plus__in inner flex">
+          <div class="plus__col">
+            <div class="plus__tabs is-active">
+              <h2>EMPOWER YOURSELF & INSPIRE OTHERS</h2>
+              <span>DARE Success Stories Group</span>
+              <p>The private Dare Success Stories Group is where you go to read very inspiring stories, but also let everyone
+                know when you have a breakthrough, big or small it does not matter. It will empower you, it will inspire
+                others to do same. This group has a wonderful domino effect of helping others push out of their comfort zone.</p>
+            </div>
+            <div class="plus__tabs">
+              <h2>BE UNDERSTOOD BY LIKE-MINDED PEERS</h2>
+              <span>DARE Respond 101 Group </span>
+              <p>The Dare Respond 101 group is your peer group. An understanding group of like-minded people who are helping
+                each other through all the sensations and symptoms, as well as discussing how to use and practice your DARE
+                steps
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end  plus-->
+      <!-- BEGIN  community-->
+      <section class="community">
+        <div class="community__top">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 250">
+            <defs>
+              <style>
+                .communityTop {
+                  fill-rule: evenodd;
+                  fill: url(#communityTop);
+                }
+              </style>
+              <linearGradient id="communityTop" x1="600" y1="1444" x2="600" y2="1194" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#8b2752" />
+                <stop offset="0.008" stop-color="#8b2752" />
+                <stop offset="1" stop-color="#6f1f51" />
+              </linearGradient>
+            </defs>
+            <path class="communityTop" d="M0,1194c251.015,240.29,836.615,155.88,1200,231v19H0.027Z" transform="translate(0 -1194)" />
+          </svg>
+
+        </div>
+        <div class="community__bottom">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 98">
+
+            <defs>
+              <style>
+                .communityBottom {
+                  fill-rule: evenodd;
+                  fill: url(#communityBottom);
+                }
+              </style>
+              <linearGradient id="communityBottom" x1="600" y1="2162.59" x2="600" y2="2064.59" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#da3d56" />
+                <stop offset="0.008" stop-color="#da3d56" />
+                <stop offset="1" stop-color="#d43c55" />
+              </linearGradient>
+            </defs>
+            <path class="communityBottom" d="M0,2111.81c181.144,54.28,379.764,75.98,610,9.52,216.115-62.4,414.8-55.25,590-11.18v-45.56H0.006Z"
+              transform="translate(0 -2064.59)" />
+          </svg>
+
+        </div>
+        <div class="community__in inner">
+          <div class="community__step community__step-1 is-active">
+            <div class="community__header">
+              <h2 class="community__title">
+                Join the community
+              </h2>
+              <div class="community__subtitle">
+                These support groups are reserved exclusively for those who have read the Dare book.
+                <br> If you have done so, please enter your details below and get instant access.
+              </div>
+            </div>
+            <div class="community__form">
+              <form id="formCommunity">
+                <div class="form__group form__group-mb30">
+                  <div class="form__field">
+                    <label class="form__label" for="name">
+                      NAME
+                    </label>
+                    <input type="text" id="name" name="name" class="form__input form__input-wh" required="" data-input="name">
+                  </div>
+                </div>
+                <div class="form__group form__group-mb30">
+                  <div class="form__field">
+                    <label class="form__label" for="email2">
+                      EMAIL
+                    </label>
+                    <input type="email" name="email" id="email2" class="form__input form__input-wh" required="" data-input="email">
+                  </div>
+                </div>
+                <div class="form__btn">
+                  <button type="submit" id="btn-community" class="btn-secondary btn-secondary__white">
+                    <svg width="208" height="58">
+                      <defs>
+                        <linearGradient id="gradWh">
+                          <stop offset="0%" stop-color="#fff"></stop>
+                          <stop offset="100%" stop-color="#fff"></stop>
+                        </linearGradient>
+                      </defs>
+                      <rect x="2" y="2" fill="none" stroke="url(#gradWh)" width="204" height="54" rx="5"></rect>
+                    </svg>
+                    <span>Join now</span>
+                  </button>
+                  <p class="form__privacy">
+                    We value your privacy and would never spam you.
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="community__step community__step-2">
+            <div class="community__header">
+              <h2 class="community__title community__title-welc">
+                Welcome!
+              </h2>
+              <div class="community__subtitle community__subtitle-welc">
+                Well done for signing up with DARE.
+                <br> Please use the links below to join the DARE Communities
+              </div>
+            </div>
+            <ul class="community__list">
+              <li class="community__list-item">
+                <a class="community__list-link" href=""></a>
+                <h3 class="community__list-title">
+                  Success stories group
+                </h3>
+                <p class="community__list-subtitle">
+                  For motivational posts
+                </p>
+              </li>
+              <li class="community__list-item">
+                <a class="community__list-link" href=""></a>
+                <h3 class="community__list-title">
+                  Response 101 group
+                </h3>
+                <p class="community__list-subtitle">
+                  To ask questions and get advice on your revocery from anxiety
+                </p>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </section>
+      <!-- end  community-->
+
+      <!-- BEGIN  freedom-->
+      <section class="freedom freedom__app" data-trigger="true" id="freedom">
+        <div class="freedom__in flex inner">
+          <div class="freedom__col">
+            <h2 class="freedom__title">
+              <span>win back </span>
+              <br> your freedom
+            </h2>
+            <p class="freedom__text">
+              For a deeper understanding of what triggers anxiety and how to apply the DARE technique in a truly transformative way,
+              <b>we encourage you to read the
+                <br> DARE book. </b>
+            </p>
+            <a class="btn-more">MORE ABOUT THE BOOK</a>
+          </div>
+          <div class="freedom__book">
+            <img src="img/content/homepage_book.png" alt="">
+          </div>
+        </div>
+        <!-- BEGIN  stats-->
+        <div class="stats" id="stats">
+          <div class="stats__in inner">
+            <ul class="stats__list stats__list-purple">
+              <li class="stats__item">
+                <div class="stats__pic">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 27.6 39.7"
+                    style="enable-background:new 0 0 27.6 39.7;" xml:space="preserve">
+                    <path class="icon-book" d="M26.4,5H3.6C2.9,5,2.3,4.4,2.3,3.6s0.6-1.3,1.3-1.3h22.8c0.6,0,1.1-0.5,1.1-1.1S27.1,0,26.4,0H3.6
+	C1.6,0,0,1.6,0,3.6v32c0,2.2,1.8,4,4,4h19.6c2.2,0,4-1.8,4-4V6.1C27.6,5.5,27.1,5,26.4,5z M18.6,7.3h2.8V12l-0.8-0.7
+	c-0.4-0.3-0.9-0.3-1.3,0L18.6,12V7.3z M23.6,37.4H4c-0.9,0-1.7-0.8-1.7-1.7V7c0.4,0.2,0.9,0.3,1.3,0.3h12.9v6.9
+	c0,0.4,0.2,0.7,0.6,0.9c0.4,0.2,0.8,0.1,1.1-0.2l1.8-1.5l1.8,1.5c0.2,0.2,0.4,0.2,0.7,0.2c0.1,0,0.3,0,0.4-0.1
+	c0.4-0.2,0.6-0.5,0.6-0.9V7.3h1.9v28.4C25.3,36.6,24.5,37.4,23.6,37.4z"></path>
+                  </svg>
+
+
+                </div>
+                <div class="stats__num">
+                  50,409
+                </div>
+                <div class="stats__desc">
+                  Books sold
+                </div>
+              </li>
+              <li class="stats__item">
+                <div class="stats__pic">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31 40"
+                    style="enable-background:new 0 0 31 40;" xml:space="preserve">
+
+                    <path class="icon-kindle" d="M31,3.3C31,1.5,29.5,0,27.7,0c0,0,0,0,0,0H3.3C1.5,0,0,1.5,0,3.3c0,0,0,0,0,0v33.4C0,38.5,1.5,40,3.3,40h24.4
+	c1.8,0,3.3-1.5,3.3-3.3L31,3.3L31,3.3z M29.3,36.7c0,0.9-0.7,1.7-1.7,1.7H3.3c-0.9,0-1.7-0.7-1.7-1.7V3.3c0-0.9,0.7-1.6,1.7-1.6
+	c0,0,0,0,0,0h24.4c0.9,0,1.7,0.7,1.7,1.6c0,0,0,0,0,0L29.3,36.7L29.3,36.7z M27,3.2H4C3.5,3.1,3.2,3.5,3.2,4v28.9
+	c0,0.5,0.4,0.8,0.8,0.8h23c0.5,0,0.8-0.4,0.8-0.8V4C27.8,3.5,27.5,3.1,27,3.2L27,3.2z M26.2,32H4.8V4.8h21.4L26.2,32L26.2,32z
+	 M6.7,10.5h10.1v1.7H6.7V10.5z M6.7,15.5h17.6v1.7H6.7V15.5z M6.7,20.4h17.6v1.7H6.7V20.4z M6.7,25.4H21V27H6.7V25.4z"></path>
+                  </svg>
+                </div>
+                <div class="stats__num">
+                  38,506
+                </div>
+                <div class="stats__desc">
+                  kindle &amp; audiobook
+                </div>
+              </li>
+              <li class="stats__item">
+                <div class="stats__pic">
+
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 36"
+                    style="enable-background:new 0 0 20 36;" xml:space="preserve">
+
+                    <g>
+                      <path d="M16.4,0H3.5C1.6,0,0,1.6,0,3.5v28.9C0,34.4,1.6,36,3.5,36h12.9c1.9,0,3.5-1.6,3.5-3.5V3.5
+		C20,1.6,18.4,0,16.4,0z M17.8,32.5c0,0.7-0.6,1.3-1.3,1.3H3.5c-0.7,0-1.3-0.6-1.3-1.3V3.5c0-0.7,0.6-1.3,1.3-1.3H5l0.1,0.2
+		C5.4,3,5.9,3.3,6.5,3.3c0,0,0,0,0,0h7c0,0,0,0,0,0c0.6,0,1.2-0.4,1.4-0.9l0.1-0.2h1.5c0.7,0,1.3,0.6,1.3,1.3V32.5z"></path>
+                      <circle cx="10" cy="30.6" r="1.6"></circle>
+                    </g>
+                  </svg>
+
+
+                </div>
+                <div class="stats__num">
+                  56,400
+                </div>
+                <div class="stats__desc">
+                  APP downloadS
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END  stats-->
+      </section>
+      <!-- END  freedom-->
+
+      <!-- BEGIN  footer-->
+      {% include "partials/footer.html" %}
+      <!-- END  footer-->
+    </div>
+  </div>
+
+
+  <!-- BEGIN  popup-login-->
+  {% include "partials/popups/popup-login.html"%}
+  <!-- END  popup-login-->
+
+  <!-- BEGIN  popup-login-->
+  {% include "partials/popups/popup-menu.html"%}
+  <!-- END  popup-login-->
+
+
+
+  {% include "partials/page-end.html"%}

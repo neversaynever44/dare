@@ -1,0 +1,287 @@
+.feature
+  position: relative
+  margin: 270px 0 140px 0
+  padding: 30px 0 60px 0
+  &:before
+    content: ''
+    z-index: 1
+    display: block
+    padding-top: 60%
+    +rm(1500)
+      padding-top: 40%
+    +r(1024)
+      padding-top: 60%
+    +r(767)
+      padding-top: 90%
+  &__title
+    position: absolute
+    color: $WHITE
+    z-index: 1
+    top: 49px
+    left: 11px
+    right: 0
+    text-align: center
+    font-size: 35px
+    font-weight: 700
+  &__in
+    max-width: 1030px
+    position: absolute
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    z-index: 22
+    right: 0
+    +r(1024)
+      position: static
+      top: auto
+      padding-bottom: 200px
+      // padding: 100px 0 200px 0
+  &__dots
+    z-index: 24
+    bottom: 17%
+    left: 50%
+    transform: translate(-50%,-50%)
+    +r(1024)
+      bottom: auto
+      top: 40%
+      display: none
+  &__phone
+    +vcenter
+    z-index: 11
+    max-width: 60%
+    max-height: 84%
+    top: 51%
+  &__footer
+    +tr(all .3s ease-in)
+    position: absolute
+    z-index: 111
+    text-align: center
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+    +r(1024)
+      padding-bottom: 50px
+      text-align: center
+  &__text
+    display: none
+    text-align: center
+    font-weight: 600
+    line-height: 20px
+    color: white
+    max-width: 250px
+    width: 100%
+    margin: 40px auto
+    +r(1024)
+      display: block
+
+.dots
+  position: absolute
+  @extend %flex
+  @extend %flex-c
+  &__item
+    background-color: rgba(255,255,255, 0.3)
+    width: 18px
+    cursor: pointer
+    height: 3px
+    +tr(background-color .3s ease-in)
+    &:not(:first-child)
+      margin-left: 12px
+    &:hover,
+    &.is-active
+      background-color: rgba(255,255,255, 1)
+.scene
+  // padding: 300px 0
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  opacity: 0
+  visibility: hidden
+  +tr(all .3s ease-in)
+  // display: none
+  &.is-active
+    opacity: 1
+    visibility: visible
+    // display: block
+  &__1
+    background-image: linear-gradient(to top,#b03056 0%,#ef4259 0%,#7e2353 100%)
+  &__2
+    background-image: linear-gradient(to top, #4194a3 0%, #4194a3 0%, #a44b7b 100%)
+  &__3
+    background-image: linear-gradient(to top, #d66a60 0%, #f4c426 99%, #f4c426 100%)
+  &__top,
+  &__bottom
+    position: absolute
+    width: 100%
+    left: 0
+  &__top
+    bottom: 100%
+    transform: translateY(3px)
+  &__bottom
+    top: 100%
+  &__in
+    max-width: 694px
+    width: 100%
+    margin: auto
+    padding-right: 330px
+    @extend %flex
+    height: 100%
+    flex-direction: column
+    +r(1024)
+      padding-right: 0
+      height: auto
+      padding-top: 60px
+  &__col
+    color: $WHITE
+    flex: 1
+    img
+      max-width: 100%
+      max-height: 100%
+      +vcenter
+      z-index: 0
+      top: 48%
+      +r(1024)
+        // max-width: 60%
+        position: static
+        transform: none
+        // top: 20px
+        // left: 0
+        // right: 0
+        // margin: auto
+      +r(767)
+        top: 30%
+        max-width: 70%
+    &:last-of-type
+      text-align: center
+      // +r(1024)
+        // order: 1
+    &:first-of-type
+      +r(767)
+        display: none
+        // order: 2
+        // padding-top: 400px
+        // text-align: center
+  &__body
+    @extend %flex
+    @extend %flex-c
+    flex: 1 0 auto
+    +r(1024)
+      padding-top: 40px
+      // flex-direction: column
+  &__footer
+    flex-shrink: 0
+    @extend %flex
+    justify-content: flex-end
+    position: relative
+    z-index: 23
+  &__title
+    font-size: 32px
+    font-weight: 700
+    +tr(all .3s ease-in)
+  &__subtitle
+     font-size: 16px
+     font-weight: 500
+     line-height: 28px
+     margin: 15px 0 28px 0
+
+    
+
+.scene
+  +tr(all .3s ease-in)
+  &__audio
+    position: relative
+    z-index: 23
+    @extend %flex
+    align-items: center
+    span
+      order: 2
+      text-transform: uppercase
+      font-weight: 800
+      margin-left: 17px
+    canvas
+      cursor: pointer
+  &__tabs
+    +tr(all .3s ease-in)
+    position: absolute
+    top: 45.8%
+    transform: translateY(-50%)
+    right: 0
+    max-width: 320px
+    +r(1024)
+      position: relative
+      z-index: 11
+      top: auto
+      margin: auto
+      transform: none
+      max-width: 360px
+    h3
+      text-transform: uppercase
+      margin-bottom: 27px
+      color: $WHITE
+      font-weight: 700
+      font-size: 15px
+      text-align:  center
+  &__list
+    @extend %flex
+    flex-wrap: wrap
+    margin: 0 0 0 -4%
+
+.scene__list-item
+  cursor: pointer
+  flex: 45%
+  margin-left: 4%
+  border-radius: 6px
+  border: 1px solid $WHITE
+  +vertical
+  padding: 10px 0
+  +tr(all .3s ease-in)
+  &:not(:last-child)
+    margin-bottom: 10px
+  &:last-of-type
+    @extend %flex
+    justify-content: center
+    padding: 14px 27px
+    .scene__list-in
+      width: 100% 
+      @extend %flex
+      align-items: center
+    h4
+      margin-left: 16px
+      padding: 0
+  &.is-active,
+  &:hover
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.04)
+.scene__list-in
+  display: inline-block
+  vertical-align: middle
+  h4
+    padding-top: 8px
+    +tr(all .3s ease-in)
+    text-transform: uppercase
+    font-size: 16px
+    font-weight: 600
+    color: $WHITE
+
+.scene__list-anxiety
+  &.is-active,
+  &:hover
+    border-color: #fc3a52
+    h4
+      color: #fc3a52
+.scene__list-panic
+  &.is-active,
+  &:hover
+    border-color: #a697ef
+    h4
+      color: #a697ef
+
+.scene__list-worry
+  &.is-active,
+  &:hover
+    border-color: #ffc60b
+    h4
+      color: #ffc60b
+

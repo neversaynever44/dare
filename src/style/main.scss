@@ -1,0 +1,71 @@
+
+@import "vendor/lib";
+@import "partials/partial";
+@import "partials/header";
+
+@import "partials/advantages";
+
+@import "partials/entry";
+@import "partials/intro";
+@import "partials/footer";
+@import "partials/freedom";
+// book-page
+@import "partials/book/promo";
+@import "partials/book/plus";
+@import "partials/book/reviews";
+@import "partials/book/stats";
+@import "partials/book/numbers";
+@import "partials/book/testimonial";
+@import "partials/book/app";
+// audio-page
+@import "partials/audio/program";
+@import "partials/audio/technology";
+// app-page
+@import "partials/app/feature";
+// terms
+@import "partials/terms/terms";
+// community
+@import "partials/community/community";
+// coaching
+@import "partials/coaching/coaching";
+// bootcamp-page
+@import "partials/bootcamp/training";
+@import "partials/bootcamp/bootcamp";
+@import "partials/bootcamp/program";
+@import "partials/bootcamp/info";
+@import "partials/bootcamp/tooltip";
+@import "partials/bootcamp/faqs";
+@import "partials/bootcamp/guarantee";
+@import "partials/bootcamp/member";
+// story-page
+@import "partials/story/story";
+@import "partials/story/hero";
+@import "partials/story/comments";
+@import "partials/story/recent";
+
+
+body {
+	font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  width: 100%;
+  height: 100%;
+}
+body.is-fixed {
+  position: fixed;
+  overflow-y: scroll;
+}
+
+.header {
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+

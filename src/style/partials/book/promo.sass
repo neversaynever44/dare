@@ -1,0 +1,167 @@
+.promo
+  // height: 100%
+  position: relative
+  margin-bottom: 240px
+  +tr(all .3s ease-in)
+  +rm(1025)
+    height: 440px
+  +r(1024)
+    height: auto
+  &__coaching
+    // background-image: linear-gradient(to top, #f75971 0%, #da3952 100%)
+    margin-bottom: 173px
+    .promo__col
+      padding-right: 570px
+    .promo__text
+      margin: 19px 0 31px 0
+    .promo__in
+      padding-top: 154px
+    .promo__pic
+      top: 60%
+  &__community
+    // background: linear-gradient(180deg, #D93C58 0%, #8D2753 100%)
+    .promo__col
+      max-width: 500px
+    .promo__in
+      padding-top: 158px
+    .promo__text
+      margin-bottom: 25px
+    .promo__pic
+      left: 46%
+      top: 65%
+  &__app
+    // background-image: linear-gradient(to top, #616197 0%, #4e8c9e 100%)
+    .promo__subtitle
+      margin: 25px 0 42px 0
+    .promo__scroll
+      top: 77%
+    .promo__col
+      max-width: 530px
+    .promo__in
+      padding-top: 164px
+      +r(1024)
+        padding-top: 83px
+    .promo__text
+      margin-bottom: 35px
+    .promo__pic
+      top: 58%
+      right: -4%
+      +r(1024)
+        top: 110%
+        left: 50%
+        right: auto
+        transform: translate(-50%,-50%)
+    .promo__scroll
+      top: 77%
+  &__book
+    // background-image: linear-gradient(to top,#da3c57 0%,#f6435a 100%)
+  &__audio
+    // margin-bottom: 160px
+    // background-image: linear-gradient(to top,#3497a7 0%,#346b94 100%)
+    .promo__col
+      max-width: 500px
+    .promo__in
+      padding-top: 150px
+      padding-bottom: 230px
+    .promo__text
+      margin-bottom: 0
+    .promo__scroll
+      top: 80%
+    .promo__pic
+      top: 64%
+      right: 54px
+      +r(1024)
+        top: 110%
+        left: 50%
+        right: auto
+        transform: translate(-50%,-50%)
+  &__title
+    font-size: 19px
+    text-transform: uppercase
+    font-weight: 800
+    color: $WHITE
+  &__in
+    position: relative
+    max-width: 1105px
+    padding-top: 184px
+    // padding-bottom: 0!important
+    padding-bottom: 250px
+  &__scroll,
+  &__pic
+    position: absolute
+    right: 0
+    opacity: 0
+  &__pic
+    top: 50%
+    transform: translateY(-50%) scale(1.3)
+    // scale(1.3) 
+    max-width: 600px
+    +tr(all .3s ease-in)
+    z-index: 1
+    +r(1024)
+      width: 100%
+      margin: auto
+    img
+      max-width: 100%
+      max-height: 100%
+    &.is-scroll
+      animation: translatePhone 1.4s ease-in-out forwards alternate
+      // top: 50%!important
+  &__scroll
+    transform: translateY(-50%) 
+    z-index: 2
+    top: 74%
+    +tr(all .3s ease-in)
+    &.is-hidden
+      opacity: 0!important
+      visibility: hidden
+    +r(1024)
+      display: none
+    .scroll-to
+      padding: 7px 0
+  &__col
+    max-width: 590px
+    padding-left: 42px
+    padding-right: 450px
+    +r(1024)
+      padding-right: 0
+  &__text
+    color: white
+    font-size: 35px
+    width: 100%
+    font-weight: 500
+    line-height: 50px
+    margin-bottom: 55px
+  &__subtitle
+    font-size: 20px
+    line-height: 30px
+    font-weight: 500
+    color: $WHITE
+    margin: 25px 0 33px 0 
+  &__shape
+    width: 100%
+    top: 100%
+    position: absolute
+    left: 0 
+    right: 0
+  &__layer
+    z-index: 0
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    // +tr(all .3s ease-in)
+    will-change: transform
+    &.is-translate
+      animation: translateLayer .6s ease-in-out forwards alternate
+.promo__layer-app
+  background-image: linear-gradient(to top, #616197 0%, #4e8c9e 100%)
+.promo__layer-audio
+  background-image: linear-gradient(to top,#3497a7 0%,#346b94 100%)
+.promo__layer-book
+  background-image: linear-gradient(to top,#da3c57 0%,#f6435a 100%)
+.promo__layer-community
+  background-image: linear-gradient(180deg, #D93C58 0%, #8D2753 100%)
+.promo__layer-coaching
+  background-image: linear-gradient(to top, #f75971 0%, #da3952 100%)

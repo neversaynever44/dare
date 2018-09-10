@@ -1,0 +1,46 @@
+.tooltip
+  +vcenter
+  top: 60%
+  z-index: 2
+  box-shadow: 0 5px 17px 4px rgba(0, 0, 0, 0.12)
+  border-radius: 5px 5px 0 0
+  background-color: $WHITE
+  color: $BLACK
+  max-width: 853px
+  width: 100%
+  +tr(all .3s ease-in)
+  opacity: 0
+  visibility: hidden
+  &.is-active
+    opacity: 1
+    visibility: visible
+  &__inner
+    padding: 70px 54px 45px
+  &__close
+    background: none
+    outline: 0
+    display: block
+    border: 0
+    padding: 10px 0
+    +hide-text
+    position: absolute
+    top: 10px
+    right: 17px
+    +tr(all .3s ease-in)
+    &:hover
+      +rotate(90)
+  &__title
+    font-size: 35px
+    line-height: 45px
+    font-weight: 700
+  &__subtitle
+    margin: 52px 0
+    font-size: 20px
+    font-weight: 500
+    // letter-spacing: -0.4px
+  &__body
+    text-align: center
+    margin-bottom: 54px
+  &__text
+    font-size: 15px
+    line-height: 22px

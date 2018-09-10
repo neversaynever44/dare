@@ -1,0 +1,174 @@
+.plus
+  // height: 100vh
+  // display: flex
+  // justify-content: center
+  // align-items: center
+  +tr(all .3s ease-in)
+  &__coaching
+    padding: 150px 0 50px 0
+    .plus__body
+      font-size: 26px
+      line-height: 38px
+  &__community
+    padding: 122px 0 60px 0
+    .plus__col
+      position: relative
+      height: 100%
+      padding-bottom: 40%
+  &__audio
+    padding: 150px 0
+    .plus__col
+      max-width: 510px
+    .plus__body
+      font-size: 26px
+  &__app
+    padding-top: 70px
+    .plus__body
+      margin: 15px 0 48px 0
+  &__book
+    padding: 64px 0 80px
+  &__in
+    max-width: 980px
+  &__col
+    max-width: 570px
+    width: 100%
+  &__title
+    h2
+      color: $BLACK
+      font-size: 62px
+      font-weight: 800
+      line-height: 70px
+      text-transform: uppercase
+    span
+      color: #da3d56
+    p
+      color: #da3d57
+      font-size: 38px
+      padding: 17px 0
+      font-weight: 500
+  &__subtitle
+    font-size: 20px
+    font-weight: 600
+    line-height: 30px
+  &__list
+    margin: 50px 0
+  &__button
+    padding-left: 35px
+  &__item
+    position: relative
+    padding-left: 35px
+    &:not(:last-child)
+      margin-bottom: 20px
+    p
+      font-size: 19px
+      color: $BLACK
+      font-weight: 500
+      line-height: 30px
+    &:before
+      content: ''
+      z-index: 1
+      display: block
+      position: absolute
+      top: 7px
+      left: 0
+      width: 16px
+      height: 12px
+      background: url(../img/svg/tick.svg)center no-repeat
+  &__body
+    margin: 15px 0
+    color: $BLACK 
+    font-size: 28px	
+    line-height: 40px
+    font-weight: 500
+  &__tabs
+    color: $BLACK
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+    visibility: hidden
+    +tr(all .3s ease-in)
+    &.is-active
+      opacity: 1
+      visibility: visible
+    h2
+      font-size: 48px
+      line-height: 52px
+      font-weight: 800
+      text-transform: uppercase
+    span
+      display: block
+      margin: 29px 0 26px 0
+      color: #c03557
+      font-weight: 600
+      font-size: 26px
+    p
+      font-size: 17px
+      line-height: 29px
+      font-weight: 500
+      max-width: 480px
+
+.plus__title-blue
+  h2
+    font-size: 65px
+  span
+    color: #32a1ac
+.plus__title-app
+  h2
+    font-size: 62px
+  span
+    color: #619eb8
+.plus__title-coaching
+  h2
+    font-size: 65px
+  span
+    color: #f75870
+.plus__title-book
+  h2
+    font-size: 65px
+    line-height: 66px
+
+.cd-words-wrapper
+  color: #619eb8
+  font-size: 30px
+  z-index: 1
+.cd-headline.rotate-1 .cd-words-wrapper 
+  display: inline-block
+  perspective: 300px
+  width: 100%
+.cd-headline.rotate-1 b 
+  opacity: 0
+  transform-origin: 50% 100%
+  transform: rotateX(180deg)
+  display: inline-block
+  position: absolute
+  left: 0
+  top: 0
+
+
+.cd-headline.rotate-1 b.is-visible 
+  position: relative
+  opacity: 1
+  transform: rotateX(0deg)
+.cd-headline.rotate-1 b 
+  opacity: 0
+  transform-origin: 50% 100%
+  transform: rotateX(180deg)
+  display: inline-block
+  position: absolute
+  left: 0
+  width: 100%
+  top: 0
+
+.cd-headline.rotate-1 b.is-visible 
+  position: relative
+  opacity: 1
+  transform: rotateX(0deg)
+  animation: cd-rotate-1-in 1.2s
+
+.cd-headline.rotate-1 b.is-hidden 
+  transform: rotateX(180deg)
+  animation: cd-rotate-1-out 1.2s
+
+
+

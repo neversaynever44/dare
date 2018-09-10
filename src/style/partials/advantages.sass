@@ -1,0 +1,183 @@
+
+.screen
+  padding-top: 70px
+  // padding: 80px 0
+  // padding-top: 200px
+  color: #000
+  +r(1024)
+    padding: 100px 0
+  +r(480)
+    padding: 100px 0 43px 0
+  &__info
+    text-transform: uppercase
+    color: $RED
+    font-size: 15px
+    font-weight: 700
+  &__title
+    text-transform: uppercase
+    margin: 21px 0 29px 0
+    +r(480)
+      margin: 14px 0 19px
+    span
+      color: $CRIMSON
+  &__subtitle
+    font-size: 20px
+    line-height: 30px
+    max-width: 586px
+    font-weight: 500
+    +r(480)
+      max-width: 272px
+      font-size: 16.75px
+      font-weight: 600
+      line-height: 24px
+      width: 100%
+
+.advantages
+  height: 100vh
+  +r(1024)
+    height: auto
+  &__in
+    position: relative
+    @extend %flex
+    flex-wrap: wrap
+    align-items: flex-end
+    height: 100%
+    +r(1024)
+      height: auto
+      padding-left: 10px
+  &__screen
+    position: relative
+    width: 100%
+    z-index: 1
+.wrapper
+  max-width: 1100px
+  padding-left: 200px
+  margin: auto
+  width: 100%
+  +r(1200)
+    padding-left: 50px
+  +r(1024)
+    max-width: 480px
+    padding-bottom: 100px
+    padding-left: 0
+    width: 90%
+  +r(480)
+    max-width: 320px
+
+
+.advantages-body
+  &_num
+    color: $CRIMSON
+    font-size: 80px
+    margin-bottom: 2px
+    font-family: "Galano Grotesque Alt"
+    +r(1024)
+      font-size: 55px
+      line-height: 55px
+  &_step
+    font-size: 30px
+    margin-bottom: 22px
+    line-height: 1.3
+    +r(1024)
+      max-width: 300px
+      width: 100%
+      margin-bottom: 0
+      font-size: 23px
+      font-weight: 500
+      line-height: 31px
+    br
+      +r(1024)
+        display: none
+    b
+      font-weight: 700
+  &_text
+    margin-bottom: 30px
+    font-weight: 500
+    font-size: 16px
+    color: #2c2929
+    line-height: 28px
+    +r(1024)
+      margin: 40px 0 20px 0
+      line-height: 24px
+    +r(480)
+      max-width: 275px
+.advantages-body
+  position: absolute
+  max-width: 400px
+  width: 100%
+  +r(1024)
+    position: static
+    max-width: 100%
+.advantages-hide
+  display: none
+  +r(1024)
+    display: block
+    max-width: 75%
+.advantages-hide,
+.section__img
+  margin: auto
+  +r(480)
+    max-width: 89%
+    margin-left: 0
+  
+.section__img
+  +r(1024)
+    max-width: 100%
+.container__1
+  +r(1024)
+    margin-bottom: 60px
+  .advantages-body
+    top: 77px
+    left: 36px
+    @extend %flex
+    justify-content: flex-start
+    flex-direction: column
+
+.container__2
+  transform: translateX(150%)
+  +r(1024)
+    transform: none
+    flex-direction: column
+    width: 100%
+    img
+      &:nth-of-type(1)
+        display: none
+  @extend %flex
+  @extend %flex-c
+  .advantages-body
+    top: 30%
+    transform: translateY(-30%)
+    right: 0
+    flex: 1
+    +r(1024)
+      transform: none
+      top: auto
+      padding-top: 170px
+  .advantages-body_step
+    +r(1024)
+      max-width: 200px
+.advantages-col
+  flex: 1
+  padding-top: 20px
+  position: relative
+  +r(1024)
+    width: 100%
+    padding-top: 0
+.section__img
+  &:nth-of-type(2)
+    position: absolute
+    bottom: 6px
+    left: 36%
+    +r(1024)
+      // position: static
+      bottom: auto
+      top: 30px
+      left: 7%
+    +r(480)
+      // top: 5%
+      // left: -3%
+      // max-width: 150%
+      max-width: 100%
+      top: 0
+      left: 0
+    

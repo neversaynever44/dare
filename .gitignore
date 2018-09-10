@@ -1,0 +1,16 @@
+node_modules/
+dev/
+prod/
+package-lock.json
+src/img/.DS_Store
+.DS_Store
+src/.DS_Store
+src/img/.DS_Store
+src/img/content/.DS_Store
+src/img/favicon/.DS_Store
+src/img/svg/.DS_Store
+src/img/.DS_Store
+src/.DS_Store
+.DS_Store
+src/img/.DS_Store
+src/img/svg/.DS_Store
