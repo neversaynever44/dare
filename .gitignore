@@ -1,6 +1,5 @@
 node_modules/
 dev/
-prod/
 src/img/.DS_Store
 .idea
 .DS_Store
