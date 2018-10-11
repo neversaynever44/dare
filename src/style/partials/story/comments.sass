@@ -1,43 +1,79 @@
 .comments
   color: $WHITE
-  padding: 50px 0 100px 0
+  padding: 50px 0
   background-image: linear-gradient(to top, #6f1f51 0%, #da3b4f 100%)
   position: relative
+  margin: 150px 0 122px 0
+  +r(1024)
+    margin: 50px 0
   &__top,
   &__bottom
     width: 100%
     left: 0
     position: absolute
+    right: 0
+    +xs
+      transform: translateY(0)
   &__top
     bottom: 100%
+    transform: translateY(1px) 
   &__bottom
     top: 100%
+    transform: translateY(-1px)
   &__in
     max-width: 845px
   &__title
     margin-bottom: 64px
     text-align: center
+    +xs
+      margin-bottom: 44px
     h3
       font-size: 28px
       font-weight: 700
+      +xs
+        font-size: 24px
     span
       font-weight: 400
     p
       margin-top: 5px
       font-size: 17px
+      line-height: 26px
+      +xs
+        font-size: 15px
   &__list
-    margin-bottom: 73px
+    margin-bottom: 71px
+    +sm
+      margin-bottom: 50px
   &__form
     max-width: 780px
     margin: auto
     width: 100%
-    padding-top: 18px
+    padding-top: 8px
+    +xs
+      padding-top: 0
+    .reg
+      @extend %flex
+      justify-content: flex-start
+    .reg-check
+      width: 100%
+      margin-left: 0
+    .reg-link
+      font-size: 14px
+      +xs
+        position: absolute
+        top: 0
+        right: 0
+        line-height: 22px
+        width: 85%
 .comment
   padding-left: 34px
   padding-right: 30px
-  margin-bottom: 40px
+  margin-bottom: 34px
   position: relative
   font-weight: 500
+  +xs
+    padding: 0 15px 0 5px
+    margin-bottom: 20px
   &:before
     content: ''
     z-index: 1
@@ -48,21 +84,31 @@
     width: 18px
     height: 16px
     background: url(../img/svg/post-w.svg)center no-repeat
+    +xs
+      display: none
   &__content
     border-bottom: 1px solid rgba(2555,255,255,0.2)
-    padding-bottom: 40px
+    padding-bottom: 37px
+    +xs
+      padding-bottom: 20px
   &__title
     font-size: 17px
     font-weight: 500
   &__desc
-    margin: 11px 0
+    margin: 12px 0
     line-height: 28px
     font-size: 16px
+    +xs
+      font-size: 15px
+      line-height: 22px
   &__post
     font-size: 14px
     font-style: italic
     padding-left: 20px
+    line-height: 20px
     position: relative
+    +xs
+      padding-right: 25px
     &:before
       content: ''
       z-index: 1
@@ -72,3 +118,4 @@
       background: url(../img/svg/clock.svg)center no-repeat
       width: 14px
       height: 13px
+

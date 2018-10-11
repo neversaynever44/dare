@@ -16,7 +16,7 @@
     
     <div class="sticky sticky-main js-sticky">
   <div class="sticky__logo">
-    <a href="" class="logo">
+    <a href="home.html" class="logo">
       <img class="logo__ico" src="img/svg/logo.svg" alt="" width="48" height="30">
       <svg class="logo__svg" xmlns="http://www.w3.org/2000/svg" width="100" height="33.687" viewBox="0 0 135.625 33.687">
 
@@ -33,11 +33,11 @@
       </li>
       |
       <div class="auth__item">
-        <a href="" class="auth__link link-eff">SHOP</a>
+        <a href="shop.html" class="auth__link link-eff">SHOP</a>
       </div>
     </ul>
     <div class="basket">
-      <a href="" class="basket__link">
+      <a href="cart.html" class="basket__link">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22.2 19.3" style="enable-background:new 0 0 22.2 19.3;" xml:space="preserve" width="22" height="19">
           <g>
             <path class="basket__icon" d="M22.1,3.9c-0.1-0.2-0.4-0.4-0.6-0.4H5.9l-1-3.1C4.8,0.2,4.5,0,4.2,0H0.8C0.3,0,0,0.3,0,0.8s0.3,0.8,0.8,0.8
@@ -77,25 +77,19 @@
 
   <div id="out">
 
-    <div id="viewBox">
+    <main id="viewBox">
       
       <section class="promo promo__coaching" id="promo">
         <div class="promo__layer promo__layer-coaching">
           <div class="promo__shape">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 146.25">
-              <defs>
-                <linearGradient id="linear-coaching" x1="600" y1="606.25" x2="600" y2="460" gradientUnits="userSpaceOnUse">
-                  <stop offset="0" stop-color="#f75971"/>
-                  <stop offset="1" stop-color="#f75971"/>
-                </linearGradient>
-              </defs>
-              <path data-name="Shape 2 copy 3" d="M1199.99 466.85c-86.77-7.7-280.92-11.25-524.19 68.82C450.1 609.96 232.82 624.75 0 584.13V460H1200z" transform="translate(0 -460)" fill-rule="evenodd" fill="url(#linear-coaching)"/>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 146.25" preserveAspectRatio="xMidYMid slice">
+              <path data-name="Shape 2 copy 3" d="M1199.99 466.85c-86.77-7.7-280.92-11.25-524.19 68.82C450.1 609.96 232.82 624.75 0 584.13V460H1200z" transform="translate(0 -460)" fill-rule="evenodd" fill="#f75971"/>
             </svg>
           </div>
         </div>
         <div class="promo__in inner flex">
           <div class="promo__col">
-            <h2 class="promo__title">
+            <h2 class="promo__title title-bold">
               one to one coaching
             </h2>
             <div class="promo__text">
@@ -104,19 +98,14 @@
               <b>light bulb moments.</b>
             </div>
             <div class="promo__subtitle">
-              A one on one session with one of our coaches will help you shed a lot of light on how you need to use the information in
+              A one on one session with one of our coaches will help you shed a lot of light on how you need to use the
+              information in
               the book.
             </div>
             <div class="promo__btn">
-              <a href="" class="btn-primary">
+              <a href="#coaching" class="btn-primary js-scrollto">
                 <svg width="250" height="58">
-                  <defs>
-                    <linearGradient id="grad1">
-                      <stop offset="0%" stop-color="white"></stop>
-                      <stop offset="100%" stop-color="white"></stop>
-                    </linearGradient>
-                  </defs>
-                  <rect x="2" y="2" rx="6" fill="none" stroke="url(#grad1)" width="247" height="54"></rect>
+                  <rect x="2" y="2" rx="6" fill="none" stroke="white" width="247" height="54"></rect>
                 </svg>
                 <span>meet the coaches</span>
               </a>
@@ -137,14 +126,15 @@
           <div class="plus__col">
             <div class="plus__header">
               <div class="plus__title plus__title-coaching">
-                <h2>
+                <h2 class="title-bold">
                   <span>we’re here</span>
                   <br> to help you
                 </h2>
               </div>
               <div class="plus__body">
                 <p>
-                  Our coaches will provide you with a walkthrough of the steps as well as use many different metaphors and visuals to make
+                  Our coaches will provide you with a walkthrough of the steps as well as use many different metaphors
+                  and visuals to make
                   you understand them.
                 </p>
               </div>
@@ -157,58 +147,30 @@
       
 
       
-      <section class="coaching">
-        <div class="coaching__top">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 208.91">
-            <defs>
-              <style>
-                .coaching-top {
-                  fill-rule: evenodd;
-                  fill: url(#coaching-top);
-                }
-              </style>
-              <linearGradient id="coaching-top" x1="600" y1="1408" x2="600" y2="1199.09" gradientUnits="userSpaceOnUse">
-                <stop offset="0" stop-color="#ec5068"/>
-                <stop offset="1" stop-color="#ec5068"/>
-              </linearGradient>
-            </defs>
-            <path data-name="Shape 2 copy 5" d="M1200 1408l-.01-2.28C859.1 1323.71 256.04 1397.78 0 1199.09V1408h1200zM-316 2452" transform="translate(0 -1199.09)" fill-rule="evenodd" fill="url(#coaching-top)"/>
-          </svg>
+      <section class="coaching" id="coaching">
+        <svg class="coaching__top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 208.9" preserveAspectRatio="xMidYMid slice">
+          <path data-name="Shape 2 copy 5" d="M1200 1408v-2.3c-340.9-82-944-8-1200-206.6V1408h1200zM-316 2452" transform="translate(0 -1199)" fill-rule="evenodd" fill="#ec5068"/>
+        </svg>
+        <svg class="coaching__bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 95.5">
+          <path data-name="Shape 2 copy 6" d="M1200 2330.3a1110.4 1110.4 0 0 0-596 9.7c-227.7 66-424.5 45.4-604-7.8V2286h1200zM-316 2452" transform="translate(0 -2286)" style="fill-rule:evenodd;fill:white"/>
+        </svg>
 
-
-        </div>
-        <div class="coaching__bottom">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 95.47">
-            <defs>
-              <style>
-                .coaching-bottom {
-                  fill-rule: evenodd;
-                  fill: url(#coaching-bottom);
-                }
-              </style>
-              <linearGradient id="coaching-bottom" x1="600" y1="2381.47" x2="600" y2="2286" gradientUnits="userSpaceOnUse">
-                <stop offset="0" stop-color="#bb4077"></stop>
-                <stop offset="1" stop-color="#bb4077"></stop>
-              </linearGradient>
-            </defs>
-            <path id="Shape_2_copy_6" data-name="Shape 2 copy 6" class="coaching-bottom" d="M1199.98,2330.3c-176.65-45.63-377.4-53.69-595.98,9.7-227.7,66.04-424.475,45.44-604-7.77L0,2286H1200ZM-316,2452" transform="translate(0 -2286)"></path>
-          </svg>
-
-        </div>
         <div class="coaching__in inner">
           <div class="coaching__col">
             <div class="coaching__title">
-              <span>Talk to</span>
+              <span class="title-bold">Talk to</span>
               <h2>
                 <b>Michelle</b> Cavanaugh</h2>
             </div>
             <div class="coaching__body">
               <p>
-                Michelle is a licensed clinical therapist with years of experience helping people break free from anxiety and has significant
+                Michelle is a licensed clinical therapist with years of experience helping people break free from
+                anxiety and has significant
                 training in various areas, including Motivational therapy, and Applied Behavioral Analysis (ABA).
               </p>
               <p>
-                Michelle's approach is strengths-based and motivational using Cognitive Behavioral Therapy (CBT) techniques and specializes
+                Michelle's approach is strengths-based and motivational using Cognitive Behavioral Therapy (CBT)
+                techniques and specializes
                 in anxiety disorders.
               </p>
             </div>
@@ -223,40 +185,40 @@
                   <span>1 hour session</span>
                 </div>
               </div>
-              <a href="" class="btn-secondary btn-secondary__white">
+              <a href="" class="btn-secondary">
                 <svg width="208" height="58">
-                  <defs>
-                    <linearGradient id="btnwhite">
-                      <stop offset="0%" stop-color="#fff"></stop>
-                      <stop offset="100%" stop-color="#fff"></stop>
-                    </linearGradient>
-                  </defs>
-                  <rect x="2" y="2" fill="none" stroke="url(#btnwhite)" width="204" height="54" rx="5"></rect>
+                  <rect x="2" y="2" fill="none" stroke="white" width="204" height="54" rx="5"></rect>
                 </svg>
                 <span>BOOK NOW</span>
               </a>
             </div>
           </div>
-          <img src="img/content/coaching/michelle.png" alt="">
+          <div class="coaching__pic">
+            <img src="img/content/team/michelle.png" alt="">
+
+          </div>
         </div>
       </section>
       
+
       
       <section class="coaching" data-trigger="true">
         <div class="coaching__in inner">
           <div class="coaching__col">
             <div class="coaching__title">
-              <span>Talk to</span>
+              <span class="title-bold">Talk to</span>
               <h2>
                 <b>Suzane</b> Brikassa</h2>
             </div>
             <div class="coaching__body">
               <p>
-                Suzane Brikassa is a life and anxiety coach, who with the help of Barry McDonagh's program has made it her mission and passion
+                Suzane Brikassa is a life and anxiety coach, who with the help of Barry McDonagh's program has made it
+                her mission and passion
                 to help people from all walks of life, to achieve a more peaceful anxiety free state.
               </p>
               <p>
-                Now recovered for over 6 years, with the help of this program and her constant motivational tools, she is able to teach many
+                Now recovered for over 6 years, with the help of this program and her constant motivational tools, she
+                is able to teach many
                 to do the exact same.
               </p>
             </div>
@@ -273,40 +235,32 @@
               </div>
               <a href="" class="btn-secondary">
                 <svg width="208" height="58">
-                  <defs>
-                    <linearGradient id="btnPurple">
-                      <stop offset="0%" stop-color="#be4076"></stop>
-                      <stop offset="100%" stop-color="#be4076"></stop>
-                    </linearGradient>
-                  </defs>
-                  <rect x="2" y="2" fill="none" stroke="url(#btnPurple)" width="204" height="54" rx="5"></rect>
+                  <rect x="2" y="2" fill="none" stroke="#be4076" width="204" height="54" rx="5"></rect>
                 </svg>
                 <span>BOOK NOW</span>
               </a>
             </div>
           </div>
-          <img src="img/content/coaching/susane.png" alt="">
+          <div class="coaching__pic">
+            <img src="img/content/coaching/susane.png" alt="">
+          </div>
         </div>
       </section>
       
 
-      
-<footer class="footer section" id="footer">
 
-  <div class="footer__bg">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1202 372">
-      <defs>
-        <linearGradient id="footer-gradient" x1="591.252" y1="375" x2="610.748" y2="3" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stop-color="#6b5d8d"/>
-          <stop offset="1" stop-color="#9F497E"/>
-        </linearGradient>
-      </defs>
-      <path id="Shape_1_copy_9" data-name="Shape 1 copy 9" class="footer-shape" d="M1202,3c-46.49,47.553-93.41,108-134.12,184.988C983.734,347.106,793.694,409.232,503.153,332.2,306.093,279.962,152.914,295.879,0,358v17H1202V3Z" transform="translate(0 -3)"/>
-    </svg>
-    
+    </main>
+    <footer class="footer section" id="footer">
 
-
-  </div>
+  <svg class="footer__bg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1202 372" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient id="footer-gradient" x1="591.252" y1="375" x2="610.748" y2="3" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#6b5d8d"/>
+        <stop offset="1" stop-color="#9F497E"/>
+      </linearGradient>
+    </defs>
+    <path id="Shape_1_copy_9" data-name="Shape 1 copy 9" class="footer-shape" d="M1202,3c-46.49,47.553-93.41,108-134.12,184.988C983.734,347.106,793.694,409.232,503.153,332.2,306.093,279.962,152.914,295.879,0,358v17H1202V3Z" transform="translate(0 -3)"/>
+  </svg>
   <div class="footer__in inner">
     <div class="footer__top">
       <h2 class="footer__promo">
@@ -397,16 +351,16 @@
             <h3 class="footer__list-title">DARE TOOLKIT</h3>
           </li>
           <li class="footer__list-item">
-            <a class="footer__list-link link-eff" href="#">Dare Book</a>
+            <a class="footer__list-link link-eff" href="book.html">Dare Book</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__list-link link-eff" href="#">Dare app</a>
+            <a class="footer__list-link link-eff" href="app.html">Dare app</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__list-link link-eff" href="#">Dare audios</a>
+            <a class="footer__list-link link-eff" href="audio.html">Dare audios</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__list-link link-eff" href="#">Shop</a>
+            <a class="footer__list-link link-eff" href="shop.html">Shop</a>
           </li>
         </ul>
         <ul class="footer__list">
@@ -425,10 +379,10 @@
             <h3 class="footer__list-title">Coaching</h3>
           </li>
           <li class="footer__list-item">
-            <a class="footer__list-link link-eff" href="#">Bootcamp</a>
+            <a class="footer__list-link link-eff" href="bootcamp.html">Bootcamp</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__list-link link-eff" href="#">1:1 Coaching</a>
+            <a class="footer__list-link link-eff" href="coaching.html">1:1 Coaching</a>
           </li>
           <li class="footer__list-item">
             <a class="footer__list-link link-eff" href="#">Advanced Coaching</a>
@@ -448,7 +402,7 @@
             <a class="footer__list-link link-eff" href="#">About Barry McDonagh</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__list-link link-eff" href="#">Support</a>
+            <a class="footer__list-link link-eff" href="support.html">Support</a>
           </li>
         </ul>
       </div>
@@ -682,7 +636,7 @@
           </a>
         </li>
         <li class="privacy__item">
-          <a class="privacy__link link-eff">
+          <a href="terms.html" class="privacy__link link-eff">
             Terms of Serivce
           </a>
         </li>
@@ -708,16 +662,10 @@
 
 </footer>
 
-
-
-    </div>
-
   </div>
 
   
   <div class="popup popup__login js-popup" id="popupLogin">
-  
-
   <div class="popup__in">
     <div class="popup__body popup__body-login">
       <div class="popup__title">
@@ -743,15 +691,15 @@
         </div>
         <div class="form__group form__group-mb30">
           <div class="reg">
-            <input name="agreement" type="checkbox" class="reg-field" id="reg-check">
-            <label for="reg-check" class="reg-check">
+            <input name="rememberme" type="checkbox" class="reg-field" id="rememberme" value="forever">
+            <label for="rememberme" class="reg-check">
               <span class="reg-link" target="">
                 <b>Remember me</b> (for 2 weeks)</span>
             </label>
           </div>
         </div>
         <div class="form__footer">
-          <a href="" class="btn-secondary btn-red" tabindex="-1">
+          <button type="submit" class="btn-secondary btn-red">
             <svg width="208" height="58">
               <defs>
                 <linearGradient id="gradRed">
@@ -762,8 +710,8 @@
               <rect x="2" y="2" fill="none" stroke="url(#gradRed)" width="204" height="54" rx="5"></rect>
             </svg>
             <span>LOGIN</span>
-          </a>
-          
+          </button>
+
           <a href="/" class="btn-forgot">Forgot Password?</a>
         </div>
       </form>
@@ -1052,26 +1000,24 @@
 
   
   <div class="popup popup__menu js-popup" id="popupMenu">
-  
-
   <div class="popup__in">
     <div class="popup__body popup__body-menu">
       <div class="menu">
         <div class="menu__col">
           <nav class="nav">
-            <a href="" class="nav__link" data-text="Home">Home</a>
-            <a href="" class="nav__link" data-text="Stories">Stories</a>
-            <a href="community.html" class="nav__link" data-text="Community">Community</a>
-            <a href="coaching.html" class="nav__link" data-text="Coaching">Coaching</a>
-            <a href="bootcamp.html" class="nav__link" data-text="Bootcamp">Bootcamp</a>
-            <a href="" class="nav__link" data-text="Shop">Shop</a>
+            <a href="home.html" class="nav__link">Home</a>
+            <a href="story.html" class="nav__link">Stories</a>
+            <a href="community.html" class="nav__link">Community</a>
+            <a href="coaching.html" class="nav__link">Coaching</a>
+            <a href="bootcamp.html" class="nav__link">Bootcamp</a>
+            <a href="shop.html" class="nav__link">Shop</a>
           </nav>
           <ul class="list">
             <li>
               <span class="js-open-popup" data-popup="popupLogin">Member login</span>
             </li>
             <li>
-              <a href="">Support</a>
+              <a href="https://panicaway.zendesk.com/hc/en-us">Support</a>
             </li>
           </ul>
         </div>
@@ -1083,7 +1029,7 @@
             <li class="menu__list-item">
               <a class="menu__list-link" href="book.html"></a>
               <div class="menu__list-pic">
-                <img src="img/svg/icon-book.svg" alt="" style="width: 30px; height: 42px">
+                <img src="img/svg/icon-book.svg" alt="">
               </div>
               <h3 class="menu__list-title">
                 Book
@@ -1092,7 +1038,7 @@
             <li class="menu__list-item">
               <div class="menu__list-pic">
                 <a class="menu__list-link" href="app.html"></a>
-                <img src="img/svg/icon-app.svg" alt="" style="width: 30px; height: 40px">
+                <img src="img/svg/icon-app.svg" alt="">
               </div>
               <h3 class="menu__list-title">
                 App
@@ -1101,7 +1047,7 @@
             <li class="menu__list-item">
               <div class="menu__list-pic">
                 <a class="menu__list-link" href="audio.html"></a>
-                <img src="img/svg/icon-audio.svg" alt="" style="width: 30px; height: 40px">
+                <img src="img/svg/icon-audio.svg" alt="">
               </div>
               <h3 class="menu__list-title">
                 Audios

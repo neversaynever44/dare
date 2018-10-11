@@ -1,6 +1,8 @@
 .reviews
   padding: 100px 0 125px 0
   +tr(all .3s ease-in)
+  +r(1024)
+    padding: 50px 0
   &__promo
     text-align: center
     color: #000
@@ -9,9 +11,17 @@
     line-height: 45px
     max-width: 830px
     margin: 0 95px 67px
+    +r(1024)
+      margin: 65px auto
+    +sm
+      margin: 75px auto 65px
+      font-size: 25px
+      line-height: 34px
     span
       color: #eb4059
       font-weight: 800
+      +xs
+        display: block
   &__list
     @extend %flex
     justify-content: space-between
@@ -28,6 +38,8 @@
     &.is-ready
       opacity: 1
       visibility: visible
+    .slick-list.draggable
+      overflow: hidden
   &__inner
     max-width: 1075px
 .reviews__list-item
@@ -36,6 +48,8 @@
 .review
   font-size: 15px
   color: #2c2929
+  +r(1024)
+    text-align: center
   &__body
     line-height: 25px
     p
@@ -44,7 +58,10 @@
       color: rgba(0,0,0,0.5)
 .review__header-icon
   @extend %flex
+  +r(1024)
+    justify-content: center
   .icon
+    margin: 0
     &:not(:first-child)
       margin-left: 1px
 .review__header-title

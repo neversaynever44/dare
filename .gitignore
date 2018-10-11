@@ -1,7 +1,8 @@
 node_modules/
 dev/
-package-lock.json
+prod/
 src/img/.DS_Store
+.idea
 .DS_Store
 src/.DS_Store
 src/img/.DS_Store

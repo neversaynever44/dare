@@ -1,22 +1,40 @@
 .stats
-  padding: 90px 0 87px 0
+  padding: 50px 0 127px 0
   position: relative
   +tr(all .3s ease-in)
   // margin-top: 60px
   // margin-bottom: 40px
   &__text
     position: absolute
-    bottom: 110%
+    bottom: 100%
     text-align: right
     z-index: 1
     color: white
-    right: (88px/1200px)*100%
+    right: (171px/1200px)*100%
     font-size: 18px
     line-height: 30px
     max-width: 420px
+    +r(1200)
+      right: 4.25%
+    +r(1024)
+      font-size: 15px
+      color: #b73260
+      position: static
+      margin: 0 auto 70px
+      text-align: center
+    +xs
+      padding: 0 30px
+      br
+        display: none
+  &__community
+    +sm
+      padding-top: 0
   &__book
     padding-top: 160px
     padding-bottom: 20%
+    +r(1024)
+      padding: 83px 0
+      margin-top: 100px
   &__bg
     height: 100%
     position: absolute
@@ -37,9 +55,14 @@
   &__in
     max-width: 925px
     position: relative
-    padding-bottom: 12%
+    padding-bottom: 14%
     +r(1024)
-      padding-bottom: 44%
+      padding-bottom: 40%
+    +sm
+      padding-bottom: 45%
+    +xs
+      padding-bottom: 50%
+
   &__list
     position: absolute
     top: 0
@@ -47,37 +70,48 @@
     width: 100%
     @extend %flex
     color: $AMARANTH
+    font-size: 16px
+    +r(1200)
+      font-size: 15px
     +r(1024)
+      font-size: 14px
       flex-wrap: wrap
-    // margin: 0 0 0 -3%
+    +r(767)
+      font-size: 12px
   &__item
-    flex: 1
+    flex: auto
     text-transform: uppercase
     text-align: center
     opacity: 0
     +tr(all .3s ease-in)
     &:not(:first-child)
       margin-left: 5%
+      +r(1200)
+        margin-left: 0
     +r(1024)
       margin-bottom: 40px
     &:last-of-type
       +r(1024)
-        flex: 100%
+        width: 100%
   &__pic
     svg
       width: 36px
       height: 40px
       fill: $AMARANTH
       fill-rule: evenodd
+      +xs
+        width: 25px
+        height: 25px
   &__num
     margin: 16px 0
     letter-spacing: 0.25px
     color: $BLACK
-    font: 400 55px/1 "Galano Grotesque - Black", sans-serif, arial
-    +r(1024)
-      font-size: 40px
+    font: 400 3.438em/1 "Galano Grotesque - Black", sans-serif, arial
+    +r(480)
+      font-size: 35px
+      margin: 6px 0
   &__desc
-    font-size: 16px
+    font-size: 1.000em
     font-weight: 700
     line-height: 20px
     letter-spacing: 0.48px

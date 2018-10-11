@@ -50,13 +50,13 @@ $('#btn-community').on('click', function (event) {
     $.ajax({
       contentType: "application/json",
       type: "POST",
-      url: "../main.php", //Change
+      url: "main.php", //Change
       data: form.serialize()
     }).done(() => {
       $('.community__step-1').removeClass('is-active');
       setTimeout(() => {
         $('.community__step-2').addClass('is-active');
-      }, 1500);
+      }, 1000);
     })
     form.trigger("reset");
     return false;

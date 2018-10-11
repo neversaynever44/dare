@@ -1,0 +1,248 @@
+// team
+.team
+  height: 100vh
+  position: relative
+  background: url(../img/content/team/team.jpg)center no-repeat
+  +cover
+  +sm
+    height: 700px
+    background-position: 20% 50%
+  +xs
+    height: 429px
+  &__in
+    max-width: 1105px
+    position: relative
+    height: 100%
+  &__title
+    +vcenter
+    top: 47%
+    font-weight: 800
+    font-size: 56px
+    line-height: 65px
+    color: $WHITE
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.2)
+    width: 100%
+    text-align: center
+    +sm
+      top: 57%
+    +xs
+      font-size: 35px
+      line-height: 42px
+  &__shape
+    position: absolute
+    left: 0
+  &__layer
+    // top: 0
+    // width: 55%
+    background-image: url(../img/svg/team.svg)
+  &__shape
+    bottom: 0
+    width: 100%
+    transform: translateY(1px)  
+  &__scroll
+    transform: translateY(-50%)
+    top: 80%
+    right: 0
+    position: absolute
+    +r(1024)
+      display: none
+// team-members
+.team-members
+  color: $BLACK
+  padding: 140px 0 190px 0
+  position: relative
+  +r(1024)
+    padding-top: 100px
+  +sm
+    padding-top: 50px
+  +xs
+    padding-top: 25px
+  &__pic
+    img
+      // max-width: 130%
+      // max-height: 130%
+  &__img
+    height: auto
+    width: 100%
+    position: absolute
+    transform: translateY(-20%)
+    top: 0
+    z-index: 0
+    max-width: 450px
+    +r(1024)
+      left: 0
+      right: 0
+      margin: auto
+      max-width: 350px
+      transform: translateY(39%)
+      bottom: 0
+      top: auto
+    +xs
+      max-width: 290px
+      transform: translateY(47%)
+      // top: -12%
+      // transform: translateY(-50%)
+  &__barry
+    max-width: 450px
+    transform: translateY(0%)
+  &__michelle
+    max-width: 291px
+    // bottom: -20%
+    top: 20%
+    +r(1024)
+      max-width: 260px
+    +xs
+      max-width: 221px
+  &__suzanne
+    max-width: 500px
+    transform: translateY(-5%)
+    +r(1024)
+      transform: translateY(57%)
+    +xs
+      transform: translateY(57%)
+  &__quirke
+    z-index: -1
+  &__top,
+  &__bottom
+    position: absolute
+    width: 100%
+    left: 0
+  &__top
+    bottom: 100%
+    transform: translateY(1px)
+  &__bottom
+    bottom: 0
+    transform: translateY(1%) scale(-1)
+    z-index: 1
+  &__bgRed,
+  &__bgPurple
+    color: $WHITE
+  &__bgPurple
+    margin: 100px 0
+    +r(1024)
+      margin: 50px 0
+  &__bgRed
+    background-image: linear-gradient(to top, #bb4077 0%, #ec5068 100%)
+  &__bgPurple
+    background-image: linear-gradient(to top, #865385 0%, #bb4077 100%)
+  &:first-of-type
+    .team-members__in
+      max-width: 1078px
+  &:nth-child(odd)
+    .team-members__pic
+      order: 2
+      img
+        right: 0
+    .team-members__content
+      order: 1
+  &:nth-child(even)
+    .team-members__pic
+      img
+        left: 0
+  &__promo
+    max-width: 931px
+    @extend %flex
+    margin-bottom: 160px
+    +r(1024)
+      flex-wrap: wrap
+      flex-direction: column
+      margin-bottom: 100px
+    +sm
+      margin-bottom: 53px
+  &__col
+    flex: 1
+    h2
+      font-size: 60px
+      line-height: 64px
+      +r(1024)
+        font-size: 50px
+        line-height: 54px
+        margin-bottom: 30px
+      +sm
+        font-size: 32px
+        line-height: 38px
+    span
+      color: #f64058
+    p
+      font-size: 28px
+      font-weight: 500
+      line-height: 42px
+      +sm
+        font-size: 18px
+        line-height: 28px
+  &__in
+    max-width: 978px
+    @extend %flex
+    justify-content: space-between
+    position: relative
+  &__content
+    width: 49%
+    +r(1024)
+      width: 100%
+      padding-bottom: 320px
+    +xs
+      padding-bottom: 220px
+  // &__content,
+  // &__pic
+    // flex: 1
+  &__achievement
+    font-size: 18px
+    text-transform: uppercase
+    +sm
+      font-size: 15px
+    span
+      font-weight: 800
+  &__name
+    font-size: 35px
+    font-weight: 500
+    margin: 16px 0
+    +sm
+      font-size: 24px
+    b
+      font-weight: 800
+  &__body
+    margin: 19px 0 33px 0
+    p
+      font-size: 16px
+      font-weight: 500
+      line-height: 26px
+      +xs
+        font-size: 15px
+        line-height: 23px
+      &:not(:last-child)
+        margin-bottom: 20px
+  &__footer
+    @extend %flex
+    flex-direction: column
+    +r(1024)
+      margin-bottom: 60px
+    h5
+      text-transform: uppercase
+      font-size: 15px
+      margin-bottom: 30px
+    .btn-more
+      &:not(:last-child)
+        margin-bottom: 15px
+      z-index: 111
+.team-members__achievement--purple
+  color: #6c5c8d
+.team-members__achievement--coaching
+  color: #d4486f
+.team-members__achievement--red
+  color: #f64058
+
+.layer-logo
+  position: absolute
+  left: 0
+  top: 0
+  width: 50%
+  height: 50%
+  +cover
+  background-position: 100% 50%
+  +sm
+    width: 71%
+    height: 61%
+  +xs
+    height: 71%
+
+

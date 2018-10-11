@@ -20,8 +20,10 @@
 // audio-page
 @import "partials/audio/program";
 @import "partials/audio/technology";
+@import "partials/audio/slider";
 // app-page
 @import "partials/app/feature";
+@import "partials/app/slider";
 // terms
 @import "partials/terms/terms";
 // community
@@ -37,12 +39,25 @@
 @import "partials/bootcamp/faqs";
 @import "partials/bootcamp/guarantee";
 @import "partials/bootcamp/member";
+@import "partials/bootcamp/slider";
 // story-page
 @import "partials/story/story";
 @import "partials/story/hero";
 @import "partials/story/comments";
 @import "partials/story/recent";
+// success-page
+@import "partials/success/success";
+// shop-page
+@import "partials/shop/shop";
+@import "partials/shop/unit";
+@import "partials/shop/cart";
+@import "partials/shop/checkout";
+@import "partials/shop/details";
+// support-page
+@import "partials/support/support";
+// team-page
 
+@import "partials/team/team";
 
 body {
 	font-family: 'Montserrat', sans-serif;

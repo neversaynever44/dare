@@ -1,0 +1,90 @@
+.support
+  color: $BLACK
+  padding: 40px 0 200px 0
+  &__in
+    max-width: 1000px
+  &__body
+    max-width: 780px
+  &__title
+    font-size: 35px
+  &__subtitle
+    font-size: 24px
+    margin-bottom: 64px
+  &__list
+    @extend %flex
+    align-items: stretch
+    justify-content: center
+    margin: 59px 0 75px -2%
+    flex-wrap: wrap
+    text-align: center
+  &__content
+    padding: 70px 20px
+    font-size: 17px
+    font-weight: 700
+  &__item
+    flex: 1
+    &:not(:last-of-type)
+      margin-bottom: 24px
+    &:not(:first-child):not(:last-child)
+      margin-left: 20px
+    &:last-of-type
+      flex: 0 0 auto
+      // margin: 0
+  &__btn
+    text-align: center
+
+.support-article
+  margin: 0 -10px 80px
+  @extend %flex
+  justify-content: flex-start
+  &__item
+    flex: 1
+    margin: 0 10px
+    border-bottom: 1px solid rgba($BLACK, 0.2)
+    padding-bottom: 35px
+  &__title
+    font-size: 18px
+    font-weight: 700
+
+.support-activity
+  font-weight: 500
+  margin-bottom: 50px
+  &__item
+    @extend %flex
+    justify-content: space-between
+    align-items: center
+    border-bottom: 1px solid rgba($BLACK, 0.2)
+    padding-bottom: 26px
+    margin-bottom: 30px
+  &__col
+    &:last-of-type
+      display: flex
+      width: 35%
+      justify-content: flex-end
+      padding-top: 25px
+  &__title
+    margin-bottom: 8px
+    font-size: 18px
+    font-weight: 700
+  &__subtitle
+    font-size: 15px
+  &__comment
+    font-size: 13px
+  &__amount
+    position: relative
+    color: $SHOP_COLOR
+    font-weight: 700
+    margin-left: 12px
+    padding-left: 25px
+    &:before
+      content: ''
+      z-index: 1
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      width: 18px
+      height: 16px
+      background: url('../img/svg/post-r.svg') center no-repeat
+
+    

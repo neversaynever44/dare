@@ -1,0 +1,174 @@
+.success
+  padding-top: 165px
+  padding-bottom: 200px
+  margin-bottom: 30px
+  position: relative
+  +r(1024)
+    padding-bottom: 100px
+  +xs
+    padding-top: 97px
+  &__in
+    max-width: 1074px
+    +r(1024)
+      max-width: 768px
+    +xs
+      max-width: 320px
+  &__list
+    font-size: 0
+    -webkit-column-count: 3
+    -moz-column-count: 3
+    column-count: 3
+    counter-reset: item-counter
+    -webkit-column-gap: 30px
+    -moz-column-gap: 30px
+    grid-gap: 30px
+    padding-bottom: 100px
+    +r(1024)
+      -webkit-column-count: 2
+      -moz-column-count: 2
+      column-count: 2
+      grid-gap: 20px
+    +xs
+      -webkit-column-count: 1
+      -moz-column-count: 1
+      column-count: 1
+  &__layer
+    position: absolute
+    width: 100%
+    top: 0
+    left: 0
+    z-index: -1
+    height: 483px
+    +xs
+      height: 294px
+    svg
+      width: 100%
+      height: 100%
+  &__item
+    font-size: 15px
+    -webkit-column-break-inside: avoid
+    page-break-inside: avoid
+    break-inside: avoid
+    counter-increment: item-counter
+    margin: 30px 0
+    +sm
+      margin: 20px 0
+    &:first-of-type
+      +sm
+        margin: 70px 0
+      +xs
+        margin: 0 0 41px 0
+    &:not(:first-child)
+      color: $BLACK
+      box-shadow: 0 5px 17px 4px rgba(0, 0, 0, 0.08)
+      border-radius: 5px
+      background-color: #ffffff
+  &__promo
+    margin: 52px 0 140px 21px
+    +r(1200)
+      margin-left: 0
+    +sm
+      margin: 0
+    h2
+      color: $WHITE
+      font-size: 55px
+      line-height: 70px
+      margin-bottom: 83px
+      +r(1024)
+        margin-bottom: 125px
+      +sm
+        font-size: 40px
+        line-height: 55px
+      +xs
+        font-size: 24px
+        line-height: 34px
+        margin-bottom: 7px
+        font-weight: 900
+        br
+          display: none
+    p
+      font-size: 22px
+      line-height: 34px
+      +xs
+        color: $WHITE
+        font-size: 15px
+        line-height: 23px
+
+
+  &__title
+    color: $STORY_COLOR
+    text-transform: uppercase
+    b
+      font-weight: 800
+  &__subtitle
+    font-size: 23px
+    font-weight: 700
+    line-height: 30px
+    +sm
+      font-size: 18px
+  &__text
+    line-height: 25px
+    font-weight: 500
+  &__subtitle,
+  &__text
+    margin: 14px 0
+    +sm
+      margin: 16px 0
+  &__pic
+    position: relative
+    // padding-top: 100%
+    img
+      // position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      // height: 100%
+      height: auto
+      // object-fit: cover
+      border-top-left-radius: 5px
+      border-top-right-radius: 5px
+    svg
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+  &__content
+    padding: 22px 15px 15px 15px
+  &__info
+    @extend %flex
+  &__link
+    position: relative
+    padding-left: 25px
+    color: $STORY_COLOR
+    font-weight: 700
+    z-index: 11
+    &:before
+      content: ''
+      z-index: 1
+      display: block
+      background: url(../img/svg/post-r.svg) center no-repeat
+      width: 18px
+      height: 16px
+      position: absolute
+      top: 0
+      left: 0
+.entry__success
+  position: absolute    
+  bottom: 0
+  width: 100%
+  +r(1024)
+    height: 100vh
+    max-width: 100%
+    padding-bottom: 150px
+  +sm
+    padding-bottom: 75px
+  .entry__tool,
+  .entry__top
+    z-index: -1
+  .entry__footer
+    position: absolute
+    bottom: 45px
+    left: 0
+    right: 0
+    margin: auto
+    z-index: 444

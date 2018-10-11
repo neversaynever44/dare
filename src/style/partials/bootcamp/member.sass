@@ -1,19 +1,58 @@
 .member-in
-  padding: 40px 66px
+  padding: 30px 58px
+  +sm
+    padding: 22px 20px 32px 20px
 .member
+  position: relative
+  margin-bottom: 175px
+  +sm
+    margin-bottom: 55px
+  &__top,
+  &__bottom
+    width: 100%
+    position: absolute
+  &__top
+    bottom: 100%
+    transform: translateY(1px)
+  &__bottom
+    top: 100%
+    transform: translateY(-2px)
+  &__layer
+    position: absolute
+    top: 0
+    transform: translateY(90%)
+    height: 53%
+    width: 100%
+    left: 0
+    z-index: -1
+    background-image: linear-gradient(to top, #A64081 0%, #804E8F 100%)
   &__step
-    // display: none
-    // &.is-active
-      // display: block
+    display: none
+    &.is-active
+      display: block
   &__in
     max-width: 780px
     text-align: center
+    padding-bottom: 180px
+    +sm
+      padding-bottom: 80px
+    +xs
+      padding-bottom: 15px
   &__title
     font-weight: 800
     font-size: 35px
+    +sm
+      font-size: 24px
+      line-height: 29px
+      max-width: 285px
+      margin: auto
   &__subtitle
-    margin: 47px 0 70px
+    margin: 47px 0 60px
     font-size: 22px
+    +xs
+      margin: 25px 0
+      font-size: 21px
+      line-height: 24px
     span
       color: #b84278
       font-weight: 700
@@ -21,29 +60,50 @@
     @extend %flex
     justify-content: center
     margin-bottom: 78px
+    +sm
+      flex-direction: column
+      max-width: 320px
+      margin: auto
   &__note
     font-size: 22px
+    +sm
+      font-size: 18px
   &__footer
     font-weight: 500
     font-size: 16px
+    color: $WHITE
     line-height: 28px
   &__security
     margin-top: 52px
+    +sm
+      margin-top: 20px
+    +xs
+      font-size: 14px
+      line-height: 22px
 .member-item
   max-width: 500px
   width: 100%
   box-shadow: 0 5px 17px 4px rgba(0, 0, 0, 0.08)
   border-radius: 5px
   background-color: #ffffff
+  +sm
+    margin-bottom: 34px
   &__m30
     margin-left: 30px
+    +sm
+      margin-left: 0
   // padding: 40px 66px
   &__head
     font-weight: 600
     line-height: 28px
     font-size: 20px
+    +sm
+      font-size: 15px
+      line-height: 25px
   &__form
-    margin: 60px 0 35px
+    margin: 50px 0 34px
+    +xs
+      margin: 40px 0 24px 0
     .form__field
       &:last-of-type
         margin-top: 44px
@@ -80,6 +140,8 @@
     font-weight: 600
     margin-bottom: 36px
     text-transform: uppercase
+    +sm
+      margin-bottom: 26px
     b
       font-weight: 800
   &__title
@@ -88,6 +150,8 @@
     text-transform: uppercase
     font-weight: 800
     margin: 36px 0 41px 0
+    +sm
+      margin: 26px 0 21px 0
     p
       font-size: 15px
       margin-bottom: 10px

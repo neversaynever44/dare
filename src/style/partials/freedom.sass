@@ -1,21 +1,29 @@
 .freedom
   overflow: hidden
   +tr(all .3s ease-in)
+  opacity: 0
+  padding: 142px 0 50px 0
+  +r(1024)
+    padding: 50px 0
   &__audio
     padding: 300px 0 200px 0
-  &__app
-    padding: 150px 0
     +r(1024)
-      padding: 75px 0 150px 0
-    .stats
-      padding: 100px 0 17px
+      padding: 200px 0
+    +sm
+      padding: 60px 0
+  &__app
+    +r(1024)
+      padding-top: 65px
+    +xs
+      padding-bottom: 0
   &__in
     max-width: 1000px
     position: relative
     padding-left: 30px
     padding-bottom: 100px
     +r(1024)
-      padding-bottom: 0
+      padding-bottom: 25px
+      padding-left: 0
   &__col
     flex: 1
     padding-right: 410px
@@ -28,20 +36,35 @@
     right: 15px
     img
       +r(1024)
-        max-width: 80%
-        max-height: 80%
+        width: 100%
+        height: auto
+        max-width: 360px
+      +xs
+        max-width: 271px
     +r(1024)
       top: 40%
+      text-align: center
+      left: 0
+      right: 0
+      margin: auto
       transform: translateY(-50%)
+    +sm
+      top: 42%
+    +xs
+      top: 38%
   &__title
     font-size: 65px
     color: $BLACK
-    font-weight: 800
-    text-transform: uppercase
     line-height: 65px
+    +r(1200)
+      font-size: 40px
+      line-height: 55px
     +r(1024)
-      font-size: 52px
       padding-bottom: 460px
+    +xs
+      padding-bottom: 400px
+      font-size: 31px
+      line-height: 38px
     span
       color: #da3d56
   &__text
@@ -51,5 +74,16 @@
     line-height: 40px
     margin: 48px 0
     max-width: 550px
+    +r(1200)
+      max-width: 490px
     b
+      +r(1200)
+        br
+          display: none
       font-weight: 700
+    +sm
+      font-size: 18px
+      margin: 38px 0 29px 0
+    +xs
+      line-height: 28px
+      margin: 16px 0 19px 0

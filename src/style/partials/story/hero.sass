@@ -1,6 +1,10 @@
 .hero
   padding: 100px 0
   color: $BLACK
+  +sm
+    padding: 50px 0
+  +xs
+    padding: 6px 0
   &__in
     max-width: 855px
   &__text
@@ -8,6 +12,13 @@
     font-weight: 500
     line-height: 30px
     padding: 0 40px
+    +r(1024)
+      padding: 0 20px
+    +xs
+      padding: 0 5px
+      font-size: 15px
+      line-height: 22px
+      margin: 18px 0
     span
       color: $STORY_COLOR
       font-weight: 700
@@ -15,9 +26,15 @@
     position: relative
     margin: 80px auto 55px
     width: 100%
+    overflow: hidden
+    +xs
+      margin: 80px 0 75px 0
     iframe
       width: 100%
       min-height: 460px
+      height: 100%
+      +xs
+        min-height: 160px
   &__shape
     position: absolute
     width: 100%
@@ -32,5 +49,16 @@
     margin: 67px auto 78px
     span
       color: $STORY_COLOR
+    +r(1024)
+      margin: 47px 0
+    +sm
+      font-size: 24px
+      line-height: 30px
+    +xs
+      font-size: 18px
+      line-height: 26px
+      padding: 0 11px
 .hero__title-m100
   margin: 85px auto 100px
+  +r(1024)
+    margin: 50px auto 0

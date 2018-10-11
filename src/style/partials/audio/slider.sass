@@ -1,0 +1,110 @@
+.popup__audio-mob
+  z-index: 4444
+  background-image: linear-gradient(to top,#b5437a 0,#428ea2 99%,#428ea3 100%)
+  +scrollbar
+    width: 3px
+    background-color: rgba(255,255,255, 0.1)
+  +scrollbar-track
+    width: 3px
+    background-color: rgba(255,255,255, 0.1)
+  +scrollbar-thumb
+    width: 3px
+    background-color: rgba(255,255,255, 0.3)
+  +scrollbar-track-piece
+    width: 3px
+    background-color: rgba(255,255,255, 0.1)
+  .popup__in
+    width: 100%
+    max-width: 100%
+    height: auto
+    .slick-slide
+        margin: 0!important
+    .slider-app__item
+        height: auto
+        padding: 55px 0 0 0
+        +xs
+            padding: 55px 0 90px 0
+    .slider-app__body
+        padding-bottom: 8px
+    .slider-app__text
+        max-height: 100%
+        overflow: unset
+        margin: 0
+        padding: 10px 0
+        +sm
+            padding: 25px 0
+        +xs
+            padding: 25px 0
+            max-height: 100%
+            overflow: unset
+    
+    .slider-close
+        top: 36px
+    .slider-app__pic
+        +sm
+            max-height: 270px
+            width: 130%
+            margin-top: -11px
+.slider-app
+    &__footer
+        width: 100%
+        padding-bottom: 85px
+        +xs
+            padding-bottom: 0
+        h3
+            font-size: 15px
+
+.accordion
+    margin: 31px auto
+    width: 96%
+    &__item
+        &:not(:last-child)
+            margin-bottom: 14px
+    &__title
+        font-size: 15px
+        font-weight: 700
+    &__header
+        box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.04)
+        border-radius: 6px
+        border: 1px solid rgba(#fff, 0.5)
+        position: relative
+        padding: 15px
+        cursor: pointer
+        &.is-active
+            .accordion__svg
+                opacity: 1
+                visibility: visible
+    &__svg
+        opacity: 0
+        visibility: hidden
+        position: absolute
+        +tr(all .3s ease-in)
+        top: 50%
+        transform: translateY(-50%)
+        right: 11px
+    &__body
+        max-height: 0
+        +tr(all .3s ease-in)
+        overflow: hidden
+    &__pic
+        height: 185px
+        overflow: hidden
+        position: relative
+        margin: 30px auto 25px
+        img
+            max-width: 100%
+            max-height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            object-fit: cover
+            margin: auto
+            border-radius: 12px
+            box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.04)
+    &__content
+        font-size: 15px
+        line-height: 22px
+
+    

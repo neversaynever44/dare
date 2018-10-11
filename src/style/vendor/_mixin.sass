@@ -13,6 +13,10 @@
 =rh($height)
 	@media only screen and (max-height: $height + "px")
 		@content
+=rhm($height)
+	@media only screen and (min-height: $height + "px")
+		@content
+
 =md
   +r(1023)
     @content
@@ -22,7 +26,7 @@
     @content
 
 =xs
-  +r(599)
+  +r(480)
     @content
 
 // font-family 

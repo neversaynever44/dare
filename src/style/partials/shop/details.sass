@@ -1,0 +1,90 @@
+.details
+  padding: 42px 0 150px 0
+  color: $BLACK
+  +xs
+    padding: 17px 0 60px 0
+  &__in
+    max-width: 620px
+  &__header,
+  &__footer
+    text-align: center
+  &__body
+    margin: 69px 0 76px 0
+    +xs
+      margin: 43px 0 46px 0
+  &__title
+    font-size: 28px
+    font-weight: 600
+    @extend %flex
+    @extend %flex-c
+    +r(1024)
+      flex-direction: column
+      line-height: 32px
+    +xs
+      font-size: 24px
+      p
+        font-size: 18px
+  &__subtitle
+    font-size: 20px
+    font-weight: 700
+    margin: 38px 0
+    @extend %flex
+    @extend %flex-c
+    +xs
+      margin: 10px 0 32px 0
+      font-size: 18px
+  &__order
+    color: #bfbebe
+    margin-right: 5px
+  &__number
+    color: $SHOP_COLOR
+  &__info
+    margin: 72px 0 30px 0
+    font-size: 18px
+    font-weight: 800
+    +sm
+      font-size: 16px
+      max-width: 250px
+      margin: 42px auto 20px
+      line-height: 24px
+  &__box
+    margin: 58px auto 0
+    +xs
+      margin: 30px 0
+  &__security
+    img
+      width: 100%
+      height: auto
+      max-width: 250px
+      +xs
+        max-width: 187px
+
+.details-info
+  &__in
+    padding: 37px 69px 25px 28px
+    @extend %flex
+    justify-content: space-between
+    align-items: flex-start
+    +xs
+      flex-direction: column
+      padding: 37px 59px 25px 10px
+    .cart-cost
+      color: $SHOP_COLOR
+      font-size: 16px
+      font-weight: 700
+  &__row
+    text-align: left
+  &__total
+    margin-top: 32px
+  &__btn
+    margin-top: 32px
+  &__title
+    font-size: 12px
+    font-weight: 600
+    text-transform: uppercase
+    margin-bottom: 15px
+  &__text
+    font-size: 16px
+    font-weight: 700
+    color: $BLACK
+    margin: 12px 0

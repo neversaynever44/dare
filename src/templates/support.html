@@ -1,0 +1,196 @@
+{% include "partials/head.html" %}
+
+<body>
+
+
+  <div class="container">
+    <!-- BEGIN  sticky-->
+    {% include "partials/sticky.html" %}
+    <!-- END  sticky-->
+  </div>
+  <!-- BEGIN  out-->
+
+  <div id="out">
+    <main id="viewBox">
+      <div class="layer">
+
+        <svg viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient x1="50%" y1="99.7107208%" x2="50%" y2="0%" id="a">
+              <stop stop-color="#EE4259" offset="100%" />
+            </linearGradient>
+          </defs>
+          <path d="M1200 141.491447c-177-51.3477027-377-60.4761831-596 11.4106-228 75.309964-424 51.347703-604-9.12848V0h1200v141.491447z"
+            fill="url(#a)" fill-rule="evenodd" />
+        </svg>
+
+      </div>
+      <!-- BEGIN  support-->
+      <section class="support" data-trigger="true">
+        <div class="support__in inner">
+          <div class="support__header">
+            <h2 class="support__title title-shop">
+              <b>Dare</b> Support
+            </h2>
+            <ul class="support__list">
+              <li class="support__item box">
+                <div class="support__content">
+                  DARE app
+                </div>
+              </li>
+              <li class="support__item box">
+                <div class="support__content">
+                  Account and Payment support
+                </div>
+              </li>
+              <li class="support__item box">
+                <div class="support__content">
+                  Technical support
+                </div>
+              </li>
+              <li class="support__item box">
+                <div class="support__content">
+                  Other help
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="support__body inner">
+            <h3 class="support__subtitle title-shop">
+              <b>Promoted</b> articles
+            </h3>
+            <ul class="support-article">
+              <li class="support-article__item">
+                <h4 class="support-article__title">Payment Refused</h4>
+              </li>
+              <li class="support-article__item">
+                <h4 class="support-article__title">
+                  How do I submit a success story?
+                </h4>
+              </li>
+            </ul>
+            <h3 class="support__subtitle title-shop">
+              <b>Recent</b> activity
+            </h3>
+            <ul class="support-activity">
+              <li class="support-activity__item">
+                <div class="support-activity__col">
+                  <h4 class="support-activity__title">
+                    About Dare Response and Panic Away
+                  </h4>
+                  <p class="support-activity__subtitle">
+                    How do I buy the Panic Away CDs/DVD?
+                  </p>
+                </div>
+                <div class="support-activity__col">
+                  <p class="support-activity__comment">
+                    Comment added 18 hours ago
+                  </p>
+                  <div class="support-activity__amount">
+                    1
+                  </div>
+                </div>
+              </li>
+              <li class="support-activity__item">
+                <div class="support-activity__col">
+                  <h4 class="support-activity__title">
+                    Frequently Asked Questions
+                  </h4>
+                  <p class="support-activity__subtitle">
+                    How do I save audios to my phone?
+                  </p>
+                </div>
+                <div class="support-activity__col">
+                  <p class="support-activity__comment">
+                    Comment added 18 hours ago
+                  </p>
+                  <div class="support-activity__amount">
+                    1
+                  </div>
+                </div>
+              </li>
+              <li class="support-activity__item">
+                <div class="support-activity__col">
+                  <h4 class="support-activity__title">
+                    Frequently Asked Questions
+                  </h4>
+                  <p class="support-activity__subtitle">
+                    The files won't download to my phone
+                  </p>
+                </div>
+                <div class="support-activity__col">
+                  <p class="support-activity__comment">
+                    Comment added 3 months ago
+                  </p>
+                  <div class="support-activity__amount">
+                    2
+                  </div>
+                </div>
+              </li>
+              <li class="support-activity__item">
+                <div class="support-activity__col">
+                  <h4 class="support-activity__title">
+                    Payment
+                  </h4>
+                  <p class="support-activity__subtitle">
+                    I'm having problems purchasing the Panic Away Program
+                  </p>
+                </div>
+                <div class="support-activity__col">
+                  <p class="support-activity__comment">
+                    Comment added 5 months ago
+                  </p>
+                  <div class="support-activity__amount">
+                    0
+                  </div>
+                </div>
+              </li>
+              <li class="support-activity__item">
+                <div class="support-activity__col">
+                  <h4 class="support-activity__title">
+                    Frequently Asked Questions
+                  </h4>
+                  <p class="support-activity__subtitle">
+                    I changed my phone where are my audios?
+                  </p>
+                </div>
+                <div class="support-activity__col">
+                  <p class="support-activity__comment">
+                    Article created 8 months ago
+                  </p>
+                  <div class="support-activity__amount">
+                    0
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+            <div class="support__btn">
+              <a href="" class="btn-order btn-order__red" id="btn-order">
+                <svg width="187" height="56">
+                  <rect x="2" y="2" rx="6" fill="none" stroke="#f3425a" width="183" height="52"></rect>
+                </svg>
+                <span>see more</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END  support-->
+    </main>
+    <!-- BEGIN  footer-->
+    {% include "partials/footer.html" %}
+    <!-- END  footer-->
+  </div>
+
+  <!-- BEGIN  popup-login-->
+  {% include "partials/popups/popup-login.html"%}
+  <!-- END  popup-login-->
+
+  <!-- BEGIN  popup-login-->
+  {% include "partials/popups/popup-menu.html"%}
+  <!-- END  popup-login-->
+
+
+
+  {% include "partials/page-end.html"%}

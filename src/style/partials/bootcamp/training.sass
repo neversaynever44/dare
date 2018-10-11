@@ -1,6 +1,8 @@
 .training
   padding: 100px 0 250px 0
   color: $BLACK
+  +r(1024)
+    padding: 50px 0
   &__in
     max-width: 856px
     position: relative
@@ -8,19 +10,46 @@
     @extend %flex
     align-items: center
     padding-bottom: 100px
+    overflow: hidden
+    +r(1024)
+      flex-direction: column
+      padding-bottom: 50px
+      align-items: flex-start
+  &__title,
+  &__text
+    flex: 1 50%
+    +r(1024)
+      flex-basis: 100%
   &__title
     font-size: 63px
-    font-weight: 800
+    +r(1024)
+      font-size: 40px
+      margin-bottom: 28px
+      line-height: 48px
+    +xs
+      line-height: 38px
+      font-size: 32px
+      max-width: 220px
+      margin-bottom: 18px
     // max-width: 366px
-    text-transform: uppercase
     span
-      color: #32a1ac
+      color: $BLUE
+      +sm
+        display: block
+      +xs
+        display: initial
   &__text
-    flex-shrink: 0
     max-width: 450px
     font-size: 26px
     font-weight: 500
     line-height: 39px
+    +r(1024)
+      max-width: 100%
+      font-size: 24px
+    +sm
+      font-size: 18px
+      line-height: 28px
+
     // margin-left: 61px
     b
       font-weight: 700

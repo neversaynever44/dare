@@ -1,0 +1,197 @@
+.unit
+  padding-top: 60px
+  padding-bottom: 200px
+  +sm
+    padding-bottom: 100px 
+  +xs
+    padding: 20px 0 80px 0
+  &__in
+    max-width: 1000px
+    margin-bottom: 60px
+    @extend %flex
+    align-items: flex-start
+    justify-content: center
+    +r(1024)
+      max-width: 100%
+    +sm
+      flex-direction: column
+      max-width: 480px
+  &__col
+    width: 50%
+    &:first-of-type
+      text-align: center
+      +sm
+        margin-bottom: 21px
+    &:last-of-type
+      margin-left: 30px
+      +sm
+        margin-left: 0
+      .cost
+        font-size: 28px
+        +sm
+          font-size: 25px
+    +sm
+      width: 100%
+  &__desc
+    color: $GRAY
+    font-size: 15px
+    text-transform: uppercase
+    font-weight: 600
+  &__title
+    margin: 15px 0 32px 0
+    font-size: 30px
+    color: $BLACK
+    text-transform: capitalize
+    font-weight: 800
+    +sm
+      font-size: 20px
+      margin: 15px 0 25px 0
+  &__header
+    +sm
+      .cost-old
+        color: $GRAY
+  &__body
+    margin: 110px 0 48px 0
+    +sm
+      margin: 48px 0
+    +xs
+      margin: 33px 0
+  &__footer
+    .btn-more__mobile
+      display: none
+    +xs
+      .btn-more
+        display: none
+      .btn-more__mobile
+        line-height: 20px
+        display: block
+        &:before
+          top: 19%
+  &__text
+    color: $BLACK
+    font-size: 16px
+    font-weight: 500
+    line-height: 28px
+    &:not(:last-child)
+      margin-bottom: 40px
+      +sm
+        margin-bottom: 20px
+    +xs
+      font-size: 15px
+      line-height: 22px
+  &__btns
+    margin-top: 36px
+    @extend %flex
+    justify-content: flex-start
+    align-items: center
+    .quantity-container
+      margin-right: 20px
+      +sm
+        margin-right: 10px
+    +sm
+      margin-top: 32px
+    .btn-secondary
+      +xs
+        width: 160px
+        svg
+          width: 160px
+          rect
+            width: 156px
+        &:hover
+          svg
+            rect
+              stroke-dasharray: 86, 525
+              stroke-dashoffset: 377
+  &__wrapper
+    max-width: 1157px
+    position: relative
+    +r(1024)
+      max-width: 100%
+  &__back,
+  &__more
+    text-align: center
+  &__more
+    font-size: 16px
+    color: $GRAY
+    font-weight: 800
+// unit-slider
+.unit-slider
+  opacity: 0
+  visibility: hidden
+  +tr(all .3s ease-in)
+  &.is-ready
+    opacity: 1
+    visibility: visible
+  &__item
+    max-width: 450px
+    position: relative
+    max-height: 450px
+    &:before
+      content: ''
+      padding-bottom: 100%
+      display: block
+    // padding-top: 90%
+    +sm
+      max-width: 100%
+    img
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      object-fit: cover
+    h3
+      text-shadow: 0 4px 17px rgba(0, 0, 0, 0.39)
+      font-size: 34px
+      +r(1024)
+        font-size: 21px
+      +xs
+        font-size: 21px
+  
+
+  
+.quantity-container
+  position: relative
+  width: 111px
+  &__gray
+    .quantity-amount
+      color: #bbb
+.quantity-amount
+  border-radius: 6px
+  border: 1px solid $GRAY
+  font-size: 16px
+  font-weight: 800
+  text-transform: uppercase
+  color: $BLACK
+  outline: 0
+  display: block
+  height: 100%
+  padding: 17px 37px 16px 31px
+  width: 41px
+.quantity-btn
+  position: absolute
+  right: 0
+  height: 50%
+  outline: 0
+  border: 0
+  padding: 0 10px
+  border-left: 1px solid $GRAY
+  +hide-text
+  background: none
+.arrow
+  border: solid $GRAY
+  border-width: 0 2px 2px 0
+  display: inline-block
+  padding: 3px
+.arrow-up
+  +rotate(-135)
+.arrow-down
+  +rotate(45)
+.decrease
+  bottom: 0
+.increase
+  top: 0
+
+

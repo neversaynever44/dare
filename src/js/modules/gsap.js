@@ -3,8 +3,22 @@ import 'RoundPropsPlugin';
 // import ScrollMagic from 'ScrollMagic';
 // import 'animation.gsap';
 // import 'debug.addIndicators';
-import $ from "jquery";
+// import $ from "jquery";
 
+let curWidth = window.innerWidth;
+let oldWidth = window.innerWidth;
+let desktopW = 1024;
+let isDesktop = null;
+isDesktop = chechIfMobile(desktopW);
+
+function chechIfMobile(width) {
+  if (curWidth <= width) {
+    return true
+  }
+  else {
+    return false
+  }
+};
 
 
 let mainPage = document.getElementsByClassName('main-page');
@@ -34,11 +48,15 @@ let imagesLoop = () => {
     for (var i = 0; i < images.length; i++) {
       images[i].classList.remove('is-show')
     }
-    index = (index != images.length - 1) ? index + 1 : 0;
-    images[index].classList.add('is-show')
-
+    if(index > images.length - 1) {
+      index = 0
+    };
+    // index = (index != images.length - 1) ? index + 1 : 0;
+    images[index++].classList.add('is-show')
+    console.log(index)
   }, 3000)
 }
+
 
 
 
@@ -61,6 +79,7 @@ let intro = document.getElementById('intro')
 let footer = document.getElementById('footer')
 let sticky = document.querySelector('.js-sticky');
 let screen1, screen2, screen22, screen3, screen4, screen5, screen6
+let windowHeight = window.innerHeight;
 let calcPos = () => {
   screen1 = (getOffset(header).height / 2.25);
   screen2 = getOffset(book).height;
@@ -69,11 +88,10 @@ let calcPos = () => {
   screen4 = getOffset(intro).top;
   screen5 = getOffset(footer).top + window.scrollY;
   screen6 = document.getElementById('out').offsetHeight - window.innerHeight;
-  console.log(screen1)
+  
 }
 if (mainPage.length > 0) {
-  console.log('here')
-  imagesLoop();
+  // imagesLoop();
   calcPos();
   window.addEventListener('resize', calcPos);
 
@@ -94,7 +112,7 @@ let pageSlides = () => {
   tl1
     .to('.header__in', 0.3, { autoAlpha: "0" }, "slide1+=0.2")
     .to('.fullscreen-bg_top', 0.7, { backgroundPosition: "0% 0" }, "slide1+=0.5")
-    .fromTo('.fullscreen-title', 0.1, { autoAlpha: "0", scale: "1.1" }, { autoAlpha: 1, scale: "1" }, "slide1+=0.5")
+    .fromTo('.fullscreen-title', 0.1, { autoAlpha: "0", scale: "1.1" }, {autoAlpha: 1, scale: "1" }, "slide1+=0.5")
     .fromTo(TITLES[0], 0.2, { autoAlpha: "1" }, { autoAlpha: "0" }, "slide1+=0.3")
     .to(TITLES[1], 0.3, { autoAlpha: '1' }, "+=1")
     .to(TITLES[1], 0.3, { autoAlpha: '0' }, "+=1")
@@ -149,14 +167,14 @@ let pageSlides = () => {
     .fromTo('.btn-primary', 0.7, { autoAlpha: 0, scale: "1.2" }, { autoAlpha: 1, scale: 1 }, "slide24+=0.9")
 
   tl1.addLabel('slide3')
-
+    .add(imagesLoop, "-=1.5")
     .to(out, slideTime, { y: - screen4, roundProps: "y" })
     .set((sticky), {
       className: '+=is-active'
     }, "slide3+=0.6")
     .from('.intro__body', 0.4, {
       autoAlpha: "0"
-    })
+    }, 'slide3+=0.2')
   tl1.addLabel('slide31')
   tl1
     .to('.intro__body', 0.8, {
@@ -173,21 +191,37 @@ let pageSlides = () => {
         autoAlpha: "1"
       })
 
-  tl1.addLabel('slide4')
-  tl1
-    .to(out, slideTime, { y: - screen5, roundProps: "y" })
-    .set((sticky), {
-      className: '-=is-active'
-    }, "slide4+=0.5")
-    .from('.footer__in', 0.4, {
-      autoAlpha: "0",
-      yPercent: "4.5"
-    })
+    if (windowHeight >= 978) { 
+      tl1.addLabel('slide5')
+      .to(out, slideTime, { y: - (screen6 - 2), roundProps: "y" })
+      .set((sticky), {
+        className: '-=is-active'
+      }, "slide5+=0.5")
+      .from('.footer__in', 0.4, {
+        alpha: "0",
+        yPercent: "4"
+      })
+    tl1.addLabel('slide6')
 
-  tl1.addLabel('slide5')
-    .to(out, slideTime, { y: - screen6, roundProps: "y" })
+     }  else {
+       console.log(tl1)
+      tl1.addLabel('slide4')
+      tl1
+        .to(out, slideTime, { y: - screen5, roundProps: "y" })
+        .set((sticky), {
+          className: '-=is-active'
+        }, "slide4+=0.5")
+        .from('.footer__in', 0.4, {
+          alpha: "0",
+          yPercent: "4"
+        })
+        tl1.addLabel('slide5')
+        .to(out, slideTime, { y: - screen6, roundProps: "y" })
+    
+      tl1.addLabel('slide6')
+     }
 
-  tl1.addLabel('slide6')
+
 
 }
 
@@ -256,13 +290,20 @@ if (mainPage.length > 0) {
     window.addEventListener("touchstart", touchStartHandler, false);
     window.addEventListener("touchend", touchEndHandler, false);
   }
-
-  if ($(window).width() <= 1024) {
-    disableSlides();
-  } else {
-    enableSlides();
-    pageSlides();
-  }
+if(isDesktop) {
+imagesLoop();
+  disableSlides();
+} else {
+  console.log('here2')
+  enableSlides();
+  pageSlides();
+}
+  // if ($(window).width() <= 1024) {
+  //   disableSlides();
+  // } else {
+  //   enableSlides();
+  //   pageSlides();
+  // }
 }
 
 
@@ -303,22 +344,18 @@ function touchEndHandler(event) {
     Tl.tweenTo(Tl.getLabelBefore(), {
       onStart: () => {
         tweenNotActive();
-        // console.log(tweenAvaible);
       },
       onComplete: () => {
         tweenActive();
-        // console.log(tweenAvaible);
       }
     })
   } else if (!preloader.classList.contains('is-load') && tweenAvaible && theTouchInfo.dy < 0 && Tl.getLabelAfter() != null) {
     Tl.tweenTo(Tl.getLabelAfter(), {
       onStart: () => {
         tweenNotActive();
-        // console.log(tweenAvaible);
       },
       onComplete: () => {
         tweenActive();
-        // console.log(tweenAvaible);
       }
     })
 

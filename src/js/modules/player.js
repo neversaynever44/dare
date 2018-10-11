@@ -34,7 +34,7 @@
 // requirements
 
 // settings
-var DEFAULTS = {
+const DEFAULTS = {
   borderColor: "rgba(255,255,255,0.4)",
   playedColor: "#ffffff",
   backgroundColor: "transparent",
@@ -45,13 +45,13 @@ var DEFAULTS = {
 };
 
 // reused values
-var pi = Math.PI;
-var doublePi = pi * 2;
-var arcOffset = -pi / 2;
-var animTime = 200;
-var loaderTime = 1800;
+const pi = Math.PI;
+const doublePi = pi * 2;
+const arcOffset = -pi / 2;
+const animTime = 200;
+const loaderTime = 1800;
 
-var CircleAudioPlayer = function (options) {
+const CircleAudioPlayer = function (options) {
   options = options || {};
   for (var property in DEFAULTS) {
     this[property] = options[property] || DEFAULTS[property];
@@ -300,20 +300,32 @@ CircleAudioPlayer.prototype = {
   }
 };
 
-// now init one as an example
-var cap1 = new CircleAudioPlayer({
-  audio: 'vendor/vincent.mp3'
-});
-var cap2 = new CircleAudioPlayer({
-  audio: 'vendor/vincent.mp3'
-});
-var cap3 = new CircleAudioPlayer({
-  audio: 'vendor/vincent.mp3'
-});
 
 let scene = document.getElementsByClassName('scene__audio');
 if (scene.length > 0) {
+  // now init one as an example
+  const cap1 = new CircleAudioPlayer({
+    audio: 'vendor/vincent.mp3'
+  });
+  const cap2 = new CircleAudioPlayer({
+    audio: 'vendor/vincent.mp3'
+  });
+  const cap3 = new CircleAudioPlayer({
+    audio: 'vendor/vincent.mp3'
+  });
+  const cap4 = new CircleAudioPlayer({
+    audio: 'vendor/vincent.mp3'
+  });
+  const cap5 = new CircleAudioPlayer({
+    audio: 'vendor/vincent.mp3'
+  });
+  const cap6 = new CircleAudioPlayer({
+    audio: 'vendor/vincent.mp3'
+  });
   cap1.appendTo(playerContainer1);
   cap2.appendTo(playerContainer2);
   cap3.appendTo(playerContainer3);
+  cap4.appendTo(playerContainer4);
+  cap5.appendTo(playerContainer5);
+  cap6.appendTo(playerContainer6);
 }

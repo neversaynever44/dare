@@ -13,7 +13,8 @@
 .btn-cart,
 .btn-primary,
 .btn-secondary,
-.btn-plus
+.btn-plus,
+.btn-order
   @extend %btn
   svg
     position: absolute
@@ -45,10 +46,15 @@
       rect
           stroke-dasharray: 180, 585
           stroke-dashoffset: 437
+  &__red
+    color: #eb4059
+    rect
+      stroke: #f3425a
 .btn-secondary
   width: 208px
   height: 58px
   line-height: 58px
+  padding: 0
   span
     color: $PURPLE
   &:hover
@@ -60,10 +66,58 @@
     span
       color: $WHITE
 
+.btn-unit
+  height: 54px
+  line-height: 54px
+  span
+    color: #f5425a
+
+
+.btn-order
+  padding: 0
+  width: 191px
+  height: 56px
+  line-height: 56px
+  svg
+    rect
+      stroke: $CADILLAC
+  span
+    color: $CADILLAC
+  &:hover
+    svg
+      rect
+          stroke-dasharray: 128,521
+          stroke-dashoffset: 397
+  &__red
+    svg
+      rect
+        stroke: #f3425a
+    span
+      color: #eb4059
+.btn-checkout
+  span
+    color: $CADILLAC
+  svg
+    rect
+      stroke: $CADILLAC
+
+
+
 .btn-tooltip
   width: 297px
   height: 54px
   line-height: 54px
+  +sm
+    width: 234px
+    svg
+      width: 234px
+      rect
+        width: 230px
+      &:hover
+        rect
+          stroke-dasharray: 90,590
+    span
+      font-size: 14px
   span
     color: $BLACK
   &:hover
@@ -87,8 +141,8 @@
   &:hover
     svg
       rect
-        stroke-dasharray: 140, 558
-        stroke-dashoffset: 430
+        stroke-dasharray: 129, 372
+        stroke-dashoffset: 227
   &__purple
     span
       color: #b84278
@@ -148,10 +202,13 @@
     background-color: $PURPLE
 .btn-red span
   color: #DF3E57
-
+.btn-apply span
+  color: #f84e66
 .btn-program
   span
     color: #b84178
+    +xs
+      font-size: 14px
   rect
     stroke: #b84178 
 
@@ -298,7 +355,7 @@
 .link
   svg,
   path
-    +tr(all .3s ease-in)
+    +tr(all .3s ease)
   &:hover
     .st-border
       fill: white
@@ -335,3 +392,22 @@
         fill: white
     .st-border
       fill: black
+
+
+// cart-cancel
+.cart-cancel
+  background: none
+  outline: 0
+  border: 0
+  +hide-text
+  padding: 0
+  +tr(all .3s ease-in)
+  // position: relative
+  position: absolute
+  right: 0
+  padding: 3px
+  +sm
+    top: 3px
+  &:hover
+    +rotate(90)
+

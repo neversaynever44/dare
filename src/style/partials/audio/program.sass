@@ -3,6 +3,11 @@
   padding: 22px 0 120px 0
   position: relative
   margin: 180px 0 240px 0
+  +r(1024)
+    margin-bottom: 80px
+  +xs
+    margin: 70px 0 68px 0
+    padding: 40px 0 20px 0
   &__layer
     position: absolute
     top: 0
@@ -12,11 +17,12 @@
     background-image: linear-gradient(to top,#b5437a 0,#428ea2 99%,#428ea3 100%)
     z-index: -1
     will-change: height
-  // &__audio
   &__bootcamp
     background-image: linear-gradient(to top, #665d95 0%, #665d95 1%, #329daa 100%)
     .program__body
       align-items: center
+      +xs
+        overflow: hidden
   &__top,
   &__bottom
     position: absolute
@@ -26,10 +32,10 @@
     margin: auto
   &__top
     bottom: 100%
-    transform: translateY(3px)
+    transform: translateY(1px)
   &__bottom
     top: 100%
-    // will-change: top
+    transform: translateY(-1px)
   &__title
     font-size: 32px
     font-weight: 800
@@ -47,14 +53,23 @@
     margin-bottom: 90px
     +r(1024)
       margin-bottom: 45px
+    +sm
+      margin-bottom: 25px
     h2
       font-size: 35px
       line-height: 40px
       margin-bottom: 17px
+      +xs
+        font-size: 25px
+        line-height: 34px
+        margin-bottom: 20px
     p
       font-size: 20px
       font-weight: 500
       line-height: 30px
+      +xs
+        font-size: 15px
+        line-height: 23px
   &__body
     justify-content: space-between
     position: relative
@@ -75,6 +90,8 @@
       padding-bottom: 44%
       +r(1024)
         padding-bottom: 100%
+      +sm
+        padding-bottom: 130%
     &:last-of-type
       max-width: 320px
       +r(1024)
@@ -134,6 +151,8 @@
       position: static
       transform: none
       max-width: 80%
+    +sm
+      max-width: 100%
 
 
 
@@ -164,8 +183,14 @@
     font-weight: 700
     color: $WHITE
     font-size: 16px
-    padding-top: 40px
+    padding-top: 30px
     +tr(all .3s ease-in)
+    +xs
+      font-size: 14px
+  &__in
+    display: inline-block
+    vertical-align: middle
+    position: relative
 .tabs__list-audio
   .tabs__item
     &.is-active,
@@ -173,41 +198,58 @@
       border-color: #7ec6fc
       .tabs__title
         color: #7ec6fc
-    &:nth-child(1)
-      .tabs__title
-        &:before
-          background-image: url(../img/content/tabs/release.png)
-    &:nth-child(2)
-      .tabs__title
-        &:before
-          background-image: url(../img/content/tabs/courage.png)
-    &:nth-child(3)
-      .tabs__title
-        &:before
-          background-image: url(../img/content/tabs/sleep.png)
-    &:nth-child(4)
-      .tabs__title
-        &:before
-          background-image: url(../img/content/tabs/travel.png)
-  .tabs__title
-    position: relative
-    &:before
-      content: ''
-      z-index: 1
-      display: block
-      position: absolute
-      top: 0
-      left: 0
-      right: 0
-      margin: auto
-      width: 40px
-      height: 40px
-      background-size: contain
-      background-repeat: no-repeat
-      background-position: center center
+      .icon-tab
+        opacity: 0
+        visibility: hidden
+      .icon-hover
+        opacity: 1
+        visibility: visible
+
+      // .icon-release
+      //   background-position: -114px -68px
+      // .icon-courage
+      //   background-position: -68px -74px
+      // .icon-sleep
+      //   background-position: -34px -108px
+      // .icon-travel
+      //   background-position: -34px -74px
+//     &:nth-child(1)
+//       .tabs__title
+//         &:before
+//           background-image: url(../img/content/tabs/release.png)
+//     &:nth-child(2)
+//       .tabs__title
+//         &:before
+//           background-image: url(../img/content/tabs/courage.png)
+//     &:nth-child(3)
+//       .tabs__title
+//         &:before
+//           background-image: url(../img/content/tabs/sleep.png)
+//     &:nth-child(4)
+//       .tabs__title
+//         &:before
+//           background-image: url(../img/content/tabs/travel.png)
+//   .tabs__title
+//     position: relative
+//     &:before
+//       content: ''
+//       z-index: 1
+//       display: block
+//       position: absolute
+//       top: 0
+//       left: 0
+//       right: 0
+//       margin: auto
+//       width: 40px
+//       height: 40px
+//       background-size: contain
+//       background-repeat: no-repeat
+//       background-position: center center
 
 .audio
   position: relative
+  +r(1024)
+    display: none
   &__title
     margin: 40px 0 30px 0
     text-align: center
@@ -251,7 +293,6 @@
   -webkit-transform: translate(-50%,-50%)
   -ms-transform: translate(-50%,-50%)
   transform: translate(-50%,-50%)
-
 
 
 

@@ -1,12 +1,32 @@
 .tooltip
-  +vcenter
-  top: 60%
+  &__sold
+    +vcenter
+    top: 60%
+    max-width: 853px
+    .tooltip__inner
+      padding: 70px 54px 45px
+      +sm
+        padding: 40px 37px
+      +xs
+        padding: 30px 17px
+  &__count
+    position: absolute
+    bottom: 0
+    // bottom: -48px
+    margin: auto
+    left: 0
+    right: 0
+    max-width: 681px
+    text-align: center
+    .tooltip__inner
+      padding: 24px 68px
+      +sm
+        padding: 40px 18px 15px 18px
   z-index: 2
   box-shadow: 0 5px 17px 4px rgba(0, 0, 0, 0.12)
   border-radius: 5px 5px 0 0
   background-color: $WHITE
   color: $BLACK
-  max-width: 853px
   width: 100%
   +tr(all .3s ease-in)
   opacity: 0
@@ -14,18 +34,16 @@
   &.is-active
     opacity: 1
     visibility: visible
-  &__inner
-    padding: 70px 54px 45px
   &__close
     background: none
     outline: 0
     display: block
     border: 0
-    padding: 10px 0
+    padding: 10px
     +hide-text
     position: absolute
     top: 10px
-    right: 17px
+    right: 10px
     +tr(all .3s ease-in)
     &:hover
       +rotate(90)
@@ -33,14 +51,62 @@
     font-size: 35px
     line-height: 45px
     font-weight: 700
+    +r(1024)
+      font-size: 35px
+    +sm
+      font-size: 25px
+      line-height: 35px
+    +xs
+      font-size: 18px
+      line-height: 25px
   &__subtitle
     margin: 52px 0
     font-size: 20px
     font-weight: 500
+    +sm
+      margin: 30px 0
+    +xs
+      margin: 19px 0
+      font-size: 15px
     // letter-spacing: -0.4px
   &__body
     text-align: center
     margin-bottom: 54px
+    +sm
+      margin-bottom: 34px
+    +xs
+      margin-bottom: 14px
   &__text
     font-size: 15px
     line-height: 22px
+  &__time
+    font-size: 17px
+    font-weight: 500
+    margin-bottom: 26px
+.countdown
+  @extend %flex
+  @extend %flex-c
+  text-transform: uppercase
+  &__item
+    &:not(:first-child)
+      margin-left: 30px
+      +sm
+        margin-left: 15px
+  &__title,
+  &__subtitle
+    font-weight: 800
+  &__title
+    color: $BLUE
+    font-size: 45px
+    line-height: 45px
+    margin-bottom: 10px
+    +sm
+      font-size: 25px
+      line-height: 35px
+      margin-bottom: 5px
+    +xs
+      line-height: 15px
+  &__subtitle
+    font-size: 12px
+    +xs
+      font-size: 10px

@@ -19,14 +19,16 @@
     width: 90%
   &.is-active
     color: $RED
-    .logo__svg
+    .logo__svg,
+    .auth__item svg
       fill: $RED
     .burger__item
       background-color: $RED
       &:before,
       &:after
         background-color: $RED
-    .title-secondary
+    .title-secondary,
+    .logo span
       color: $RED
     .basket__total
       background-color: $RED
@@ -73,23 +75,49 @@
     @extend %flex-c
     position: relative
     padding-right: 34px
+    +xs
+    padding-right: 24px
 .sticky-main
   .auth
     +r(767)
       display: none
-
-
+.sticky-shop
+  // .link-eff:after
+  //   width: 100%
+  .auth__item
+    @extend %flex
+    @extend %flex-c
+    svg
+      +tr(all .3s ease-in)
+      fill: white
+      margin-right: 12px
+    +sm
+      display: none
+  .logo span
+    color: #ffffff
+    font-size: 32px
+    line-height: 43.55px
+    font-weight: 400
+    margin-left: 19px
+    +sm
+      display: none
   
+
+
 .logo
   &__svg
     +tr(all .3s ease-in)
     margin-left: 13px
     fill: #fff
     fill-rule: evenodd
-    +r(480)
+    +xs
       width: 80px
-      margin-left: 5px
-
+      margin-left: 10px
+  &__ico
+    +xs
+      width: 29px
+      height: 30px
+      
 body
   &.is-show-popup
     overflow: hidden
@@ -102,6 +130,9 @@ body
       animation-timing-function: ease-in-out
       -webkit-animation-fill-mode: backwards
       animation-fill-mode: backwards
+    .auth__item 
+      svg
+        fill: $RED
     .link-eff
       &:before
         left: 0

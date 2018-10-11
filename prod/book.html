@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon.png">
 </head>
 
-<body class="book-page app-page">
+<body>
 
 
 
@@ -18,7 +18,7 @@
     
     <div class="sticky sticky-main js-sticky">
   <div class="sticky__logo">
-    <a href="" class="logo">
+    <a href="home.html" class="logo">
       <img class="logo__ico" src="img/svg/logo.svg" alt="" width="48" height="30">
       <svg class="logo__svg" xmlns="http://www.w3.org/2000/svg" width="100" height="33.687" viewBox="0 0 135.625 33.687">
 
@@ -35,11 +35,11 @@
       </li>
       |
       <div class="auth__item">
-        <a href="" class="auth__link link-eff">SHOP</a>
+        <a href="shop.html" class="auth__link link-eff">SHOP</a>
       </div>
     </ul>
     <div class="basket">
-      <a href="" class="basket__link">
+      <a href="cart.html" class="basket__link">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22.2 19.3" style="enable-background:new 0 0 22.2 19.3;" xml:space="preserve" width="22" height="19">
           <g>
             <path class="basket__icon" d="M22.1,3.9c-0.1-0.2-0.4-0.4-0.6-0.4H5.9l-1-3.1C4.8,0.2,4.5,0,4.2,0H0.8C0.3,0,0,0.3,0,0.8s0.3,0.8,0.8,0.8
@@ -79,21 +79,13 @@
 
   <div id="out">
 
-    <div id="viewBox">
+    <main id="viewBox">
       
       <section class="promo promo__book" id="promo">
         <div class="promo__layer promo__layer-book">
-          <div class="promo__shape">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 146.25">
-              <defs>
-                <linearGradient id="linear-book" x1="600" y1="606.25" x2="600" y2="460" gradientUnits="userSpaceOnUse">
-                  <stop offset="0" stop-color="#d73c57"/>
-                  <stop offset="1" stop-color="#dd3d57"/>
-                </linearGradient>
-              </defs>
-              <path data-name="Shape 2 copy 3" d="M1199.99 466.85c-86.77-7.7-280.92-11.25-524.19 68.82C450.1 609.96 232.82 624.75 0 584.13V460H1200z" transform="translate(0 -460)" fill-rule="evenodd" fill="url(#linear-book)"/>
-            </svg>
-          </div>
+          <svg class="promo__shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 146.25" preserveAspectRatio="xMidYMid slice">
+            <path data-name="Shape 2 copy 3" d="M1199.99 466.85c-86.77-7.7-280.92-11.25-524.19 68.82C450.1 609.96 232.82 624.75 0 584.13V460H1200z" transform="translate(0 -460)" fill-rule="evenodd" fill="#da3c57"/>
+          </svg>
         </div>
         <div class="promo__in inner flex">
           <div class="promo__col">
@@ -191,394 +183,371 @@
         </div>
       </section>
       
-      
-      <section class="plus plus__book" data-trigger="true" id="plus">
-        <div class="plus__in inner flex">
-          <div class="plus__col">
-            <div class="plus__header">
-              <div class="plus__title plus__title-book">
-                <h2>
-                  <span>break free</span>
-                  from anxiety
-                </h2>
-                <p>
-                  and win your freedom back
-                </p>
+      <div class="book-container" data-trigger="true">
+        
+        <section class="plus plus__book" id="plus">
+          <div class="plus__in inner flex">
+            <div class="plus__col">
+              <div class="plus__header">
+                <div class="plus__title plus__title-book">
+                  <h2 class="title-bold">
+                    <span>break free</span>
+                    from anxiety
+                  </h2>
+                  <p>
+                    and win your freedom back
+                  </p>
+                </div>
+                <div class="plus__subtitle">
+                  <p>
+                    In this bestselling step-by-step guide, you will
+                    <br> discover how to:
+                  </p>
+                </div>
               </div>
-              <div class="plus__subtitle">
-                <p>
-                  In this bestselling step-by-step guide, you will
-                  <br> discover how to:
-                </p>
+              <ul class="plus__list">
+                <li class="plus__item">
+                  <p>
+                    Stop panic attacks and end feelings of general anxiety.
+                  </p>
+                </li>
+                <li class="plus__item">
+                  <p>
+                    Face any anxious situation you’ve been avoiding (driving/flying/shopping etc.).
+                  </p>
+                </li>
+                <li class="plus__item">
+                  <p>
+                    Put an end to anxious or intrusive thoughts
+                  </p>
+                </li>
+                <li class="plus__item">
+                  <p>
+                    Boost your confidence and feel like your old self again
+                  </p>
+                </li>
+                <li class="plus__item">
+                  <p>
+                    Fall asleep faster and with less anxiety each night
+                  </p>
+                </li>
+                <li class="plus__item">
+                  <p>
+                    Live a more bold and adventurous life again
+                  </p>
+                </li>
+              </ul>
+              <div class="plus__button">
+                <a href="" class="btn-plus">
+                  <svg width="174" height="56">
+                    <defs>
+                      <linearGradient id="grad33">
+                        <stop offset="0%" stop-color="#bc3456"></stop>
+                        <stop offset="100%" stop-color="#bc3456"></stop>
+                      </linearGradient>
+                    </defs>
+                    <rect x="2" y="2" fill="none" stroke="url(#grad33)" width="170" height="52" rx="4"></rect>
+                  </svg>
+                  <span>BUY NOW</span>
+                </a>
               </div>
             </div>
-            <ul class="plus__list">
-              <li class="plus__item">
-                <p>
-                  Stop panic attacks and end feelings of general anxiety.
-                </p>
-              </li>
-              <li class="plus__item">
-                <p>
-                  Face any anxious situation you’ve been avoiding (driving/flying/shopping etc.).
-                </p>
-              </li>
-              <li class="plus__item">
-                <p>
-                  Put an end to anxious or intrusive thoughts
-                </p>
-              </li>
-              <li class="plus__item">
-                <p>
-                  Boost your confidence and feel like your old self again
-                </p>
-              </li>
-              <li class="plus__item">
-                <p>
-                  Fall asleep faster and with less anxiety each night
-                </p>
-              </li>
-              <li class="plus__item">
-                <p>
-                  Live a more bold and adventurous life again
-                </p>
-              </li>
-            </ul>
-            <div class="plus__button">
-              <a href="" class="btn-plus">
-                <svg width="174" height="56">
-                  <defs>
-                    <linearGradient id="grad33">
-                      <stop offset="0%" stop-color="#bc3456"></stop>
-                      <stop offset="100%" stop-color="#bc3456"></stop>
-                    </linearGradient>
-                  </defs>
-                  <rect x="2" y="2" fill="none" stroke="url(#grad33)" width="170" height="52" rx="4"></rect>
-                </svg>
-                <span>BUY NOW</span>
-              </a>
-            </div>
+
           </div>
-
-        </div>
-      </section>
-      
+        </section>
+        
 
 
 
 
 
-      
-      <div class="stats stats__book" id="stats">
-        <div class="stats__bg"></div>
-        <div class="stats__text">
-          The DARE technique can be used by
-          <br> everyone, regardless of age or background, 
-          <br>to live a life free from anxiety or panic attacks.
-        </div>
-        <div class="stats__shape">
-          <svg viewBox="0 0 1200 456" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-
+        
+        <div class="stats stats__book" id="stats">
+          <div class="stats__bg"></div>
+          <div class="stats__text">
+            The DARE technique can be used by
+            <br> everyone, regardless of age or background, 
+            <br>to live a life free from anxiety or panic attacks.
+          </div>
+          <svg class="stats__shape" viewBox="0 0 1200 456" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient x1="50.00025%" y1="100%" x2="50.00025%" y2="0.00130623974%" id="linearGradient-1">
-                <stop stop-color="#BA3356" offset="0%"></stop>
-                <stop stop-color="#F6435A" offset="99.2%"></stop>
-                <stop stop-color="#F6435A" offset="100%"></stop>
+              <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="stats-bg">
+                <stop stop-color="#BA3356" offset="0%"/>
+                <stop stop-color="#F6435A" offset="100%"/>
               </linearGradient>
             </defs>
-            <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <g id="Desktop-HD" transform="translate(-234.000000, -408.000000)" fill="url(#linearGradient-1)">
-                <g id="footer-(1)" transform="translate(234.000000, 408.000000)">
-                  <path d="M1200,456 L1200,0 C1063.44068,39.3386508 918.108409,110.175771 774.00213,261.670713 C622.653887,420.775025 287.182564,428.108908 0,454.845937 L0,456 L1200,456 Z" id="Shape_2_copy_4"></path>
-                </g>
-              </g>
-            </g>
+            <path d="M1200 456V0c-136.6 39.3-281.9 110.2-426 261.7C622.7 420.7 287.2 428 0 454.8v1.2h1200z" fill="url(#stats-bg)" fill-rule="evenodd"/>
           </svg>
-        </div>
-
-        <div class="stats__in inner">
-          <ul class="stats__list stats__list-wh">
-            <li class="stats__item">
-              <div class="stats__pic">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 27.6 39.7" style="enable-background:new 0 0 27.6 39.7;" xml:space="preserve">
-                  <path class="icon-book" d="M26.4,5H3.6C2.9,5,2.3,4.4,2.3,3.6s0.6-1.3,1.3-1.3h22.8c0.6,0,1.1-0.5,1.1-1.1S27.1,0,26.4,0H3.6
+          <div class="stats__in inner">
+            <ul class="stats__list stats__list-wh">
+              <li class="stats__item">
+                <div class="stats__pic">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 27.6 39.7" style="enable-background:new 0 0 27.6 39.7;" xml:space="preserve">
+                    <path class="icon-book" d="M26.4,5H3.6C2.9,5,2.3,4.4,2.3,3.6s0.6-1.3,1.3-1.3h22.8c0.6,0,1.1-0.5,1.1-1.1S27.1,0,26.4,0H3.6
 	C1.6,0,0,1.6,0,3.6v32c0,2.2,1.8,4,4,4h19.6c2.2,0,4-1.8,4-4V6.1C27.6,5.5,27.1,5,26.4,5z M18.6,7.3h2.8V12l-0.8-0.7
 	c-0.4-0.3-0.9-0.3-1.3,0L18.6,12V7.3z M23.6,37.4H4c-0.9,0-1.7-0.8-1.7-1.7V7c0.4,0.2,0.9,0.3,1.3,0.3h12.9v6.9
 	c0,0.4,0.2,0.7,0.6,0.9c0.4,0.2,0.8,0.1,1.1-0.2l1.8-1.5l1.8,1.5c0.2,0.2,0.4,0.2,0.7,0.2c0.1,0,0.3,0,0.4-0.1
 	c0.4-0.2,0.6-0.5,0.6-0.9V7.3h1.9v28.4C25.3,36.6,24.5,37.4,23.6,37.4z"/>
-                </svg>
+                  </svg>
 
 
-              </div>
-              <div class="stats__num">
-                50,409
-              </div>
-              <div class="stats__desc">
-                Books sold
-              </div>
-            </li>
-            <li class="stats__item">
-              <div class="stats__pic">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31 40" style="enable-background:new 0 0 31 40;" xml:space="preserve">
+                </div>
+                <div class="stats__num">
+                  50,409
+                </div>
+                <div class="stats__desc">
+                  Books sold
+                </div>
+              </li>
+              <li class="stats__item">
+                <div class="stats__pic">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31 40" style="enable-background:new 0 0 31 40;" xml:space="preserve">
 
-                  <path class="icon-kindle" d="M31,3.3C31,1.5,29.5,0,27.7,0c0,0,0,0,0,0H3.3C1.5,0,0,1.5,0,3.3c0,0,0,0,0,0v33.4C0,38.5,1.5,40,3.3,40h24.4
+                    <path class="icon-kindle" d="M31,3.3C31,1.5,29.5,0,27.7,0c0,0,0,0,0,0H3.3C1.5,0,0,1.5,0,3.3c0,0,0,0,0,0v33.4C0,38.5,1.5,40,3.3,40h24.4
 	c1.8,0,3.3-1.5,3.3-3.3L31,3.3L31,3.3z M29.3,36.7c0,0.9-0.7,1.7-1.7,1.7H3.3c-0.9,0-1.7-0.7-1.7-1.7V3.3c0-0.9,0.7-1.6,1.7-1.6
 	c0,0,0,0,0,0h24.4c0.9,0,1.7,0.7,1.7,1.6c0,0,0,0,0,0L29.3,36.7L29.3,36.7z M27,3.2H4C3.5,3.1,3.2,3.5,3.2,4v28.9
 	c0,0.5,0.4,0.8,0.8,0.8h23c0.5,0,0.8-0.4,0.8-0.8V4C27.8,3.5,27.5,3.1,27,3.2L27,3.2z M26.2,32H4.8V4.8h21.4L26.2,32L26.2,32z
 	 M6.7,10.5h10.1v1.7H6.7V10.5z M6.7,15.5h17.6v1.7H6.7V15.5z M6.7,20.4h17.6v1.7H6.7V20.4z M6.7,25.4H21V27H6.7V25.4z"/>
-                </svg>
-              </div>
-              <div class="stats__num">
-                38,506
-              </div>
-              <div class="stats__desc">
-                kindle &amp; audiobook
-              </div>
-            </li>
-            <li class="stats__item">
-              <div class="stats__pic">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.031 37.97">
-                  <path class="icon-amazon" d="M927.821,1730.18c0,1.97.048,3.62-.963,5.38a4.193,4.193,0,0,1-3.564,2.3c-1.974,0-3.13-1.48-3.13-3.68,0-4.32,3.933-5.1,7.657-5.1v1.1Zm5.19,12.36a1.086,1.086,0,0,1-1.216.12,12.437,12.437,0,0,1-2.951-3.38c-2.827,2.83-4.827,3.68-8.487,3.68-4.334,0-7.7-2.63-7.7-7.9a8.605,8.605,0,0,1,5.49-8.28c2.792-1.21,6.694-1.43,9.679-1.76v-0.66c0-1.21.1-2.63-.626-3.68a3.463,3.463,0,0,0-2.889-1.31,3.911,3.911,0,0,0-4.138,3.04,1.069,1.069,0,0,1-.894.93l-4.989-.53a0.894,0.894,0,0,1-.769-1.06c1.146-5.96,6.612-7.76,11.512-7.76,2.5,0,5.779.66,7.753,2.52,2.5,2.31,2.264,5.38,2.264,8.73v7.9c0,2.37,1,3.42,1.942,4.7a0.938,0.938,0,0,1-.016,1.34c-1.052.87-2.921,2.47-3.948,3.37Zm4.721,5.29a24.638,24.638,0,0,1-13.773,4.15,25.138,25.138,0,0,1-16.825-6.32c-0.349-.31-0.038-0.73.382-0.49a33.938,33.938,0,0,0,29.675,1.81C937.82,1746.71,938.348,1747.38,937.732,1747.83Zm1.55-1.74c-0.477-.6-3.149-0.28-4.35-0.14-0.363.04-.42-0.27-0.092-0.5,2.132-1.47,5.625-1.05,6.031-.55s-0.107,3.94-2.105,5.59c-0.307.25-.6,0.12-0.463-0.22C938.752,1749.17,939.759,1746.69,939.282,1746.09Z" transform="translate(-906.969 -1714)"/>
-                </svg>
+                  </svg>
+                </div>
+                <div class="stats__num">
+                  38,506
+                </div>
+                <div class="stats__desc">
+                  kindle &amp; audiobook
+                </div>
+              </li>
+              <li class="stats__item">
+                <div class="stats__pic">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.031 37.97">
+                    <path class="icon-amazon" d="M927.821,1730.18c0,1.97.048,3.62-.963,5.38a4.193,4.193,0,0,1-3.564,2.3c-1.974,0-3.13-1.48-3.13-3.68,0-4.32,3.933-5.1,7.657-5.1v1.1Zm5.19,12.36a1.086,1.086,0,0,1-1.216.12,12.437,12.437,0,0,1-2.951-3.38c-2.827,2.83-4.827,3.68-8.487,3.68-4.334,0-7.7-2.63-7.7-7.9a8.605,8.605,0,0,1,5.49-8.28c2.792-1.21,6.694-1.43,9.679-1.76v-0.66c0-1.21.1-2.63-.626-3.68a3.463,3.463,0,0,0-2.889-1.31,3.911,3.911,0,0,0-4.138,3.04,1.069,1.069,0,0,1-.894.93l-4.989-.53a0.894,0.894,0,0,1-.769-1.06c1.146-5.96,6.612-7.76,11.512-7.76,2.5,0,5.779.66,7.753,2.52,2.5,2.31,2.264,5.38,2.264,8.73v7.9c0,2.37,1,3.42,1.942,4.7a0.938,0.938,0,0,1-.016,1.34c-1.052.87-2.921,2.47-3.948,3.37Zm4.721,5.29a24.638,24.638,0,0,1-13.773,4.15,25.138,25.138,0,0,1-16.825-6.32c-0.349-.31-0.038-0.73.382-0.49a33.938,33.938,0,0,0,29.675,1.81C937.82,1746.71,938.348,1747.38,937.732,1747.83Zm1.55-1.74c-0.477-.6-3.149-0.28-4.35-0.14-0.363.04-.42-0.27-0.092-0.5,2.132-1.47,5.625-1.05,6.031-.55s-0.107,3.94-2.105,5.59c-0.307.25-.6,0.12-0.463-0.22C938.752,1749.17,939.759,1746.69,939.282,1746.09Z" transform="translate(-906.969 -1714)"/>
+                  </svg>
 
-              </div>
-              <div class="stats__num">
-                1,100+
-              </div>
-              <div class="stats__desc">
-                amazon reviews
-              </div>
-            </li>
-          </ul>
+                </div>
+                <div class="stats__num">
+                  1,100+
+                </div>
+                <div class="stats__desc">
+                  amazon reviews
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
+        
+
+
+
+        
+
+        <section class="reviews" id="reviews">
+          <div class="reviews__inner inner">
+            <div class="reviews__promo">
+              DARE is the
+              <span>highest rated book</span> for treating anxiety on Amazon.com
+            </div>
+            <ul class="reviews__list js-slider-review">
+              <li class="reviews__list-item">
+                <div class="review">
+                  <div class="review__header">
+                    <div class="review__header-icon">
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                    </div>
+                    <h4 class="review__header-title">
+                      The best book I ever had
+                      
+                  </h4></div>
+                  <div class="review__body">
+                    <p>
+                      The best book i ever had!! The program is fantastic! Its not magic you have to work to get
+                      results.
+                      If I could I’ll give
+                      bar 10 stars…
+                    </p>
+                    <span>
+                      Published 3 days ago by Amazon Customer
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="reviews__list-item">
+                <div class="review">
+                  <div class="review__header">
+                    <div class="review__header-icon">
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                    </div>
+                    <h4 class="review__header-title">
+                      Excellente!
+                      
+                  </h4></div>
+                  <div class="review__body">
+                    <p>
+                      The Dare response is a great tool to help end anxiety. Barry truly understands all the underlying
+                      emotions you fell with
+                      anxiety and has given a wonderful tool to give you self…
+                    </p>
+                    <span>
+                      Publish 7 days ago
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="reviews__list-item">
+                <div class="review">
+                  <div class="review__header">
+                    <div class="review__header-icon">
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                    </div>
+                    <h4 class="review__header-title">
+                      Have to have for anxiety/panic issues. Must read
+                      
+                  </h4></div>
+                  <div class="review__body">
+                    <p>
+                      Amazing book with vital info just don’t get from any drs, etc. If you’re struggling with
+                      panic/anxiety… you will greatly
+                      benefit from this!
+                    </p>
+                    <span>
+                      Published 3 days ago by Amazon Customer
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="reviews__list-item">
+                <div class="review">
+                  <div class="review__header">
+                    <div class="review__header-icon">
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                    </div>
+                    <h4 class="review__header-title">
+                      Effective way to deal with anxiety
+                      
+                  </h4></div>
+                  <div class="review__body">
+                    <p>
+                      This book teaches a very effective and sensitive method, written with expertise and care.
+                      Extremely
+                      good value for money.
+                      It includes access to inline support resources.
+                    </p>
+                    <span>
+                      Published 1 month ago by Dorothy piper
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="reviews__list-item">
+                <div class="review">
+                  <div class="review__header">
+                    <div class="review__header-icon">
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                    </div>
+                    <h4 class="review__header-title">
+                      Life changer!!!
+                      
+                  </h4></div>
+                  <div class="review__body">
+                    <p>
+                      If you buy on book on anxiety, this should be it!!
+                    </p>
+                    <span>
+                      Published 4 days ago by The Walrus
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="reviews__list-item">
+                <div class="review">
+                  <div class="review__header">
+                    <div class="review__header-icon">
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                      <i class="icon icon-star"></i>
+                    </div>
+                    <h4 class="review__header-title">
+                      This is a must read book
+                      
+                  </h4></div>
+                  <div class="review__body">
+                    <p>
+                      I’ve suffered from anxiety for decades. This is the first book to explain why I feel the way I
+                      do.
+                      I had no ideas my problems
+                      were do normal - so usual for someone suffering...
+                    </p>
+                    <span>
+                      Published 3 days ago by Amazon Customer
+                    </span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+
+        </section>
+        
+
+        
+        <div class="numbers">
+          <div class="numbers__in inner flex">
+            <div class="numbers__top">
+              <img src="img/content/numbers.png" alt="">
+            </div>
+            <div class="numbers__footer">
+              have turned to
+              <span>DARE</span> to break free from anxiety
+            </div>
+          </div>
+        </div>
+        
       </div>
-      
-
-      
-      
-      
-
-
-      
-
-      <section class="reviews" data-trigger="true" id="reviews">
-        <div class="reviews__inner inner">
-          <div class="reviews__promo">
-            DARE is the
-            <span>highest rated book</span> for treating anxiety on Amazon.com
-          </div>
-          <ul class="reviews__list js-slider-review">
-            <li class="reviews__list-item">
-              <div class="review">
-                <div class="review__header">
-                  <div class="review__header-icon">
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                  </div>
-                  <h4 class="review__header-title">
-                    The best book I ever had
-                    
-                </h4></div>
-                <div class="review__body">
-                  <p>
-                    The best book i ever had!! The program is fantastic! Its not magic you have to work to get results. If I could I’ll give
-                    bar 10 stars…
-                  </p>
-                  <span>
-                    Published 3 days ago by Amazon Customer
-                  </span>
-                </div>
-              </div>
-            </li>
-            <li class="reviews__list-item">
-              <div class="review">
-                <div class="review__header">
-                  <div class="review__header-icon">
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                  </div>
-                  <h4 class="review__header-title">
-                    Excellente!
-                    
-                </h4></div>
-                <div class="review__body">
-                  <p>
-                    The Dare response is a great tool to help end anxiety. Barry truly understands all the underlying emotions you fell with
-                    anxiety and has given a wonderful tool to give you self…
-                  </p>
-                  <span>
-                    Publish 7 days ago
-                  </span>
-                </div>
-              </div>
-            </li>
-            <li class="reviews__list-item">
-              <div class="review">
-                <div class="review__header">
-                  <div class="review__header-icon">
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                  </div>
-                  <h4 class="review__header-title">
-                    Have to have for anxiety/panic issues. Must read
-                    
-                </h4></div>
-                <div class="review__body">
-                  <p>
-                    Amazing book with vital info just don’t get from any drs, etc. If you’re struggling with panic/anxiety… you will greatly
-                    benefit from this!
-                  </p>
-                  <span>
-                    Published 3 days ago by Amazon Customer
-                  </span>
-                </div>
-              </div>
-            </li>
-            <li class="reviews__list-item">
-              <div class="review">
-                <div class="review__header">
-                  <div class="review__header-icon">
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                  </div>
-                  <h4 class="review__header-title">
-                    Effective way to deal with anxiety
-                    
-                </h4></div>
-                <div class="review__body">
-                  <p>
-                    This book teaches a very effective and sensitive method, written with expertise and care. Extremely good value for money.
-                    It includes access to inline support resources.
-                  </p>
-                  <span>
-                    Published 1 month ago by Dorothy piper
-                  </span>
-                </div>
-              </div>
-            </li>
-            <li class="reviews__list-item">
-              <div class="review">
-                <div class="review__header">
-                  <div class="review__header-icon">
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                  </div>
-                  <h4 class="review__header-title">
-                    Life changer!!!
-                    
-                </h4></div>
-                <div class="review__body">
-                  <p>
-                    If you buy on book on anxiety, this should be it!!
-                  </p>
-                  <span>
-                    Published 4 days ago by The Walrus
-                  </span>
-                </div>
-              </div>
-            </li>
-            <li class="reviews__list-item">
-              <div class="review">
-                <div class="review__header">
-                  <div class="review__header-icon">
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                    <i class="icon icon-star"></i>
-                  </div>
-                  <h4 class="review__header-title">
-                    This is a must read book
-                    
-                </h4></div>
-                <div class="review__body">
-                  <p>
-                    I’ve suffered from anxiety for decades. This is the first book to explain why I feel the way I do. I had no ideas my problems
-                    were do normal - so usual for someone suffering...
-                  </p>
-                  <span>
-                    Published 3 days ago by Amazon Customer
-                  </span>
-                </div>
-              </div>
-            </li>
-          </ul>
-
-        </div>
-
-      </section>
-      
-
-      
-      <div class="numbers">
-        <div class="numbers__in inner flex">
-          <div class="numbers__top">
-            <img src="img/content/numbers.png" alt="">
-
-            
-
-          </div>
-          <div class="numbers__footer">
-            have turned to
-            <span>DARE</span> to break free from anxiety
-          </div>
-        </div>
-      </div>
-      
       
       <div class="testimonial testimonial__book" id="testimonial">
-        <div class="testimonial__top">
 
-          <svg viewBox="0 0 1201 166" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <svg class="testimonial__top" viewBox="0 0 1201 166" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="testimonial-top">
+              <stop offset="0" stop-color="#e33e59"/>
+              <stop offset="1" stop-color="#f6435a"/>
+            </linearGradient>
+          </defs>
+          <path d="M1200 88l-9.8-3.8C922-17.8 767.4-6 617.9 12.2 473.1 30.2 217.2 162.2 0 163.3v2.4h1200V88z" fill="url(#testimonial-top)" fill-rule="evenodd"/>
+        </svg>
+        <svg class="testimonial__bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 195.8" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="testimonial-bottom" x1="600" y1="4751.8" x2="600" y2="4556" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#6f1f51"/>
+              <stop offset="1" stop-color="#882653"/>
+            </linearGradient>
+          </defs>
+          <path data-name="Shape 2 copy 6" d="M1200 4751c-220.3 13.1-444.3-150.5-639-179-240-35.1-478.8 62.7-561 101.2V4556h1200z" transform="translate(0 -4556)" style="fill-rule:evenodd;fill:url(#testimonial-bottom)"/>
+        </svg>
 
-            <defs>
-              <linearGradient x1="49.9995833%" y1="100%" x2="49.9995833%" y2="-0.00455409968%" id="test-gradient1">
-                <stop offset="0" stop-color="#e33e59"/>
-                <stop offset="1" stop-color="#f6435a"/>
-              </linearGradient>
-            </defs>
-            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <g id="footer-(1)" fill="url(#test-gradient1)">
-                <path d="M1200.04,87.98 C1196.78,86.75 1193.48333,85.5033333 1190.15,84.24 C922.082,-17.83 767.365,-6.1 617.905,12.26 C473.109,30.05 217.227,162.08 0,163.16 L0,165.62 L1200,165.62 L1200.04,87.98 Z" id="top"></path>
-              </g>
-            </g>
-          </svg>
 
-
-        </div>
-        <div class="testimonial__bottom">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 195.75">
-            <defs>
-              <style>
-                .testimonial-bottom {
-                  fill-rule: evenodd;
-                  fill: url(#test-gradient2);
-                }
-              </style>
-              <linearGradient id="test-gradient2" x1="600.015" y1="4751.75" x2="600.015" y2="4556" gradientUnits="userSpaceOnUse">
-                <stop offset="0" stop-color="#6f1f51"/>
-                <stop offset="1" stop-color="#882653"/>
-              </linearGradient>
-            </defs>
-            <path id="Shape_2_copy_6" data-name="Shape 2 copy 6" class="testimonial-bottom" d="M1200.03,4751.01C979.657,4764.15,755.7,4600.48,561,4572c-240.067-35.12-478.811,62.67-561,101.17V4556H1200Z" transform="translate(0 -4556)"/>
-          </svg>
-
-        </div>
         <div class="testimonial__in inner">
           <div class="testimonial__header">
             <blockquote>
@@ -612,7 +581,7 @@
       <section class="app" data-trigger="true" id="app">
         <div class="app__in inner">
           <div class="app__header">
-            <h2 class="app__title">
+            <h2 class="app__title title-bold">
               live the life
               <br>
               <span>you’re meant</span> to live
@@ -649,7 +618,7 @@
                   <h4>SOS</h4>
                 </li>
               </ul>
-              <a href="#" class="btn-more btn-purple">
+              <a href="app.html" class="btn-more btn-purple">
                 MORE ABOUT THE APP
               </a>
               <div class="app__btns">
@@ -784,23 +753,20 @@
         </div>
       </section>
       
-      
-<footer class="footer section" id="footer">
 
-  <div class="footer__bg">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1202 372">
-      <defs>
-        <linearGradient id="footer-gradient" x1="591.252" y1="375" x2="610.748" y2="3" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stop-color="#6b5d8d"/>
-          <stop offset="1" stop-color="#9F497E"/>
-        </linearGradient>
-      </defs>
-      <path id="Shape_1_copy_9" data-name="Shape 1 copy 9" class="footer-shape" d="M1202,3c-46.49,47.553-93.41,108-134.12,184.988C983.734,347.106,793.694,409.232,503.153,332.2,306.093,279.962,152.914,295.879,0,358v17H1202V3Z" transform="translate(0 -3)"/>
-    </svg>
+    </main>
     
+    <footer class="footer section" id="footer">
 
-
-  </div>
+  <svg class="footer__bg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1202 372" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient id="footer-gradient" x1="591.252" y1="375" x2="610.748" y2="3" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#6b5d8d"/>
+        <stop offset="1" stop-color="#9F497E"/>
+      </linearGradient>
+    </defs>
+    <path id="Shape_1_copy_9" data-name="Shape 1 copy 9" class="footer-shape" d="M1202,3c-46.49,47.553-93.41,108-134.12,184.988C983.734,347.106,793.694,409.232,503.153,332.2,306.093,279.962,152.914,295.879,0,358v17H1202V3Z" transform="translate(0 -3)"/>
+  </svg>
   <div class="footer__in inner">
     <div class="footer__top">
       <h2 class="footer__promo">
@@ -891,16 +857,16 @@
             <h3 class="footer__list-title">DARE TOOLKIT</h3>
           </li>
           <li class="footer__list-item">
-            <a class="footer__list-link link-eff" href="#">Dare Book</a>
+            <a class="footer__list-link link-eff" href="book.html">Dare Book</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__list-link link-eff" href="#">Dare app</a>
+            <a class="footer__list-link link-eff" href="app.html">Dare app</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__list-link link-eff" href="#">Dare audios</a>
+            <a class="footer__list-link link-eff" href="audio.html">Dare audios</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__list-link link-eff" href="#">Shop</a>
+            <a class="footer__list-link link-eff" href="shop.html">Shop</a>
           </li>
         </ul>
         <ul class="footer__list">
@@ -919,10 +885,10 @@
             <h3 class="footer__list-title">Coaching</h3>
           </li>
           <li class="footer__list-item">
-            <a class="footer__list-link link-eff" href="#">Bootcamp</a>
+            <a class="footer__list-link link-eff" href="bootcamp.html">Bootcamp</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__list-link link-eff" href="#">1:1 Coaching</a>
+            <a class="footer__list-link link-eff" href="coaching.html">1:1 Coaching</a>
           </li>
           <li class="footer__list-item">
             <a class="footer__list-link link-eff" href="#">Advanced Coaching</a>
@@ -942,7 +908,7 @@
             <a class="footer__list-link link-eff" href="#">About Barry McDonagh</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__list-link link-eff" href="#">Support</a>
+            <a class="footer__list-link link-eff" href="support.html">Support</a>
           </li>
         </ul>
       </div>
@@ -1176,7 +1142,7 @@
           </a>
         </li>
         <li class="privacy__item">
-          <a class="privacy__link link-eff">
+          <a href="terms.html" class="privacy__link link-eff">
             Terms of Serivce
           </a>
         </li>
@@ -1201,17 +1167,11 @@
   </div>
 
 </footer>
-
-
-
-    </div>
-
+    
   </div>
 
   
   <div class="popup popup__login js-popup" id="popupLogin">
-  
-
   <div class="popup__in">
     <div class="popup__body popup__body-login">
       <div class="popup__title">
@@ -1237,15 +1197,15 @@
         </div>
         <div class="form__group form__group-mb30">
           <div class="reg">
-            <input name="agreement" type="checkbox" class="reg-field" id="reg-check">
-            <label for="reg-check" class="reg-check">
+            <input name="rememberme" type="checkbox" class="reg-field" id="rememberme" value="forever">
+            <label for="rememberme" class="reg-check">
               <span class="reg-link" target="">
                 <b>Remember me</b> (for 2 weeks)</span>
             </label>
           </div>
         </div>
         <div class="form__footer">
-          <a href="" class="btn-secondary btn-red" tabindex="-1">
+          <button type="submit" class="btn-secondary btn-red">
             <svg width="208" height="58">
               <defs>
                 <linearGradient id="gradRed">
@@ -1256,8 +1216,8 @@
               <rect x="2" y="2" fill="none" stroke="url(#gradRed)" width="204" height="54" rx="5"></rect>
             </svg>
             <span>LOGIN</span>
-          </a>
-          
+          </button>
+
           <a href="/" class="btn-forgot">Forgot Password?</a>
         </div>
       </form>
@@ -1546,26 +1506,24 @@
 
   
   <div class="popup popup__menu js-popup" id="popupMenu">
-  
-
   <div class="popup__in">
     <div class="popup__body popup__body-menu">
       <div class="menu">
         <div class="menu__col">
           <nav class="nav">
-            <a href="" class="nav__link" data-text="Home">Home</a>
-            <a href="" class="nav__link" data-text="Stories">Stories</a>
-            <a href="community.html" class="nav__link" data-text="Community">Community</a>
-            <a href="coaching.html" class="nav__link" data-text="Coaching">Coaching</a>
-            <a href="bootcamp.html" class="nav__link" data-text="Bootcamp">Bootcamp</a>
-            <a href="" class="nav__link" data-text="Shop">Shop</a>
+            <a href="home.html" class="nav__link">Home</a>
+            <a href="story.html" class="nav__link">Stories</a>
+            <a href="community.html" class="nav__link">Community</a>
+            <a href="coaching.html" class="nav__link">Coaching</a>
+            <a href="bootcamp.html" class="nav__link">Bootcamp</a>
+            <a href="shop.html" class="nav__link">Shop</a>
           </nav>
           <ul class="list">
             <li>
               <span class="js-open-popup" data-popup="popupLogin">Member login</span>
             </li>
             <li>
-              <a href="">Support</a>
+              <a href="https://panicaway.zendesk.com/hc/en-us">Support</a>
             </li>
           </ul>
         </div>
@@ -1577,7 +1535,7 @@
             <li class="menu__list-item">
               <a class="menu__list-link" href="book.html"></a>
               <div class="menu__list-pic">
-                <img src="img/svg/icon-book.svg" alt="" style="width: 30px; height: 42px">
+                <img src="img/svg/icon-book.svg" alt="">
               </div>
               <h3 class="menu__list-title">
                 Book
@@ -1586,7 +1544,7 @@
             <li class="menu__list-item">
               <div class="menu__list-pic">
                 <a class="menu__list-link" href="app.html"></a>
-                <img src="img/svg/icon-app.svg" alt="" style="width: 30px; height: 40px">
+                <img src="img/svg/icon-app.svg" alt="">
               </div>
               <h3 class="menu__list-title">
                 App
@@ -1595,7 +1553,7 @@
             <li class="menu__list-item">
               <div class="menu__list-pic">
                 <a class="menu__list-link" href="audio.html"></a>
-                <img src="img/svg/icon-audio.svg" alt="" style="width: 30px; height: 40px">
+                <img src="img/svg/icon-audio.svg" alt="">
               </div>
               <h3 class="menu__list-title">
                 Audios

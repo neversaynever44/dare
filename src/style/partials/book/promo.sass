@@ -7,32 +7,94 @@
     height: 440px
   +r(1024)
     height: auto
+  +xs
+    margin-bottom: 170px
   &__coaching
     // background-image: linear-gradient(to top, #f75971 0%, #da3952 100%)
     margin-bottom: 173px
     .promo__col
       padding-right: 570px
+      +r(1440)
+        padding-right: 480px
+      +r(1024)
+        padding-right: 0
     .promo__text
       margin: 19px 0 31px 0
+      +r(1440)
+        font-size: 29px
+      +xs
+        font-size: 24px
+        margin: 11px 0
+        br
+          display: none
     .promo__in
       padding-top: 154px
+      +xs
+        padding-top: 119px
+    .promo__subtitle
+      +xs
+        margin: 11px 0 23px
     .promo__pic
       top: 60%
+      +r(1024)
+        top: 120%
+        left: 0
+        right: 0
+        margin: auto
+        transform: translateY(-50%) scale(1.1)
+        width: 100%
+      +sm
+        transform: translate(-50%,-50%)
+        left: 30%
+      +xs
+        left: 25%
+        top: 130%
+        max-width: 100%
+        img
+          max-width: unset
+          width: 130%
+
   &__community
     // background: linear-gradient(180deg, #D93C58 0%, #8D2753 100%)
     .promo__col
       max-width: 500px
     .promo__in
       padding-top: 158px
+      +xs
+        padding-top: 95px
+        padding-bottom: 120px
     .promo__text
       margin-bottom: 25px
+      +sm
+        font-size: 32px
+        line-height: 42px
+      +xs
+        font-size: 24px
+        line-height: 32px
+        margin-bottom: 0
+        br
+          display: none
+    .promo__subtitle
+      +xs
+        margin: 6px 0 45px
     .promo__pic
       left: 46%
       top: 65%
+      +r(1024)
+        top: 110%
+        left: 50%
+      +xs
+        width: 120%
+        top: 117%
+        left: 44%
   &__app
     // background-image: linear-gradient(to top, #616197 0%, #4e8c9e 100%)
     .promo__subtitle
       margin: 25px 0 42px 0
+      +sm
+        margin: 35px 0
+      +xs
+        margin: 10px 0
     .promo__scroll
       top: 77%
     .promo__col
@@ -40,31 +102,76 @@
     .promo__in
       padding-top: 164px
       +r(1024)
-        padding-top: 83px
+        padding-top: 127px
+      +sm
+        padding-top: 93px
     .promo__text
       margin-bottom: 35px
+      +sm
+        margin-bottom: 7px
     .promo__pic
-      top: 58%
+      top: 60%
       right: -4%
       +r(1024)
         top: 110%
         left: 50%
         right: auto
+        transform: translate(-50%,-50%)!important
+      +xs
         transform: translate(-50%,-50%)
     .promo__scroll
       top: 77%
   &__book
-    // background-image: linear-gradient(to top,#da3c57 0%,#f6435a 100%)
+    +r(1200)
+      padding-top: 14px
+      .promo__col
+        max-width: 490px
+      .promo__text
+        font-size: 24px
+    +r(1024)
+      .promo__pic
+        transform: translate(-50%,-50%)!important
+        left: 50%
+        top: 111%
+        max-width: 350px
+      .promo__in
+        padding-top: 154px
+    +sm
+      .promo__btn
+        display: none
+    +xs
+      .promo__in
+        padding-top: 91px
+        padding-bottom: 170px
+      .promo__pic
+        max-width: 270px
+        top: 100%
+      margin-bottom: 106px
   &__audio
-    // margin-bottom: 160px
-    // background-image: linear-gradient(to top,#3497a7 0%,#346b94 100%)
+    .promo
+      margin-bottom: 160px
     .promo__col
       max-width: 500px
+      +r(1200)
+        max-width: 400px
+        padding-right: 300px
+      +r(1024)
+        padding-right: 0
+    .promo__subtitle
+      margin: 34px 0 31px 0
+      +xs
+        margin: 11px 0 31px
     .promo__in
-      padding-top: 150px
+      padding-top: 155px
       padding-bottom: 230px
+      +xs
+        padding: 92px 0 116px 0
     .promo__text
       margin-bottom: 0
+      +r(1200)
+        font-size: 29px
+      +sm
+        font-size: 25px
     .promo__scroll
       top: 80%
     .promo__pic
@@ -72,20 +179,27 @@
       right: 54px
       +r(1024)
         top: 110%
-        left: 50%
+        left: 36%
         right: auto
-        transform: translate(-50%,-50%)
+        transform: translate(-50%,-50%) scale(1)!important
+        max-width: 400px
+      +xs
+        max-width: 302px
+        top: 120%
   &__title
     font-size: 19px
-    text-transform: uppercase
-    font-weight: 800
     color: $WHITE
+    +xs
+      font-size: 17px
   &__in
     position: relative
     max-width: 1105px
     padding-top: 184px
-    // padding-bottom: 0!important
     padding-bottom: 250px
+    +r(1024)
+      padding-bottom: 200px
+    +xs
+      padding-bottom: 100px
   &__scroll,
   &__pic
     position: absolute
@@ -93,6 +207,7 @@
     opacity: 0
   &__pic
     top: 50%
+    overflow: 0
     transform: translateY(-50%) scale(1.3)
     // scale(1.3) 
     max-width: 600px
@@ -101,6 +216,10 @@
     +r(1024)
       width: 100%
       margin: auto
+      opacity: 1
+      transform: translate(-50%,-50%)
+    +xs
+      width: 110%
     img
       max-width: 100%
       max-height: 100%
@@ -111,10 +230,10 @@
     transform: translateY(-50%) 
     z-index: 2
     top: 74%
-    +tr(all .3s ease-in)
+    transition: all .3s ease-in
     &.is-hidden
-      opacity: 0!important
-      visibility: hidden
+      opacity: 0
+      display: none
     +r(1024)
       display: none
     .scroll-to
@@ -123,27 +242,50 @@
     max-width: 590px
     padding-left: 42px
     padding-right: 450px
+    +r(1200)
+      padding-right: 280px
     +r(1024)
       padding-right: 0
+      padding-left: 0
   &__text
     color: white
     font-size: 35px
     width: 100%
     font-weight: 500
-    line-height: 50px
+    line-height: 47px
     margin-bottom: 55px
+    +sm
+      font-size: 24px
+      line-height: 34px
+      margin-bottom: 7px
   &__subtitle
     font-size: 20px
     line-height: 30px
     font-weight: 500
     color: $WHITE
     margin: 25px 0 33px 0 
+    +sm
+      margin: 17px 0 25px 0
+    +xs
+      line-height: 23px
+      font-size: 15px
+      br
+        display: none
   &__shape
     width: 100%
     top: 100%
     position: absolute
     left: 0 
     right: 0
+    z-index: -1
+    transform: translateY(-1px)
+  &__btn
+    +xs
+      display: flex
+      align-content: center
+      .link__svg,
+      .link-app__svg
+        width: 134px
   &__layer
     z-index: 0
     position: absolute
@@ -152,7 +294,7 @@
     width: 100%
     height: 100%
     // +tr(all .3s ease-in)
-    will-change: transform
+    // will-change: transform
     &.is-translate
       animation: translateLayer .6s ease-in-out forwards alternate
 .promo__layer-app

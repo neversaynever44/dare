@@ -1,0 +1,12 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 633 258">
+          <defs>
+            <linearGradient id="team-layer" x1="316.5" y1="258" x2="316.5" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#F52848" />
+              <stop offset="1" stop-color="#F6445A" />
+            </linearGradient>
+          </defs>
+          <path data-name="Shape 1 copy 6" d="M0 258c28.3-12.6 59-32.7 90.2-63.5C184.2 101.8 386 46.9 515.4 96c0 0 55 17.2 95.2-55C617.8 28.3 625.3 14.4 633 0H0z"
+            style="fill-rule:evenodd;fill:url(#team-layer)" />
+        </svg>
+

@@ -1,15 +1,24 @@
 .program
   &__bootcamp
-    padding: 160px 0
+    padding: 160px 0 90px 0
     margin-bottom: 157px
+    +xs
+      margin: 90px 0 68px
+      padding: 64px 0 120px
     .program__header
       max-width: 953px
       margin: 0 auto 116px
+      +r(1024)
+        margin-bottom: 50px
     .program__content
       &:first-of-type
         padding-top: 0
         padding-left: 22px
         padding-bottom: 51%
+        +r(1024)
+          padding-bottom: 100%
+        +sm
+          padding-bottom: 120%
         img
           top: 50%
           left: 71%

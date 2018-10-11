@@ -3,6 +3,23 @@ window.addEventListener("DOMContentLoaded", function () {
   let tabList = document.querySelectorAll('.js-tab');
   let dotList = document.querySelectorAll('.js-dots');
 
+  let curWidth = window.innerWidth;
+  let oldWidth = window.innerWidth;
+  let desktopW = 1024;
+  let isDesktop = null;
+  isDesktop = chechIfMobile(desktopW);
+
+  function chechIfMobile(width) {
+    if (curWidth <= width) {
+      return true
+    }
+    else {
+      return false
+    }
+  };
+
+
+
 
   tabList.forEach(tab => tab.addEventListener('click', clickOnTabHandler));
   dotList.forEach(dotItem => dotItem.addEventListener('click', clickOnDotHandler));
@@ -28,23 +45,22 @@ window.addEventListener("DOMContentLoaded", function () {
   }
   function triggerIntervalTabs() {
 
-    for (let i = 0; i < tabList.length; i++) {
+    if (!isDesktop) {
       let current = 0;
 
-      setInterval(function () {
+      let startInterval = setInterval(function () {
         if (current > tabList.length - 1) {
           current = 0
         }
         tabList[current++].click();
 
       }, 6000)
-
     }
 
   }
 
-  let section = document.getElementById('feature')
-  if (section) {
+  let isAppPage = document.getElementsByClassName('is-appage')
+  if (isAppPage.length > 0) {
     triggerIntervalTabs();
   }
 

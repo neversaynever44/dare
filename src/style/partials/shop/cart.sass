@@ -1,0 +1,325 @@
+.cart
+  padding: 17px 0 110px 0
+  +xs
+    padding-bottom: 60px
+  &__in
+    max-width: 950px
+    +r(1024)
+      max-width: 100%
+  &__title
+    font-size: 35px
+    margin-bottom: 60px
+    +xs
+      font-size: 24px
+      margin-bottom: 40px
+.cart-row,
+.cart-item,
+.cart-shop,
+.cart-shop__unit
+  @extend %flex
+.cart-row
+  justify-content: space-between
+  align-items: center
+  border-bottom: 1px solid rgba(#2c2929, 0.2)
+  padding-bottom: 21px
+  padding-right: 15px
+  +sm
+    padding-right: 0
+  &:not(:last-child)
+    margin-bottom: 22px
+    +xs
+      margin-bottom: 15px
+  .cost-new
+    font-size: 19px
+    text-transform: uppercase
+    color: $SHOP_COLOR
+    font-weight: 800
+    // margin-right: 60px
+    min-width: 97px
+    text-align: right
+    +sm
+      position: absolute
+      bottom: 0
+      right: 0
+    +xs
+      font-size: 16px
+      bottom: 10px
+  .cost-old
+    margin-right: 40px
+.cart-cost
+  font-size: 19px
+  font-weight: 600
+  text-decoration: none
+  color: $BLACK
+  position: relative
+  +xs
+    font-size: 15px
+  &:before
+    content: "$"
+  &__total,
+  &__order
+    font-weight: 800
+  &__total
+    color: #9f497e
+  &__order
+    color: $SHOP_COLOR
+    +xs
+      font-size: 16px
+
+.cart-item
+  margin-right: 43px
+  +xs
+    margin-right: 25px
+    // flex: auto
+    // justify-content: flex-start
+  &__pic
+    height: 100px
+    overflow: hidden
+    position: relative
+    +xs
+      height: 80px
+    img
+      max-width: 100%
+      border-radius: 5px
+      display: block
+      object-fit: cover
+      height: 100%
+    .product-vc
+      top: 47%
+      svg
+        width: 19px
+        height: 13px
+      h3
+        font-size: 12px
+        line-height: 1
+.cart-item,
+.cart-shop
+  @extend %flex-c
+.cart-shop
+  // width: 44%
+  width: 85%
+  justify-content: space-between
+  position: relative
+  +sm
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+  +xs
+    width: 63%
+    margin-right: 5px
+    // width: 55%
+  &__col
+    @extend %flex
+  &__title
+    font-size: 16px
+    color: $BLACK
+    font-weight: 600
+    line-height: 19px
+    max-width: 220px
+    +sm
+      padding-bottom: 12px
+    +xs
+      font-size: 14px
+      max-width: 116px
+      text-overflow: ellipsis
+      overflow: hidden
+  .cart-cost
+    // +text-overflow
+    min-width: 78px
+    text-align: right
+    +sm
+      position: absolute
+      bottom: 30px
+      right: 0
+      margin-right: 0
+    // +xs
+    //   opacity: 0
+    //   visibility: hidden
+    //   z-index: -1
+    //   height: 0
+  &__unit
+    @extend %flex-c
+    &:last-of-type
+      margin: 0 53px 0 30px
+      +sm
+        margin: 0
+    +xs
+      .quantity-container
+        display: none
+      // +r(1024)
+        // margin-left: 25px
+
+// coupon code
+.code
+  margin: 55px 0 50px 0
+  text-align: center
+  position: relative
+  min-height: 60px
+  +xs
+    min-height: 140px
+    margin: 20px 0
+  &__title
+    +vcenter
+    color: $SHOP_COLOR
+    font-size: 17px
+    font-weight: 700
+    display: inline-block
+    cursor: pointer
+    +xs
+      font-size: 15px
+      width: 100%
+    &:before
+      content: ''
+      z-index: 1
+      display: block
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 0
+      height: 2px
+      background-color: $SHOP_COLOR
+      +tr(all .3s ease-in)
+      +xs
+        display: none
+    &:hover
+      &:before
+        width: 100%
+    &.is-hidden
+      opacity: 0
+      visibility: hidden
+      height: 0
+      z-index: -1
+.coupon
+  +vcenter
+  width: 100%
+  +tr(all .3s ease-in)
+  opacity: 0
+  visibility: hidden
+  &.is-active
+    opacity: 1
+    visibility: visible
+  &__row
+    @extend %flex
+    @extend %flex-c
+    +xs
+      flex-direction: column
+  &__field
+    color: rgba($BLACK, 0.5)
+    font-size: 16px
+    font-weight: 500
+    padding: 20px 25px
+    background: none
+    outline: 0
+    border: 0
+    border-radius: 0
+    text-align: center
+    width: 100%
+    display: block
+    max-width: 149px
+    border-bottom: 1px solid rgba($BLACK, 0.5)
+    margin-right: 20px
+    +xs
+      margin: 0 0 27px 0
+    
+
+
+
+
+// cart-total
+.cart-total
+  width: 100%
+  margin: 0 auto
+  box-shadow: 0 5px 17px 4px rgba(0, 0, 0, 0.08)
+  border-radius: 5px
+  background-color: #ffffff
+  max-width: 502px
+  padding-bottom: 63px
+  +sm
+    padding-bottom: 40px
+  &__in
+    padding: 33px 82px 40px 63px
+    +sm
+      padding: 40px 20px
+  &__title
+    font-size: 30px
+    margin-bottom: 51px
+    +xs
+      font-size: 24px
+  &__unit,
+  &__item
+    @extend %flex
+  &__unit
+    h4
+      font-size: 16px
+      font-weight: 700
+      text-transform: uppercase
+      +xs
+        font-size: 14px
+    span
+      font-size: 14px
+      margin-left: 9px
+      font-weight: 500
+      +xs
+        font-size: 13px
+        margin-left: 4px
+  &__item
+    justify-content: space-between
+    padding: 0 9px
+    +xs
+      padding: 0 0 0 9px
+    &:not(:last-child)
+      margin-bottom: 30px
+      padding-bottom: 27px
+      border-bottom: 1px solid rgba(#2c2929, 0.2)
+      +xs
+        margin-bottom: 17px
+        padding-bottom: 20px
+  &__btn
+    text-align: center
+
+
+.title-shop
+  text-align: center
+  font-weight: 600
+  b
+    font-weight: 800
+
+.cart-in
+  position: relative
+  width: 63px
+  display: none
+  +xs
+    display: block
+  &:before
+    position: absolute
+    top: 46%
+    -webkit-transform: translateY(-50%) rotate(45deg)
+    -ms-transform: translateY(-50%) rotate(45deg)
+    transform: translateY(-50%) rotate(45deg)
+    right: 10px
+    content: ''
+    border: solid #bbb
+    border-width: 0 2px 2px 0
+    display: inline-block
+    padding: 3px
+    pointer-events: none
+.cart-in__sel 
+  border-radius: 6px
+  display: block
+  outline: 0
+  color: #bbb
+  font-weight: 700
+  font-size: 14px
+  text-transform: uppercase
+  background: none
+  border: 0
+  padding: 9px 29px 10px 16px
+  border: 1px solid #bbbbbb
+  -moz-appearance: none
+  -webkit-appearance: none
+.cart-in__sel::-ms-expand 
+  display: none
+.cart-in__sel:-moz-focusring 
+  color: transparent
+  text-shadow: 0 0 0 #000
+    

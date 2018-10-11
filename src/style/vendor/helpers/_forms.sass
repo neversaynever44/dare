@@ -3,7 +3,7 @@
     display: block
     font-weight: bold
     font-size: 15px
-    +r(480)
+    +xs
       font-size: 14px
   &__field
     position: relative
@@ -12,7 +12,7 @@
     justify-content: space-between
     align-items: center
     padding-right: 20px
-    +r(767)
+    +sm
       flex-direction: column
       padding-right: 0
   &__btn
@@ -21,12 +21,17 @@
     margin-top: 37px
     font-size: 14px
     font-weight: 500
+    +xs
+      margin: 27px auto 0
+      line-height: 17px
 .form__group-mb30
   margin-bottom: 50px
-  +r(767)
+  +sm
     margin-bottom: 30px
-  +r(480)
+  +xs
     margin-bottom: 15px
+.form__group-mb50
+  margin-bottom: 50px
 
 // form
 .form
@@ -56,7 +61,7 @@
     border-bottom: 1px solid $RED
     padding-bottom: 8px
     font-weight: 500
-    +r(480)
+    +xs
       padding-bottom: 3px
   &__field
     &:not(:last-child)
@@ -67,7 +72,7 @@
     font-size: 20px
     +r(1024)
       line-height: 1.3
-    +r(480)
+    +xs
       font-size: 16px
       font-weight: 600
       line-height: 24px
@@ -77,31 +82,48 @@
     width: 100%
     border: 0
     outline: 0
-    padding: 37px 0 85px
-    color: rgba($BLACK, 0.5)
+    padding: 37px 0 65px
+    color: rgba($WHITE, 0.5)
     resize: none
-    border-bottom: 1px solid rgba(#373535, 0.8)
+    border-bottom: 1px solid rgba($WHITE, 0.8)
+    margin-bottom: 10px
+    border-radius: 0
+    +xs
+      padding: 17px 0 79px
+      margin-bottom: 10px
 .form__group-flex
   @extend %flex
   @extend %flex-c
   margin: 0 -10px
+  +xs
+    flex-wrap: wrap
 .form__group-comment
   margin: 40px 0 60px 0
+  +xs
+    margin: 0 0 50px 0
 .form__field-6
   flex: 1
   padding: 0 10px
+  +xs
+    flex: 1 100%
+    margin-bottom: 40px
 .form__input-wh
   border-color: white 
   padding-bottom: 5px
 
+
+
+
+
+
 .form__input::-webkit-input-placeholder
-  color: white
+  color: $WHITE
 .form__input::-moz-placeholder
-  color: white
+  color: $WHITE
 .form__input:-ms-input-placeholder
-  color: white
+  color: $WHITE
 .form__input:-moz-placeholder
-  color: white
+  color: $WHITE
 .form__input-bl
   color: black
 .form__input-bl::-webkit-input-placeholder
@@ -117,3 +139,41 @@
   font-size: 14px
   position: absolute
   top: 100%
+  left: 0
+  width: 100%
+
+
+%input
+  outline: 0
+  border: 0
+  background: none
+  width: 100%
+  display: block
+  border-radius: 0
+.input
+  @extend %input
+input[type='number']::-webkit-inner-spin-button, 
+input[type='number']::-webkit-outer-spin-button 
+    -webkit-appearance: none    
+    appearance: none
+    margin: 0  
+input[type='number'], 
+input[type='number']:hover,
+input[type='number']:focus 
+  -moz-appearance: textfield
+
+%sel
+  outline: 0
+  border: 0
+  background: none
+  width: 100%
+  borde-radius: 0
+  display: block
+.sel
+  appearance: none
+  -moz-appearance: none
+  -webkit-appearance: none
+  @extend %input
+.sel::-ms-expand
+  display: none
+

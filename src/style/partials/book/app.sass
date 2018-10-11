@@ -2,18 +2,28 @@
   padding-bottom: 160px
   overflow: hidden
   +tr(all .3s ease-in)
+  +xs
+    padding-bottom: 50px
   &__in
     max-width: 1070px
     padding-left: 95px
     position: relative
+    +r(1024)
+      padding-left: 0
   &__title
-    font-weight: 800
     font-size: 62px
     line-height: 68px
-    text-transform: uppercase
     color: $PURPLE
+    +r(1024)
+      font-size: 50px
+      line-height: 60px
+    +sm
+      font-size: 35px
+      line-height: 43px
     span
       color: #88478c
+      +sm
+        display: block
   &__subtitle
     margin: 45px 0 48px 0
     color: $BLACK
@@ -22,6 +32,14 @@
     line-height: 40px
     max-width: 680px
     width: 100%
+    +r(1024)
+      margin: 30px 0 622px 0
+    +sm
+      margin-bottom: 442px
+      font-size: 20px
+      line-height: 30px
+    +xs
+      margin: 14px 0 322px 0
     span
       font-weight: 800
       color: #cc376b
@@ -44,23 +62,45 @@
     @extend %flex
     flex-wrap: wrap
     margin: 26px 0 31px 0
+    +xs
+      margin: 29px 0 20px
   &__phone
     position: absolute
     opacity: 0
     transform: translateY(-50%)
     top: 72%
     right: 31px
+    +r(1024)
+      top: 0
+      left: 50%
+      transform: translate(-50%,-90%)
+      right: auto
+    +sm
+      max-width: 460px
+      width: 100%
+      img
+        width: 100%
+        height: auto
   &__btns
     margin-top: 60px
     @extend %flex
     align-items: center
+    +r(480)
+      flex-direction: column
+      margin-top: 26px
+      .link
+        margin: 4px 0
+        svg
+          width: 160px
 .app__list-item
   opacity: 0
   +tr(all .3s ease-in)
-  width: 31%
+  flex: 1 31%
   padding-left: 21px
   position: relative
   margin-bottom: 20px
+  +r(1024)
+    flex-basis: 42%
   &:before
     content: ''
     z-index: 1
@@ -75,3 +115,5 @@
     font-weight: 600
     color: $BLACK
     font-size: 20px
+    +xs
+      font-size: 16px

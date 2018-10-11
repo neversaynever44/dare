@@ -1,16 +1,25 @@
 .bootcamp
   height: 100vh
-  background: url(../img/content/bootcamp/header.png)bottom no-repeat
-  +cover
   position: relative
+  background: url(../img/content/bootcamp/header.jpg)center no-repeat
+  +cover
+  +sm
+    height: 700px
+  +xs
+    height: 534px
+  &__layer
+    background-image: url(../img/svg/bootcamp-layer.svg)
   &__in
     position: relative
-    max-width: 1105px
+    max-width: 1135px
     height: 100%
   &__scroll
     position: absolute
     bottom: 90px
-    right: 0
+    right: 10px
+    +r(1024)
+      display: none
+      bottom: 10px
   &__head
     +vcenter
     color: $WHITE
@@ -21,20 +30,36 @@
     text-shadow: 0 3px 3px rgba(0, 0, 0, 0.2)
   &__title
     display: block
-    text-transform: uppercase
     font-size: 56px
-    font-weight: 800
-    line-height: 41px
+    line-height: 42px
     margin-bottom: 37px
+    +r(1024)
+      font-size: 45px
+    +sm
+      font-size: 35px
+      margin-bottom: 21px
+    +xs
+      margin-bottom: 3px
   &__subtitle
     font-size: 35px
     font-weight: 500
+    +r(1024)
+      width: 100%
+      margin: auto
+      max-width: 400px
+      line-height: 40px
+    +sm
+      max-width: 262px
+      font-size: 23px
+      line-height: 32px
   &__shape
     position: absolute
     bottom: 0
     left: 0
     transform: translateY(3px)
     width: 100%
+    +sm
+      transform: translateY(1px)
   // margin-bottom: 1000px
   // &:before
   //   content: ''
@@ -61,8 +86,11 @@
       height: 100%
   &__layer
     // display: none
-    position: absolute
-    top: 0
-    left: 0
-    width: 53%
+    // position: absolute
+    // top: 0
+    // left: 0
+    // width: 53%
     
+.bootcamp-dots
+  left: 51%
+  transform: translateX(-50%)

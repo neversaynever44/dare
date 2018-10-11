@@ -2,7 +2,7 @@
 .burger,
 .burger__close
   position: absolute
-  top: 50%
+  top: 60%
   transform: translateY(-50%)
   right: 0
   z-index: 100
@@ -15,10 +15,12 @@
   padding: 0
   +hide-text
   +tr(all .3s ease-in)
-.burger__close
-  opacity: 0
-  visibility: hidden  
+  +xs
+    width: 28px
 .burger
+  &__close
+    opacity: 0
+    visibility: hidden
   &.is-active
     .burger__item
       background-color: transparent
@@ -33,6 +35,7 @@
   &__item
     position: absolute
     top: 50%
+    transform: translateY(-50%)
     left: 0
     display: block
     width: 100%

@@ -8,13 +8,6 @@ const body = document.body;
 let mainPage = document.getElementsByClassName('main-page');
 let appPage = document.getElementsByClassName('app-page');
 let bookPage = document.getElementsByClassName('book-page');
-
-if (mainPage.length > 0) {
-  window.addEventListener("load", () => {
-    body.classList.add('is-fixed');
-  })
-}
-
 const tl = new TimelineLite({
   paused: true,
   onComplete: loadContent,
@@ -94,8 +87,13 @@ const preloaderProgress = () => {
   if (mainPage.length > 0 && preloader.classList.contains('is-load')) {
     tl.play();
   }
+}
+if (mainPage.length > 0) {
+  window.addEventListener("load", () => {
+    body.classList.add('is-fixed');
+  })
+  window.addEventListener('wheel', preloaderProgress);
+  document.addEventListener("touchstart", preloaderProgress);
 
 }
-window.addEventListener('wheel', preloaderProgress);
-document.addEventListener("touchstart", preloaderProgress);
 

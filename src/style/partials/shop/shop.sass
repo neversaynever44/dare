@@ -1,0 +1,255 @@
+.products
+  padding: 50px 0 200px 0
+  +xs
+    padding: 10px 0 70px 0
+  &__in
+    max-width: 1074px
+    position: relative
+    +r(1024)
+      max-width: 991px
+  &__title
+    margin-bottom: 72px
+    font-size: 35px
+    +xs
+      font-size: 24px
+      margin-bottom: 33px
+  &__list
+    @extend %flex
+    align-items: flex-start
+    justify-content: flex-start
+    flex-wrap: wrap
+    margin: 0 0 0 -3%
+    +sm
+      justify-content: center
+      margin: 0
+      align-items: stretch
+  &__slider
+    opacity: 0
+    visibility: hidden
+    +tr(all .3s ease-in)
+    padding: 0 40px
+    margin: 50px 0 70px 0
+    +r(1024)
+      margin: 0 0 90px 0
+      padding: 55px 20px 55px
+    +sm
+      margin-bottom: 44px
+    +xs
+      padding: 55px 0 61px 0
+    &.is-ready
+      opacity: 1
+      visibility: visible
+    .products__list-item
+      margin: 0
+    .product
+      +r(1024)
+        padding: 0
+    .slick-slide
+      padding: 20px
+      margin: 0!important       
+      +xs
+        padding: 13px            
+.slider-in
+  +vcenter 
+  width: 100%
+  z-index: 1
+  top: 38%
+  +r(1024)
+    display: none
+  .slick-arrow
+    +hide-text
+    position: absolute
+    cursor: pointer
+    z-index: 1
+    background: none
+    outline: 0
+    border: 0
+    border-radius: 0
+    svg
+    &:hover
+      svg
+        path
+          +tr(all .3s ease-in)
+          fill: $CADILLAC
+  .js-prev1
+    left: 0
+    +rotate(360)
+  .js-next1
+    right: 0
+
+.products__list-item
+  position: relative
+  width: 30.33%
+  margin-left: 3%
+  box-shadow: 0 4px 15px 3px rgba(0, 0, 0, 0.08)
+  border-radius: 5px
+  +r(1024)
+    margin: 7px
+  +sm
+    width: 45%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: stretch
+    flex-wrap: wrap
+  &:not(:last-child)
+    margin-bottom: 40px
+    +r(1024)
+      margin-bottom: 20px
+    +xs
+      margin-bottom: 7px
+.products__list-item--hover
+  &:hover
+    .product__pic img
+      +scale(1.1)
+    .product__content
+      background-color: #f3425a
+    .product__description,
+    .product__app,
+    .cost-new,
+    .cost-old
+      color: $WHITE
+    .product-vc
+      transform: translate(-50%,-50%) scale(1.1)
+    .product__line
+      fill: #f3425a
+  .product__pic img
+    width: 100%
+    height: auto
+
+  // .product__content
+    // padding: 11px 0
+  .product
+    +sm
+      padding: 0
+.products__list-link
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  width: 100%
+  height: 100%
+  cursor: pointer
+  z-index: 1
+
+.product
+  +sm
+    height: 100%
+    width: 100%
+    padding: 14px
+  &__pic
+    // height: 338px
+    position: relative
+    padding-top: 100%
+    overflow: hidden
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+    img
+      position: absolute
+      top: 0 
+      left: 0
+      right: 0
+      bottom: 0
+      margin: auto
+      max-width: 100%
+      max-height: 100%
+      +tr(all .3s ease-in)
+      object-fit: cover
+  &__line
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    +tr(all .3s ease)
+    fill: white
+    +xs
+      display: none
+  &__content,
+    @extend %flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 26px 0 31px 0
+    background-color: white
+    +tr(all .3s ease)
+    border-bottom-right-radius: 5px
+    border-bottom-left-radius: 5px
+    font-weight: 600
+    text-align: center
+    +xs
+      padding: 18px 11px
+      min-height: 65px
+  &__app
+    color: $BLACK
+    font-size: 17px
+    +tr(color .3s ease)
+    +sm
+      font-size: 14px
+      line-height: 20px
+  .cost
+    margin: 16px 0
+    font-size: 19px
+    +r(1024)
+      font-size: 14px
+    +xs
+      margin: 10px 0 0 0
+  .cost-old
+    color: #bbb
+  .cost-new
+    color: #f3425a
+  &__description
+    +tr(color .3s ease)
+    color: $GRAY
+    font-size: 13px
+    text-transform: uppercase
+    +xs
+      display: none
+.cost
+  text-transform: uppercase
+  font-weight: 700
+  @extend %flex
+  align-items: flex-start
+  color: $SHOP_COLOR
+.cost-old,
+.cost-new
+  position: relative
+  +tr(color .3s ease)
+  &:before
+    content: "$"
+.cost-old
+  text-decoration: line-through
+  margin-right: 10px
+.cost-new
+  &__red
+    color: $SHOP_COLOR
+    font-weight: 700
+
+
+.product-vc
+  +vcenter
+  width: 100%
+  text-align: center
+  +tr(transform .3s ease-in)
+  svg
+    margin-bottom: 5px
+    +xs
+      width: 21px
+      height: 15px
+      margin-bottom: 0
+  h3
+    display: block
+    color: $WHITE
+    font-size: 34px
+    line-height: 50px
+    font-weight: 800
+    +r(1024)
+      font-size: 24px
+    +xs
+      font-size: 16px
+      line-height: 21px
+.layer
+  svg
+    +sm
+      width: 100%
+      height: 128px

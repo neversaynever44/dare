@@ -36,6 +36,9 @@ h1
     font-weight: 800
 h2
   font-weight: 700
+.title-bold
+  font-weight: 800
+  text-transform: uppercase
 h3
   font-weight: 600
 
@@ -137,6 +140,67 @@ a
 .numbers__top
   svg
     font: 400 221px/1 "Galano Grotesque - Black",sans-serif,arial
+
+.pages
+  height: 100vh
+  @extend %flex
+  @extend %flex-c
+  max-width: 780px
+.pages-list
+  @extend %flex
+  justify-content: flex-start
+  align-content: center
+  flex-wrap: wrap
+  &__item
+    margin: 15px 0
+    flex: 1 43%
+    +sm
+      margin: 10px 0
+  &__link
+    font-weight: 800
+    color: $BLACK
+    text-transform: capitalize
+    font-size: 22px
+    position: relative
+    +tr(all .2s ease)
+    +r(1024)
+      font-size: 18px
+    +sm
+      font-size: 14px
+    &:before,
+    &:after 
+      content: ''
+      z-index: 1
+      position: absolute
+      display: block
+      bottom: -2px
+      height: 2px
+      width: 0 
+    &:before 
+      left: 0
+      width: 0
+      background-color: transparent
+      +tr(width .0s ease) 
+    &:after 
+      right: 0
+      background-color: $RED
+      +tr(width .3s ease) 
+    &:hover 
+      color: $RED
+      &:before,
+      &:after 
+        width: 100%  
+    &:hover 
+      &:before 
+        background-color: $RED
+        +tr(width .3s ease-in)  
+    &:hover 
+      &:after 
+        background-color: transparent
+        +tr(all .0s ease)   
+
+    
+
 
 body
   +scrollbar

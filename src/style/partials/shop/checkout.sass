@@ -1,0 +1,578 @@
+.checkout
+  padding: 25px 0 140px 0
+  +xs
+    padding: 8px 0 80px 0
+  &__coupon
+    opacity: 0
+    visibility: hidden
+    transition: none
+    &.is-active
+      opacity: 1
+      visibility: visible
+      .coupon
+        opacity: 1
+        visibility: visible
+      +r(1024)
+        min-height: 41px
+      +xs
+        min-height: 161px
+  &__close
+    display: none
+    +xs
+      display: block
+  &__promo
+    margin-bottom: 70px
+    text-align: center
+    +sm
+      margin-bottom: 53px
+  &__in
+    position: relative
+  &__wrapper
+    @extend %flex
+    text-align: center
+    margin: 70px 0
+    +tr(all .3s ease-in)
+    &.is-hidden
+      opacity: 0
+      visibility: hidden
+    +r(1024)
+      flex-direction: column
+    +xs
+      margin: 30px 0 50px 0
+  &__form
+    max-width: 620px
+    width: 100%
+    margin: auto
+  &__col
+    box-shadow: 0 5px 17px 4px rgba(0, 0, 0, 0.08)
+    border-radius: 5px
+    background-color: #ffffff
+    @extend %flex
+    @extend %flex-c
+    position: relative
+    flex: 1
+    padding: 49px 10px 47px
+    +r(1024)
+      padding: 22px 0
+      flex-direction: row
+      // min-height: 90px
+      &:first-of-type
+        margin-bottom: 20px
+    &:last-of-type
+      margin-left: 20px
+      +r(1024)
+        margin-left: 0
+      +xs
+        // min-height: 211px
+  &__row
+    width: 100%
+    &.is-hidden
+      display: none
+    &.is-active
+      display: block
+  &__description
+    font-size: 16px
+    font-weight: 600
+    @extend %flex
+    @extend %flex-c
+    flex-wrap: wrap
+    +r(1024)
+      flex-direction: column
+    h3
+      margin-right: 10px
+      +r(1024)
+        margin: 0 0 9px 0
+    span
+      color: $SHOP_COLOR
+      position: relative
+      cursor: pointer
+      +xs
+        font-size: 15px
+      &:before
+        content: ''
+        z-index: 1
+        display: block
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 0
+        height: 2px
+        +tr(all .3s ease-in)
+        background-color: $SHOP_COLOR
+      &:hover
+        &:before
+          width: 100%
+  &__in
+    max-width: 980px
+  &__title
+    font-size: 35px
+    +xs
+      font-size: 24px
+  &__form
+    max-width: 620px
+    margin: 0 auto
+    width: 100%
+  &__box
+    margin: 86px auto 83px
+    +xs
+      margin: 53px auto 65px
+
+.checkout__promo-title
+  font-size: 30px
+  +xs
+    font-size: 21px
+.checkout__promo-subtitle
+  font-size: 15px
+  display: block
+  font-weight: 500
+  margin: 11px 0 16px 0
+  +xs
+    font-size: 14px
+    margin: 16px 0
+
+// box
+%box
+  box-shadow: 0 5px 17px 4px rgba(0, 0, 0, 0.08)
+  border-radius: 5px
+  background-color: #ffffff
+  width: 100%
+.box
+  @extend %box
+  // max-width: 620px
+// payment
+.payment
+  &__in
+    padding: 36px 15px 43px
+  &__footer
+    text-align: center
+  &__header
+    @extend %flex
+    flex-wrap: wrap
+    margin-bottom: 52px
+    +xs
+      margin-bottom: 42px
+  &__row
+    @extend %flex
+    width: 100%
+    &:not(:last-child)
+      margin-bottom: 33px
+    position: relative
+  &__label
+    position: relative
+    font-size: 12px
+    color: $BLACK
+    text-transform: uppercase
+    display: block
+    font-weight: 600
+  &__input
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+    color: rgba($BLACK,0.3)
+    border-bottom: 1px solid rgba(#5f5d5d, 0.5)
+    padding: 10px 0
+  &__selects
+    position: absolute
+    bottom: 0
+    left: 0
+// payment-input supports
+.payment__input::-webkit-input-placeholder
+   color: rgba($BLACK,0.3)
+.payment__input::-moz-placeholder
+   color: rgba($BLACK,0.3)
+.payment__input:-ms-input-placeholder
+   color: rgba($BLACK,0.3)
+.payment__input:-moz-placeholder
+   color: rgba($BLACK,0.3)
+// payment-col
+.payment__col-12
+  flex: 1 100%
+.payment__col-8
+  flex: 1 1 auto
+  flex-basis: 72%
+  margin-right: 18px
+.payment__col-4
+  // flex: 0 0 auto
+
+.sup
+  vertical-align: super
+  font-size: smaller
+  color: $SHOP_COLOR
+  top: 4px
+
+
+
+.check-in__field::-webkit-input-placeholder
+  color: $BLACK
+.check-in__field::-moz-placeholder
+  color: $BLACK
+.check-in__field:-ms-input-placeholder
+  color: $BLACK
+.check-in__field:-moz-placeholder
+  color: $BLACK
+
+// check-in
+.check-in
+  width: 100%
+  &__login
+    max-width: 620px
+    width: 100%
+    margin: auto
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    z-index: 11
+    opacity: 0
+    visibility: hidden
+    +tr(all .3s ease-in)
+    &.is-active
+      opacity: 1
+      visibility: visible
+  &__inner
+    padding: 27px 120px 39px
+    +r(1024)
+      padding: 31px 60px 35px
+    +sm
+      padding: 35px 20px
+  &__close
+    position: absolute
+    top: 10px
+    right: 10px
+    padding: 10px
+    cursor: pointer
+    +tr(all .3s ease-in)
+    &:hover
+      +rotate(90)
+  &__header
+    text-align: center
+  &__title
+    font-size: 30px
+    font-weight: 800
+    margin-bottom: 22px
+    +xs
+      font-size: 24px
+  &__subtitle
+    font-size: 15px
+    line-height: 26px
+    font-weight: 500
+    color: $BLACK
+    +xs
+      font-size: 13px
+  &__footer
+    @extend %flex
+    justify-content: space-between
+    +sm
+      flex-direction: column
+      align-items: center
+  &__link
+    font-size: 15px
+    position: relative
+    font-weight: 600
+    &:before
+      content: ''
+      z-index: 1
+      display: block
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 1px
+      +tr(all .3s ease-in)
+    &:hover
+      &:before
+        width: 0
+    +sm
+      &:first-of-type
+        margin-bottom: 30px
+  &__body
+    margin: 45px 0 40px 0
+    +xs
+      margin: 50px 0 37px 0
+  &__col
+    margin: 0 10px
+    flex: 1
+  &__btn
+    margin: 26px 0
+    text-align: center
+  &__row
+    &:not(:last-child)
+      margin-bottom: 55px
+  &__row,
+  &__col
+    position: relative
+    &.is-active
+      .check-in__label
+        font-size: 12px
+        font-weight: 600
+        // top: -10px
+        transform: translateY(-18px)
+      .check-in__address
+        opacity: 0
+        visibility: hidden
+      .check-in__label--addressline1,
+      .check-in__label--addressline2
+        +xs
+          transform: translateY(-2px)
+  &__field,
+  &__label
+    color: $BLACK
+  &__label
+    text-transform: uppercase
+    font-size: 14px
+    font-weight: 800
+    cursor: pointer
+    left: 0
+    transition: transform .3s ease-in, weight .4s ease-in-out
+    z-index: -1
+    // +tr(all .3s ease-in)
+  &__select
+    // position: absolute
+    @extend %flex
+    @extend %flex-c
+    height: 100%
+    font-size: 16px
+    font-weight: 700
+    bottom: 0
+    left: 0
+    width: 100%
+    &:after
+      position: absolute
+      top: 30%
+      transform: translateY(-50%) rotate(45deg)
+      right: 5px
+      content: ''
+      border: solid $BLACK
+      border-width: 0 2px 2px 0
+      display: inline-block
+      padding: 3px
+      pointer-events: none
+    &.is-active
+      label
+        transform: translateY(-18px)
+        font-size: 12px
+        font-weight: 600
+    // label
+      // top: auto
+      // bottom: 0
+    .sel
+      height: 30px
+      line-height: 30px
+      border-radius: 0
+      border: none
+      border-bottom: 1px solid rgba(#5f5d5d, 0.5)
+      background: none
+    .sel 
+      -moz-appearance: none
+      -webkit-appearance: none
+    .sel::-ms-expand 
+      display: none
+    .sel:-moz-focusring 
+      color: transparent
+      text-shadow: 0 0 0 #000
+
+  &__label,
+  &__address
+    position: absolute
+    // transform: translateY(-50%)
+    top: 4px
+  &__address
+    font-size: 15px
+    color: #908b8b
+    z-index: -1
+    font-weight: 400
+    left: 148px
+    opacity: 1
+    visibility: visible
+    transition: opacity .3s ease-in-out, visibility .4s ease-in-out
+    &.is-hidden
+      opacity: 0
+      visibility: visible
+    +xs
+      left: 0
+      font-size: 14px
+      top: 10px
+  &__field
+    border-bottom: 1px solid rgba(#5f5d5d, 0.5)
+    font-size: 16px
+    font-weight: 700
+    height: 30px
+    line-height: 30px
+    padding: 0
+    &:focus
+      ~ .check-in__label
+          font-size: 12px
+          font-weight: 600
+          transform: translateY(-18px)
+      ~ .check-in__label--addressline1,
+      ~ .check-in__label--addressline2
+          +xs
+            transform: translateY(-2px)
+       
+.field
+  &__title
+    font-size: 15px
+    font-weight: 600
+    text-transform: none
+    margin-left: 7px
+    display: inline-block
+    vertical-align: middle
+  &__input
+    position: absolute
+    z-index: -1
+    opacity: 0
+    height: 0
+    &:checked + label:after
+      content: ""
+      position: absolute
+      z-index: 3
+      left: 10px
+      top: 5px
+      width: 7px
+      height: 11px
+      -ms-transform: rotate(220deg)
+      -webkit-transform: rotate(220deg)
+      transform: rotate(220deg)
+      background: 0 0
+      border-top: 2px solid #000
+      border-left: 2px solid #000
+  &__label
+    position: relative
+    display: inline-block
+    vertical-align: middle
+    // @extend %flex
+    // justify-content: flex-start
+    // align-items: center
+    // flex: 0 0 auto
+    &:before
+      content: ""
+      display: inline-block
+      vertical-align: middle
+      width: 25px !important
+      height: 25px !important
+      -webkit-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      user-select: none
+      position: relative
+      overflow: hidden
+      box-shadow: none
+      background: 0 0
+      border-radius: 6px
+      border: 1px solid rgba(#565454, 0.5)
+.check-in__link--red
+  color: $SHOP_COLOR
+  &:before
+    background-color: $SHOP_COLOR
+.check-in__link--black
+  color: $BLACK
+  &:before
+    background-color: $BLACK
+
+
+.check-in__row--45
+  &:not(:last-child)
+    margin-bottom: 47px
+.check-in__row--m0
+  margin-bottom: 0!important
+.check-in__row--flex
+  @extend %flex
+  align-items: flex-end
+  margin: 0 -10px
+  +xs
+    flex-wrap: wrap
+    .check-in__col
+      &:first-of-type
+        flex: 1 100%
+        margin-bottom: 54px
+.check-in__row--account
+  margin: 39px 0 53px 0
+  font-size: 0
+  +xs
+    margin: 20px 0 53px 0
+.check-in__label--red
+  color: $SHOP_COLOR
+.check-in__label--addressline1,
+.check-in__label--addressline2
+  +xs
+    top: -18px
+.check-in__row--address
+  +xs
+    margin: 75px 0 84px 0!important
+// order
+.order-box
+  @extend %flex
+  flex-direction: column
+  &__in
+    padding: 33px 30px
+    +xs
+      padding: 38px 14px 33px
+  &__title
+    font-size: 30px
+    margin-bottom: 52px
+    +xs
+      font-size: 24px
+  &__item
+    @extend %flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 19px
+    padding-bottom: 18px
+    border-bottom: 1px solid rgba($BLACK, 0.2)
+  &__total
+    font-size: 16px
+    font-weight: 700
+  &__amount
+    margin-left: 11px
+    font-size: 14px
+  &__unit
+    @extend %flex
+    align-items: center
+    justify-content: flex-start
+    span
+      margin-left: 6px
+      font-size: 14px
+      +xs
+        font-size: 13px
+
+    h4,
+    h5
+      font-size: 16px
+      +xs
+        font-size: 14px
+    h4
+      font-weight: 700
+      text-transform: uppercase
+    h5
+      font-weight: 500
+      text-transform: capitalize
+      +xs
+        max-width: 120px
+  &__header
+    flex: 1 1 auto
+  &__footer
+    @extend %flex
+    align-items: flex-end
+    flex-direction: column
+    .order-box__item
+      width: 55%
+      +sm
+        width: 100%
+      &:last-of-type
+        margin-bottom: 0
+        padding-bottom: 0
+        border: 0
+    // .order-box__item
+      // justify-content: flex-end
+      // width: 50%
+
+.field__label-white
+  &:before
+    border-color: white
+.field__input:checked+.field__label-white:after
+  border-color: white
+.reg
+  &__link
+    margin-left: 10px
+
+

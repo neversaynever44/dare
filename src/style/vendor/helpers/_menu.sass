@@ -1,7 +1,7 @@
 // menu
   
 .menu
-  padding-top: 70px
+  // padding-top: 70px
   +r(480)
     padding-top: 0
     flex-direction: column
@@ -14,11 +14,7 @@
   .basket__total
     background-color: $RED
     span
-      color: white
-.reg-link
-  font-size: 14px
-.reg-check
-  padding-left: 10px
+      color: $WHITE
 
 
 .menu
@@ -51,7 +47,7 @@
       margin-bottom: 40px
       text-transform: none
       font-size: 41px
-      +rh(740)
+      +rh(662)
         font-size: 32px
         margin-bottom: 30px
       +r(1024)
@@ -108,6 +104,9 @@
 
 .menu__list-pic
   margin-bottom: 10px
+  img
+    width: 30px
+    height: 40px
 .menu__list-item
   position: relative
   &:not(:last-child)
@@ -138,7 +137,7 @@
     font-size: 40px 
     line-height: 46px
     position: relative
-    +rh(740)
+    +rh(662)
       font-size: 30px
       line-height: 30px
     +r(1024)
@@ -150,21 +149,29 @@
     +r(767)
       font-size: 26px
       line-height: 26px
-    &:before 
-      top: 0
-      left: 0
-      width: 0
-      color: $RED
-      overflow: hidden
-      position: absolute
-      content: attr(data-text)
-      +tr(all .9s ease)
+    +tr(all .7s ease-out)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-image: linear-gradient(90deg, #000 0%, #000 50%, #e91536 50%, #e91536 100%)
+    background-size: 200% 100%
+    white-space: nowrap
     &:hover
-      &:before
-        width: 100%
+      background-position: -100%
+    // &:before 
+    //   top: 0
+    //   left: 0
+    //   width: 0
+    //   color: $RED
+    //   overflow: hidden
+    //   position: absolute
+    //   content: attr(data-text)
+    //   +tr(all .9s ease)
+    // &:hover
+    //   &:before
+    //     width: 100%
     &:not(:last-child)
       margin-bottom: 28px
-      +rh(740)
+      +rh(662)
         margin-bottom: 20px
       +r(1024)
         margin-bottom: 18px
@@ -179,3 +186,61 @@
       font-weight: bold
       color: black
       text-transform: uppercase
+
+.reg-link
+  font-size: 14px
+
+.reg-field 
+  position: absolute
+  z-index: -1
+  opacity: 0
+  height: 0
+
+.reg-check, .reg-check:before 
+  position: relative
+  display: inline-block
+  vertical-align: middle
+.reg-check
+  &:before
+    content: ""
+    width: 25px!important
+    height: 25px!important
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    overflow: hidden
+    -webkit-box-shadow: none
+    box-shadow: none
+    background: 0 0
+    border-radius: 6px
+    border: 1px solid rgba(1,1,1, 1)
+.reg-link
+  font-size: 15px
+  font-weight: 600
+  text-transform: none
+  margin-left: 7px
+  display: inline-block
+  vertical-align: middle
+.reg-field:checked+label:after 
+  content: ""
+  position: absolute
+  z-index: 3
+  left: 10px
+  top: 5px
+  width: 7px
+  height: 11px
+  -ms-transform: rotate(220deg)
+  -webkit-transform: rotate(220deg)
+  transform: rotate(220deg)
+  background: 0 0
+  border-top: 2px solid #000
+  border-left: 2px solid #000
+
+.reg-check
+  margin-left: 10px
+  &__white
+    &:before
+      border-color: $WHITE
+.reg-field:checked+.reg-check__white:after   
+  border-color: $WHITE

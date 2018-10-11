@@ -4,12 +4,45 @@
   position: relative
   margin: 193px 0 180px 0
   +tr(all .3s ease-in)
+  +xs
+    margin: 73px 0 90px 0
   &__book
-    background-image: linear-gradient(to top,#892651 0%,#e53f59 100%)
+    background-image: linear-gradient(to top,#892651 0%,#e33e59 100%)
   &__bootcamp
     background-image: linear-gradient(to top, #645b92 0%, #3498a7 100%)
-    margin-top: 263px
-    margin-bottom: 312px
+    margin-top: 213px
+    margin-bottom: 70px
+    +rm(1800)
+      margin-bottom: 150px
+    +sm
+      margin-top: 100px
+    +xs
+      margin: 70px 0 30px 0
+    .testimonial__header blockquote
+      padding-top: 30px
+      +r(1024)
+        padding-top: 20px
+        font-size: 28px
+      +sm
+        font-size: 22px
+        line-height: 32px
+      p
+        margin-bottom: 26px
+      cite
+          &:before
+            display: none
+          +sm
+            line-height: 20px
+            padding-left: 0
+            b
+              display: block
+      &:before
+        font-size: 160px
+        +r(1024)
+          font-size: 120px
+        +xs
+          font-size: 90px
+        
   &__top,
   &__bottom
     position: absolute
@@ -18,22 +51,36 @@
     width: 100%
   &__top
     bottom: 100%
-    transform: translateY(10px)
+    transform: translateY(1px)
   &__bottom
     top: 100%
+    transform: translateY(-1px)
   &__in
     max-width: 920px
     padding-bottom: 100px
     padding-top: 70px
     +tr(all .3s ease-in)
+    +xs
+      padding-bottom: 70px
   &__header
     margin-bottom: 40px
+    +xs
+      margin-bottom: 30px
     blockquote
       font-size: 38px
       font-weight: 700
       line-height: 55px
       position: relative
       padding-top: 40px
+      +sm
+        font-size: 24px
+        line-height: 32px
+        padding-top: 22px
+        p
+          margin-bottom: 36px
+      +xs
+        p
+          margin-bottom: 16px
       &:before
         content: "“"
         z-index: 1
@@ -48,6 +95,9 @@
         line-height: 130px
         font-weight: 900
         color: white
+        +sm
+          font-size: 90px
+          line-height: 90px
       cite
         font-style: normal
         font-size: 15px

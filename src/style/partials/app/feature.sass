@@ -1,7 +1,16 @@
 .feature
   position: relative
-  margin: 270px 0 140px 0
+  margin: 333px 0 152px 0
   padding: 30px 0 60px 0
+  +r(1400)
+    margin-top: 269px
+  +r(1024)
+    margin-bottom: 100px
+  +sm
+    margin: 120px 0
+  +xs
+    padding-bottom: 40px
+    margin-bottom: 45px
   &:before
     content: ''
     z-index: 1
@@ -10,9 +19,11 @@
     +rm(1500)
       padding-top: 40%
     +r(1024)
-      padding-top: 60%
-    +r(767)
-      padding-top: 90%
+      padding-top: 75%
+    +sm
+      padding-top: 100%
+    +xs
+      padding-top: 150%
   &__title
     position: absolute
     color: $WHITE
@@ -23,6 +34,14 @@
     text-align: center
     font-size: 35px
     font-weight: 700
+    +sm
+      font-size: 24px
+      line-height: 34px
+    +xs
+      max-width: 270px
+      left: 0
+      top: 56px
+      margin: auto
   &__in
     max-width: 1030px
     position: absolute
@@ -36,6 +55,8 @@
       position: static
       top: auto
       padding-bottom: 200px
+    +xs
+      padding-bottom: 150px
       // padding: 100px 0 200px 0
   &__dots
     z-index: 24
@@ -64,6 +85,11 @@
     +r(1024)
       padding-bottom: 50px
       text-align: center
+    +xs
+      padding-bottom: 0
+    svg
+      +xs
+        width: 131px
   &__text
     display: none
     text-align: center
@@ -75,6 +101,9 @@
     margin: 40px auto
     +r(1024)
       display: block
+    +xs
+      max-width: 190px
+      font-size: 14px
 
 .dots
   position: absolute
@@ -117,11 +146,14 @@
     position: absolute
     width: 100%
     left: 0
+    svg
+      width: 100%
   &__top
     bottom: 100%
-    transform: translateY(3px)
+    transform: translateY(1px)
   &__bottom
     top: 100%
+    transform: translateY(-1px)
   &__in
     max-width: 694px
     width: 100%
@@ -130,38 +162,48 @@
     @extend %flex
     height: 100%
     flex-direction: column
+    +r(1200)
+      width: 60%
     +r(1024)
       padding-right: 0
       height: auto
-      padding-top: 60px
+      // padding-top: 60px
+      padding-top: 0
+    +xs
+      width: 100%
   &__col
     color: $WHITE
     flex: 1
     img
       max-width: 100%
-      max-height: 100%
+      max-height: 82%
       +vcenter
       z-index: 0
-      top: 48%
       +r(1024)
-        // max-width: 60%
+        margin-top: 75px
+        max-width: 80%
         position: static
         transform: none
+      +sm
+        margin-top: 100px
+        max-width: 100%
         // top: 20px
         // left: 0
         // right: 0
         // margin: auto
-      +r(767)
-        top: 30%
-        max-width: 70%
+      // +r(767)
+        // top: 30%
+        // max-width: 70%
     &:last-of-type
       text-align: center
-      // +r(1024)
-        // order: 1
+      +r(1024)
+        order: 1
     &:first-of-type
+      +r(1024)
+        display: none
+        order: 2
       +r(767)
         display: none
-        // order: 2
         // padding-top: 400px
         // text-align: center
   &__body
@@ -169,7 +211,7 @@
     @extend %flex-c
     flex: 1 0 auto
     +r(1024)
-      padding-top: 40px
+      // padding-top: 40px
       // flex-direction: column
   &__footer
     flex-shrink: 0
@@ -224,6 +266,8 @@
       font-weight: 700
       font-size: 15px
       text-align:  center
+      +r(480)
+        display: none
   &__list
     @extend %flex
     flex-wrap: wrap
@@ -244,6 +288,11 @@
     @extend %flex
     justify-content: center
     padding: 14px 27px
+    +xs
+      padding: 7px 26px 7px 0px
+      h4
+        font-size: 14px
+        margin-left: 4px
     .scene__list-in
       width: 100% 
       @extend %flex
@@ -264,6 +313,9 @@
     font-size: 16px
     font-weight: 600
     color: $WHITE
+    +xs
+      font-size: 13px
+      padding-top: 5px
 
 .scene__list-anxiety
   &.is-active,

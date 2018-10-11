@@ -9,7 +9,12 @@ import './modules/tabs';
 import './modules/player';
 import './modules/ajax';
 import './modules/animate';
+import './modules/countdown';
+import './modules/scrollto';
+import './modules/quantity';
+import './modules/cart';
 import './modules/accordion';
+import './modules/validate';
 import './modules/example-module'; // the way imports your module 
 
 // the way imports your module 
@@ -32,20 +37,18 @@ import './modules/example-module'; // the way imports your module
   "use strict";
 
 
-  // const TOOLTIP_CLOSE = document.getElementById('tooltip-close');
+  const TOOLTIP_CLOSE = document.getElementsByClassName('tooltip__close');
+  if (TOOLTIP_CLOSE) {
+    closeTooltip();
+  }
 
-  // if (TOOLTIP_CLOSE) {
-  //   closeTooltip();
-  // }
+  function closeTooltip() {
+    for (let i = 0; i < TOOLTIP_CLOSE.length; i++) {
+      const close = TOOLTIP_CLOSE[i];
+      close.addEventListener('click', function () {
+        this.parentNode.classList.remove('is-active')
+      })
 
-  // function closeTooltip() {
-  //   TOOLTIP_CLOSE.addEventListener('click', function () {
-  //     this.parentNode.classList.remove('is-active')
-  //     console.log('hello world')
-  //   })
-  // }
-
-
-
+    }
+  }
 })();
-

@@ -1,33 +1,82 @@
 {% include "partials/head.html" %}
 
-<body class="main-page">
-  <!-- BEGIN  preloader-->
-  {% include "partials/preloader.html" %}
-  <!-- END  preloader-->
+<body>
 
   <div class="container">
     <!-- BEGIN  sticky-->
     {% include "partials/sticky.html" %}
     <!-- END  sticky-->
   </div>
-  <!-- BEGIN  out-->
-  <div class="out" id="out">
+
+  <main id="viewBox">
 
 
-
-    <div id="viewBox">
-
-      {% include "partials/header.html" %} {% include "partials/advantages.html" %} {% include "partials/entry.html" %} {% include
-      "partials/intro.html"%} {% include "partials/footer.html" %}
-
+    <div class="pages inner" data-trigger="true">
+      <ul class="pages-list">
+        <li class="pages-list__item">
+          <a href="home.html" class="pages-list__link">Home</a>
+        </li>
+        <li class="pages-list__item">
+          <a href="book.html" class="pages-list__link">Book</a>
+        </li>
+        <li class="pages-list__item">
+          <a href="app.html" class="pages-list__link">app</a>
+        </li>
+        <li class="pages-list__item">
+          <a href="audio.html" class="pages-list__link">audios</a>
+        </li>
+        <li class="pages-list__item">
+          <a href="community.html" class="pages-list__link">community</a>
+        </li>
+        <li class="pages-list__item">
+          <a href="coaching.html" class="pages-list__link">coaching</a>
+        </li>
+        <li class="pages-list__item">
+          <a href="shop.html" class="pages-list__link">shop</a>
+        </li>
+        <li class="pages-list__item">
+          <a href="unit.html" class="pages-list__link">shop product page</a>
+        </li>
+        <li class="pages-list__item">
+          <a href="cart.html" class="pages-list__link">shop cart</a>
+        </li>
+        <li class="pages-list__item">
+          <a href="checkout.html" class="pages-list__link">checkout</a>
+        </li>
+        <li class="pages-list__item">
+          <a href="details.html" class="pages-list__link">order confirmation</a>
+        </li>
+        <li class="pages-list__item">
+          <a href="terms.html" class="pages-list__link">terms & conditions</a>
+        </li>
+        <li class="pages-list__item">
+          <a href="https://panicaway.zendesk.com/hc/en-us" class="pages-list__link">support</a>
+        </li>
+        <li class="pages-list__item">
+          <a href="team.html" class="pages-list__link">team</a>
+        </li>
+        <li class="pages-list__item">
+          <a href="story.html" class="pages-list__link">story</a>
+        </li>
+        <li class="pages-list__item">
+          <a href="success.html" class="pages-list__link">success</a>
+        </li>
+        <li class="pages-list__item">
+          <a href="bootcamp.html" class="pages-list__link">bootcamp1</a>
+        </li>
+        <li class="pages-list__item">
+          <a href="bootcamp2.html" class="pages-list__link">bootcamp2</a>
+        </li>
+        <li class="pages-list__item">
+          <a href="bootcamp3.html" class="pages-list__link">bootcamp3</a>
+        </li>
+      </ul>
     </div>
 
 
 
-
-
-
-  </div>
+  </main>
+  {% include "partials/footer.html" %}
 
 
   <!-- END  out-->

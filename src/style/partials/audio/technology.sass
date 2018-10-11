@@ -1,4 +1,10 @@
 .technology
+  +sm
+    display: none
+  &.is-hide
+    display: none
+    +sm
+      display: block
   &__list
     text-align: center
     align-items: flex-start
@@ -10,6 +16,9 @@
     +r(1024)
       flex-wrap: wrap
       justify-content: center
+      margin-bottom: 50px
+    +xs
+      margin-bottom: 22px
   &__footer
     @extend %flex-c
     +tr(all .3s ease-in)
@@ -17,12 +26,21 @@
   &__btns
     @extend %flex
     @extend %flex-c
+    +r(1024)
+      flex-direction: column
+      .btn-primary
+        margin: 10px 0
 .technology__list-item
   flex: 1
   +r(1024)
     flex: auto
     max-width: 200px
     margin: 20px
+  +xs
+    max-width: 100%
+    margin: 0
+    &:not(:last-child)
+      margin-bottom: 32px
     // &:not(:first-child)
     //   margin-left: 45px
     // &:not(:last-child)
@@ -41,6 +59,9 @@
   letter-spacing: 0.1px
   font-size: 22px
   font-weight: 800
+  +sm
+    font-size: 20px
+    margin: 16px 0 15px 0
 .technology__list-desc
   font-size: 15px
   color: #b84178
@@ -48,6 +69,8 @@
   line-height: 22px
   max-width: 280px
   margin: auto
+  +sm
+    font-size: 14px
 .technology__list-wh
   .technology__list-pic
     svg

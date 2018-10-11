@@ -1,0 +1,155 @@
+.popup__app
+  z-index: 4444
+  .popup__in
+    width: 100%
+    max-width: 100%
+.slider-app
+  color: $WHITE
+  height: 100%
+  width: 100%
+  z-index: 2
+  &__anxiety
+    background-image: linear-gradient(to top,#b03056 0%,#ef4259 0%,#7e2353 100%)
+  &__panic
+    background-image: linear-gradient(to top,#4194a3 0%,#4194a3 0%,#a44b7b 100%)
+  &__worry
+    background-image: linear-gradient(to top,#d66a60 0%,#f4c426 99%,#f4c426 100%)
+  &__audio
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 90%
+    padding: 0 20px
+  &__item
+    height: 100%
+    max-width: 320px
+    text-align: center
+    width: 90%
+    height: calc(100vh - 150px)
+    padding-top: 55px
+    padding-bottom: 95px
+  &__wrapper
+    height: 100%
+  &__item
+    max-width: 320px
+    margin: auto
+    @extend %flex
+    @extend %flex-c
+    flex-direction: column
+  &__title
+    font-size: 24px
+    h3
+      font-weight: 700
+      max-width: 220px
+      line-height: 34px
+  &__time
+    padding: 30px 0
+    display: block
+  &__body
+    position: relative
+    width: 100%
+    padding-bottom: 50px
+  &__text
+    font-size: 15px
+    font-weight: 500
+    line-height: 22px
+    padding: 0 10px
+    max-height: 430px
+    overflow-y: auto
+    margin-bottom: 15px
+    +sm
+      margin: 25px 0
+    +xs
+      max-height: 125px
+      padding: 5px 3px
+      margin: 0
+    +scrollbar
+      width: 3px
+      background-color: rgba(255,255,255, 0.1)
+    +scrollbar-track
+      width: 3px
+      background-color: rgba(255,255,255, 0.1)
+    +scrollbar-thumb
+      width: 3px
+      background-color: rgba(255,255,255, 0.3)
+    +scrollbar-track-piece
+      width: 3px
+      background-color: rgba(255,255,255, 0.1)
+  &__pic
+    overflow: hidden
+    position: relative
+    width: 100%
+    +sm
+      max-height: 240px
+    img
+      // position: absolute
+      // top: 0
+      // left: 0
+      // right: 0
+      // top: 93%
+      // transform: translateY(-50%)
+      height: auto
+      max-width: 100%
+// .slider-app
+//   .slick-track,
+//   .slick-list
+//     height: 100%
+//   .slick-slide > div
+//     height: 100%
+  // .slider-app__item,
+  // .slider-app__wrapper
+  //   height: 100%
+
+.popup-wrapper
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  width: 100%
+  max-width: 320px
+  margin: auto
+  height: 100%
+  .popup__close
+    top: 8%
+    padding: 0
+
+.slider-controls
+  position: absolute
+  left: 0
+  right: 0
+  max-width: 320px
+  margin: auto
+  bottom: 40px
+  width: 100%
+  text-align: center
+  color: $WHITE
+  z-index: 2
+  &__in
+    @extend %flex
+    align-items: flex-end
+    justify-content: center
+  h5
+    margin-bottom: 11px
+    font-size: 15px
+    font-weight: 500
+.arrows
+  cursor: pointer
+  +tr(all .3s ease-in)
+  &:hover
+    opacity: 0.7
+.arrow-prev
+  +rotate(180)
+.slider-cursor 
+  margin: 0 12px
+
+
+
+.slider-close
+  cursor: pointer
+  z-index: 11
+  position: absolute
+  top: 8%
+  right: 8px
+  padding: 10px
+  transform: translateY(-50%)

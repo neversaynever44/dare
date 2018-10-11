@@ -1,34 +1,102 @@
 .story
-  // min-height: 672px
-  min-height: 612px
   color: $WHITE
   position: relative
-  // height: auto
-  background: url(../img/svg/story.svg)center no-repeat
+  background-color: #f63857
   +cover
-  +rm(1400)
-    height: 100vh
+  height: 100vh
   &__in
     max-width: 980px
     height: 100%
-  &__shape
+    @extend %flex
+    align-items: center
+    justify-content: flex-start
+    z-index: 11
+    position: relative
+    +r(1024)
+      max-width: 100%
+    +r(1024)
+      max-width: 480px
+      display: block
+  &__pic
     position: absolute
-    z-index: -1
+    top: 0
+    right: 0
+    bottom: 0
+    width: 61%
+    height: 100%
+    +r(1200)
+      width: 62%
+    +r(1024)
+      width: 67%
+    +r(1024)
+      top: auto
+      left: 0
+      right: 0
+      width: 100%
+      height: 59%
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &__layer
+    position: absolute
     top: 0
     left: 0
+    bottom: 0
     width: 100%
+    height: 100%
+    z-index: 2
+    +r(1024)
+      display: none
+  &__top,
+  &__bottom
     display: none
-  &__promo
+    +r(1024)
+      display: block
+  &__top,
+  &__bottom
     position: absolute
-    top: 51%
-    transform: translateY(-50%)
-    max-width: 373px
+    left: 0
     width: 100%
+  &__top
+    bottom: 0
+    transform: translateY(1px)
+    +xs
+      transform: translateY(0px)
+  &__bottom
+    top: 0
+    transform: translateY(-2px)
+  // &__shape
+  //   position: absolute
+  //   z-index: 1
+  //   left: 0
+  //   width: 100%
+  //   bottom: -15px
+  &__promo
+    max-width: 383px
+    width: 100%
+    +r(1024)
+      position: absolute
+      top: 28%
+      left: 6px
+      transform: translateY(-50%)
+      max-width: 303px
     h3
       font-size: 19px
       text-transform: uppercase
       margin-bottom: 10px
+      +r(1024)
+        font-size: 14px
+        margin-bottom: 13px
     strong
       text-transform: capitalize
       font-size: 40px
+      font-weight: 800
       line-height: 55px
+      +r(1024)
+        font-size: 30px
+      +sm
+        line-height: 40px
+      +xs
+        font-size: 24px
+        line-height: 34px
