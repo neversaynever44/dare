@@ -50,6 +50,47 @@ const doublePi = pi * 2;
 const arcOffset = -pi / 2;
 const animTime = 200;
 const loaderTime = 1800;
+let current = 0;
+let intervalID = null;
+let startInterval;
+let flag = true;
+let tabList = document.querySelectorAll('.js-tab');
+let curWidth = window.innerWidth;
+let oldWidth = window.innerWidth;
+let desktopW = 1024;
+let isDesktop = null;
+isDesktop = chechIfMobile(desktopW);
+
+function chechIfMobile(width) {
+  if (curWidth <= width) {
+    return true
+  }
+  else {
+    return false
+  }
+};
+
+function intervalManager(flag, animate, time) {
+  if(flag && !isDesktop) {
+    intervalID = setInterval(animate, time);
+  }
+  else if(!isDesktop) {
+    clearInterval(intervalID);
+  }
+}
+function changeSlides() {
+if(current > tabList.length - 1) {
+  current = 0;
+ }
+tabList[current++].click();
+}
+
+let isAppPage = document.getElementsByClassName('is-appage')
+if (isAppPage.length > 0) {
+  intervalManager(true, changeSlides, 4000)
+}
+
+
 
 const CircleAudioPlayer = function (options) {
   options = options || {};
@@ -284,6 +325,7 @@ CircleAudioPlayer.prototype = {
       // reset when finished
       if (this.audio.currentTime === this.audio.duration) {
         this.audio.currentTime = 0;
+        intervalManager(true, changeSlides, 4000)
       }
       this._setState('paused');
     }).bind(this));
@@ -294,9 +336,13 @@ CircleAudioPlayer.prototype = {
   },
   play: function () {
     this.audio.play();
+    intervalManager(false)
+
   },
   pause: function () {
     this.audio.pause();
+    intervalManager(true, changeSlides, 4000)
+
   }
 };
 

@@ -43,27 +43,7 @@ window.addEventListener("DOMContentLoaded", function () {
     setActiveClass(dotItem);
     tab.click();
   }
-  function triggerIntervalTabs() {
-
-    if (!isDesktop) {
-      let current = 0;
-
-      let startInterval = setInterval(function () {
-        if (current > tabList.length - 1) {
-          current = 0
-        }
-        tabList[current++].click();
-
-      }, 6000)
-    }
-
-  }
-
-  let isAppPage = document.getElementsByClassName('is-appage')
-  if (isAppPage.length > 0) {
-    triggerIntervalTabs();
-  }
-
+ 
 
 
 
