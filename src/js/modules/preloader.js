@@ -8,8 +8,12 @@ const body = document.body;
 let mainPage = document.getElementsByClassName('main-page');
 let appPage = document.getElementsByClassName('app-page');
 let bookPage = document.getElementsByClassName('book-page');
+let tweenAvaible = true;
+let tweenActive = () => tweenAvaible = true;
+let tweenNotActive = () => tweenAvaible = false;
 const tl = new TimelineLite({
   paused: true,
+  onStart: tweenNotActive,
   onComplete: loadContent,
   ease: Power1.easeOut
 })
@@ -64,6 +68,7 @@ function loadContent() {
   if (!isMobile && mainPage.length > 0) {
     video.play();
   }
+  tweenActive();
   return tlLoaderOut;
 
 }
@@ -84,7 +89,7 @@ function loadContent() {
 // document.addEventListener('scroll', preloaderProgress);
 
 const preloaderProgress = () => {
-  if (mainPage.length > 0 && preloader.classList.contains('is-load')) {
+  if (mainPage.length > 0 && tweenAvaible && preloader.classList.contains('is-load')) {
     tl.play();
   }
 }

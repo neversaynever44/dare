@@ -44,6 +44,13 @@
     svg
       width: 100%
       height: 100%
+  &__l
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 2
   &__item
     font-size: 15px
     -webkit-column-break-inside: avoid
@@ -51,6 +58,7 @@
     break-inside: avoid
     counter-increment: item-counter
     margin: 30px 0
+    position: relative
     +sm
       margin: 20px 0
     &:first-of-type

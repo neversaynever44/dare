@@ -4,9 +4,8 @@
     <title>man_BG</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <linearGradient x1="50.0013331%" y1="100.025651%" x2="50.0013331%" y2="0.00131813752%" id="linearGradient-1">
-            <stop stop-color="#f0425a" offset="0%"></stop>
-            <stop stop-color="#A52D55" offset="0.3%"></stop>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="5.00131813752%" id="linearGradient-1">
+     <stop stop-color="#A52D55" offset="0%"></stop>
             <stop stop-color="#F6435A" offset="100%"></stop>
         </linearGradient>
     </defs>

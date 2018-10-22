@@ -53,10 +53,9 @@ let imagesLoop = () => {
     };
     // index = (index != images.length - 1) ? index + 1 : 0;
     images[index++].classList.add('is-show')
-    console.log(index)
+
   }, 3000)
 }
-
 
 
 
@@ -73,6 +72,7 @@ function getOffset(el) {
 const slideTime = 1.5;
 
 let book = document.getElementById('screen1');
+let dareToolkit = document.getElementById('dareToolkit');
 let header = document.getElementById('header');
 let entry = document.getElementById('screen2')
 let intro = document.getElementById('intro')
@@ -82,8 +82,14 @@ let screen1, screen2, screen22, screen3, screen4, screen5, screen6
 let windowHeight = window.innerHeight;
 let calcPos = () => {
   screen1 = (getOffset(header).height / 2.25);
-  screen2 = getOffset(book).height;
-  screen22 = (screen2 + 200);
+  // screen2 = getOffset(book).height;
+  if (windowHeight >= 900) { 
+    screen2 = getOffset(dareToolkit).top;
+    screen22 = (screen2 + 255);
+  }  else {
+    screen2 = getOffset(book).height;
+    screen22 = (screen2 + 200);
+  }
   screen3 = getOffset(entry).height;
   screen4 = getOffset(intro).top;
   screen5 = getOffset(footer).top + window.scrollY;
@@ -112,11 +118,14 @@ let pageSlides = () => {
   tl1
     .to('.header__in', 0.3, { autoAlpha: "0" }, "slide1+=0.2")
     .to('.fullscreen-bg_top', 0.7, { backgroundPosition: "0% 0" }, "slide1+=0.5")
-    .fromTo('.fullscreen-title', 0.1, { autoAlpha: "0", scale: "1.1" }, {autoAlpha: 1, scale: "1" }, "slide1+=0.5")
+    .fromTo('.fullscreen-title', 0.1, { autoAlpha: "0", xPercent: "-1", yPercent: "24", scale: "1.1" }, {autoAlpha: 1, xPercent:"0.2", yPercent: "25", scale: "1" }, "slide1+=0.5")
     .fromTo(TITLES[0], 0.2, { autoAlpha: "1" }, { autoAlpha: "0" }, "slide1+=0.3")
-    .to(TITLES[1], 0.3, { autoAlpha: '1' }, "+=1")
-    .to(TITLES[1], 0.3, { autoAlpha: '0' }, "+=1")
-    .to(TITLES[2], 0.3, { autoAlpha: '1' }, "+=1")
+    .to(TITLES[1], 0.3, { autoAlpha: '1' }, "+=0.44")
+
+  tl1.addLabel('slide11')
+  tl1
+    .to(TITLES[1], 0.3, { autoAlpha: '0' }, "+=0.44")
+    .to(TITLES[2], 0.3, { autoAlpha: '1' }, "+=0.44")
 
   tl1.addLabel('slide2')
 
@@ -167,14 +176,14 @@ let pageSlides = () => {
     .fromTo('.btn-primary', 0.7, { autoAlpha: 0, scale: "1.2" }, { autoAlpha: 1, scale: 1 }, "slide24+=0.9")
 
   tl1.addLabel('slide3')
-    .add(imagesLoop, "-=1.5")
-    .to(out, slideTime, { y: - screen4, roundProps: "y" })
+  .add(imagesLoop, "slide3-=1")
+    .to(out, slideTime, { y: - screen4, roundProps: "y"})
     .set((sticky), {
       className: '+=is-active'
     }, "slide3+=0.6")
-    .from('.intro__body', 0.4, {
+    .from('.intro__body', 0.3, {
       autoAlpha: "0"
-    }, 'slide3+=0.2')
+    })
   tl1.addLabel('slide31')
   tl1
     .to('.intro__body', 0.8, {
@@ -202,9 +211,14 @@ let pageSlides = () => {
         yPercent: "4"
       })
     tl1.addLabel('slide6')
+    if(windowHeight >= 1160) {
+      tl1
+      .set((sticky), {
+        className: '+=is-active'
+      }, "slide5+=0.5")
+    }
 
      }  else {
-       console.log(tl1)
       tl1.addLabel('slide4')
       tl1
         .to(out, slideTime, { y: - screen5, roundProps: "y" })
@@ -291,10 +305,9 @@ if (mainPage.length > 0) {
     window.addEventListener("touchend", touchEndHandler, false);
   }
 if(isDesktop) {
-imagesLoop();
   disableSlides();
+  imagesLoop();
 } else {
-  console.log('here2')
   enableSlides();
   pageSlides();
 }

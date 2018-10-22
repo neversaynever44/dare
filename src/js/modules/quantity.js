@@ -58,7 +58,7 @@
     quantityAmount.value = value;
 
     unitTotal(costOld, costNew)
-
+    console.log(value)
     cartTotals()
   }
   function selectTotalPrice(select, costOld, costNew) {

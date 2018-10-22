@@ -99,12 +99,10 @@
 
       
 <header class="header" id="header">
-
-  <div class="fullscreen">
     <div class="fullscreen-bg">
-      <div class="mask fullscreen-bg_top"></div>
-      <div class="mask fullscreen-bg_bottom"></div>
-    </div>
+        <div class="mask fullscreen-bg_top"></div>
+      </div>
+  <div class="fullscreen">
     <div class="fullscreen-title">
       You're here because
       <br> you're ready
@@ -133,7 +131,7 @@
     </div>
   </div>
 </header>
- <div class="wrapper" data-trigger="true">
+ <div class="wrapper" data-trigger="true" id="dareToolkit">
   <div class="screen" id="screen1">
     <div class="screen__info">
       set yourself free
@@ -217,9 +215,14 @@
   <div class="entry__tool">
     
   </div>
-  <svg class="entry__top" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1200 88.1" style="enable-background:new 0 0 1200 88.1;" xml:space="preserve" fill="#f4435a">
-
-    <path id="Shape_1_copy_8_1_" class="st11" d="M1200,88.1C1105.6,81,979.3,65.4,831,31C615.4-19.1,299.3-11.1,0,75.1v13H1200z"/>
+  
+  <svg class="entry__top" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1200 88.1" style="enable-background:new 0 0 1200 88.1;" xml:space="preserve" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient x1="50%" y1="100%" x2="50%" y2="5.00131813752%" id="linearGradient-12">
+        <stop stop-color="#F6435A" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <path fill="url(#linearGradient-12)" id="Shape_1_copy_8_1_" class="st11" d="M1200,88.1C1105.6,81,979.3,65.4,831,31C615.4-19.1,299.3-11.1,0,75.1v13H1200z"/>
   </svg>
 
   <div class="entry__in inner" id="screen2">
@@ -1435,7 +1438,7 @@
         <div class="menu__col">
           <nav class="nav">
             <a href="home.html" class="nav__link">Home</a>
-            <a href="story.html" class="nav__link">Stories</a>
+            <a href="success.html" class="nav__link">Stories</a>
             <a href="community.html" class="nav__link">Community</a>
             <a href="coaching.html" class="nav__link">Coaching</a>
             <a href="bootcamp.html" class="nav__link">Bootcamp</a>

@@ -43,8 +43,36 @@ window.addEventListener("DOMContentLoaded", function () {
     setActiveClass(dotItem);
     tab.click();
   }
- 
+  // function triggerIntervalTabs() {
+  //   let current = 0;
+  //   let intervaID = null;
+  //   let startInterval;
+  //   let playersPlay = document.querySelectorAll('.circle-audio-player');
+  //   let flag = true;
 
+  //   function intervalManager(flag, animate, time) {
+
+  //     if(flag)
+  //       intervalID =  setInterval(animate, time);
+  //     else
+  //       clearInterval(intervalID);
+  //  }
+  //  function changeSlides() {
+  //   if(current > tabList.length - 1) {
+  //     current = 0;
+  //    }
+  //   tabList[current++].click();
+  //  }
+  //  if(!isDesktop)  {
+  //    intervalManager(true, changeSlides, 4000)
+  //  }
+
+  // }
+
+  // let isAppPage = document.getElementsByClassName('is-appage')
+  // if (isAppPage.length > 0) {
+  //   triggerIntervalTabs();
+  // }
 
 
   function setActiveClass() {

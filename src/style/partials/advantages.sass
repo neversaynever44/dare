@@ -4,6 +4,12 @@
   // padding: 80px 0
   // padding-top: 200px
   color: #000
+  // flex: 1 0 auto
+  // @media (min-height: 978px) and (min-width: 1024px)
+    // padding-bottom: 7%
+  flex: 1 1 auto
+  @media (min-height: 1200px) and (min-width: 1024px)
+    padding-top: 20%
   +r(1024)
     padding: 100px 0
   +r(480)
@@ -34,6 +40,8 @@
 
 .advantages
   height: 100vh
+  +rhm(900)
+    height: auto
   +r(1024)
     height: auto
   &__in
@@ -42,9 +50,14 @@
     flex-wrap: wrap
     align-items: flex-end
     height: 100%
+    // position: absolute
+    // bottom: 0
+    // width: 80%
     +r(1024)
       height: auto
       padding-left: 10px
+      position: static
+      width: 100%
   &__screen
     position: relative
     width: 100%
@@ -53,7 +66,14 @@
   max-width: 1100px
   padding-left: 200px
   margin: auto
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  // justify-content: center
   width: 100%
+  position: relative
+  @media (min-height: 900px) and (min-width: 1024px)
+    height: 100vh
   +r(1200)
     padding-left: 50px
   +r(1024)
@@ -61,6 +81,7 @@
     padding-bottom: 100px
     padding-left: 0
     width: 90%
+    height: auto
   +r(480)
     max-width: 320px
 
@@ -172,7 +193,7 @@
       // position: static
       bottom: auto
       top: 30px
-      left: 7%
+      left: 3%
     +r(480)
       // top: 5%
       // left: -3%
