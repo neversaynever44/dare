@@ -41,21 +41,45 @@ Number.prototype.numberFormat = function (decimals, dec_point, thousands_sep) {
 
 
 
-let imagesLoop = () => {
-  let index = 0;
-  let images = document.getElementsByClassName("intro__images");
-  setInterval(() => {
-    for (var i = 0; i < images.length; i++) {
-      images[i].classList.remove('is-show')
-    }
-    if(index > images.length - 1) {
-      index = 0
-    };
-    // index = (index != images.length - 1) ? index + 1 : 0;
-    images[index++].classList.add('is-show')
+// let imagesLoop = () => {
+//   let index = 0;
+//   let images = document.getElementsByClassName("intro__images");
+//   setInterval(() => {
+//     for (var i = 0; i < images.length; i++) {
+//       images[i].classList.remove('is-show')
+//     }
+//     if(index > images.length - 1) {
+//       index = 0
+//     };
+//     // index = (index != images.length - 1) ? index + 1 : 0;
+//     images[index++].classList.add('is-show')
 
-  }, 3000)
+//   }, 3000)
+// }
+// imagesLoop();
+let imagesTl = function(){};
+
+function imagesLoop() {
+
+  let images = document.getElementsByClassName("intro__images");
+    if(typeof imagesTl.kill === 'function') {
+      imagesTl.progress(0);
+      imagesTl.kill();
+  } 
+    imagesTl = new TimelineMax({
+      repeat: -1,
+    })
+      for(let i = 0; i < images.length; i++) {
+        
+        imagesTl
+          .to(images[i], 1, {autoAlpha: 1, ease: Power2.easeIn})
+          .to(images[i], 1, {autoAlpha: 0, ease: Power2.easeOut}, '+=1')
+    }
+      return imagesTl;
+
 }
+
+
 
 
 
@@ -118,7 +142,7 @@ let pageSlides = () => {
   tl1
     .to('.header__in', 0.3, { autoAlpha: "0" }, "slide1+=0.2")
     .to('.fullscreen-bg_top', 0.7, { backgroundPosition: "0% 0" }, "slide1+=0.5")
-    .fromTo('.fullscreen-title', 0.1, { autoAlpha: "0", xPercent: "-1", yPercent: "24", scale: "1.1" }, {autoAlpha: 1, xPercent:"0.2", yPercent: "25", scale: "1" }, "slide1+=0.5")
+    .fromTo('.fullscreen-title', 0.1, { autoAlpha: "0", xPercent: "-5", yPercent: "-1", scale: "1.1" }, {autoAlpha: 1, xPercent:"-4", yPercent: "0", scale: "1" }, "slide1+=0.5")
     .fromTo(TITLES[0], 0.2, { autoAlpha: "1" }, { autoAlpha: "0" }, "slide1+=0.3")
     .to(TITLES[1], 0.3, { autoAlpha: '1' }, "+=0.44")
 
@@ -176,8 +200,8 @@ let pageSlides = () => {
     .fromTo('.btn-primary', 0.7, { autoAlpha: 0, scale: "1.2" }, { autoAlpha: 1, scale: 1 }, "slide24+=0.9")
 
   tl1.addLabel('slide3')
-  .add(imagesLoop, "slide3-=1")
     .to(out, slideTime, { y: - screen4, roundProps: "y"})
+    .add(imagesLoop, "slide3+=0.1")
     .set((sticky), {
       className: '+=is-active'
     }, "slide3+=0.6")
@@ -376,8 +400,6 @@ function touchEndHandler(event) {
 
 
 }
-
-
 
 
 
