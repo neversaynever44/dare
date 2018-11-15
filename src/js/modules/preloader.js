@@ -99,6 +99,7 @@ if (mainPage.length > 0) {
   })
   window.addEventListener('wheel', preloaderProgress);
   document.addEventListener("touchstart", preloaderProgress);
+  document.addEventListener("keydown", preloaderProgress);
 
 }
 
